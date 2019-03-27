@@ -1,0 +1,5 @@
+﻿.gitignore
+obj/
+bin/
+out/
+wwwroot/

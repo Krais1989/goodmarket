@@ -1,0 +1,270 @@
+2019-02-07 14:58:13,049 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-07 14:58:16,702 [9] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-07 14:58:16,990 [9] INFO  App  
+ Request finished in 288.2855ms 200 text/html 
+ 
+2019-02-07 14:58:17,310 [9] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-07 14:58:17,507 [9] INFO  App  
+ Request finished in 197.376ms 200 application/json;charset=utf-8 
+ 
+2019-02-07 14:58:23,866 [6] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/api/Auth   
+ 
+2019-02-07 14:58:23,975 [6] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.AuthController.GetCurrent (GoodMarket.Api)' 
+ 
+2019-02-07 14:58:23,994 [6] INFO  App  
+ Route matched with {action = "GetCurrent", controller = "Auth"}. Executing action GoodMarket.Api.Controllers.AuthController.GetCurrent (GoodMarket.Api) 
+ 
+2019-02-07 14:58:24,007 [6] INFO  App  
+ Authorization failed. 
+ 
+2019-02-07 14:58:24,009 [6] INFO  App  
+ Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+ 
+2019-02-07 14:58:24,015 [6] INFO  App  
+ Executing ChallengeResult with authentication schemes (). 
+ 
+2019-02-07 14:58:24,024 [6] INFO  App  
+ AuthenticationScheme: Bearer was challenged. 
+ 
+2019-02-07 14:58:24,027 [6] INFO  App  
+ Executed action GoodMarket.Api.Controllers.AuthController.GetCurrent (GoodMarket.Api) in 29.8746ms 
+ 
+2019-02-07 14:58:24,029 [6] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.AuthController.GetCurrent (GoodMarket.Api)' 
+ 
+2019-02-07 14:58:24,032 [6] INFO  App  
+ Request finished in 165.5477ms 401  
+ 
+2019-02-07 15:07:10,320 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-07 15:07:11,906 [9] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-07 15:07:12,196 [9] INFO  App  
+ Request finished in 291.9405ms 200 text/html 
+ 
+2019-02-07 15:07:12,513 [9] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-07 15:07:12,718 [9] INFO  App  
+ Request finished in 205.1744ms 200 application/json;charset=utf-8 
+ 
+2019-02-07 15:10:28,591 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-07 15:10:30,143 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-07 15:10:30,462 [7] INFO  App  
+ Request finished in 320.1765ms 200 text/html 
+ 
+2019-02-07 15:10:30,773 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-07 15:10:30,961 [7] INFO  App  
+ Request finished in 188.4544ms 200 application/json;charset=utf-8 
+ 
+2019-02-07 15:11:08,368 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-07 15:11:10,078 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-07 15:11:10,395 [7] INFO  App  
+ Request finished in 317.3149ms 200 text/html 
+ 
+2019-02-07 15:11:10,709 [6] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-07 15:11:10,908 [6] INFO  App  
+ Request finished in 199.0641ms 200 application/json;charset=utf-8 
+ 
+2019-02-07 15:11:38,683 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-07 15:11:40,459 [9] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-07 15:11:40,756 [9] INFO  App  
+ Request finished in 296.8527ms 200 text/html 
+ 
+2019-02-07 15:11:41,118 [9] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-07 15:11:41,333 [9] INFO  App  
+ Request finished in 214.7405ms 200 application/json;charset=utf-8 
+ 
+2019-02-07 15:12:33,308 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-07 15:12:34,973 [10] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-07 15:12:35,276 [10] INFO  App  
+ Request finished in 303.2258ms 200 text/html 
+ 
+2019-02-07 15:12:35,613 [10] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-07 15:12:35,795 [10] INFO  App  
+ Request finished in 182.3117ms 200 application/json;charset=utf-8 
+ 
+2019-02-07 15:24:15,472 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-07 15:24:17,148 [6] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-07 15:24:17,430 [6] INFO  App  
+ Request finished in 282.5957ms 200 text/html 
+ 
+2019-02-07 15:24:17,726 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-07 15:24:17,904 [7] INFO  App  
+ Request finished in 177.6073ms 200 application/json;charset=utf-8 
+ 
+2019-02-07 15:25:15,679 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-07 15:25:17,293 [6] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-07 15:25:17,569 [6] INFO  App  
+ Request finished in 276.1438ms 200 text/html 
+ 
+2019-02-07 15:25:17,861 [13] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-07 15:25:18,039 [13] INFO  App  
+ Request finished in 177.6071ms 200 application/json;charset=utf-8 
+ 
+2019-02-07 15:25:45,533 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-07 15:25:46,980 [8] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-07 15:25:47,255 [8] INFO  App  
+ Request finished in 275.2365ms 200 text/html 
+ 
+2019-02-07 15:25:47,583 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-07 15:25:47,749 [7] INFO  App  
+ Request finished in 166.168ms 200 application/json;charset=utf-8 
+ 
+2019-02-07 15:30:12,749 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-07 15:30:14,342 [9] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-07 15:31:13,105 [9] INFO  App  
+ Request finished in 58763.9153ms 500 application/json 
+ 
+2019-02-07 15:31:24,550 [18] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-07 15:33:03,064 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-07 15:33:04,427 [6] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-07 15:33:04,726 [6] INFO  App  
+ Request finished in 299.3583ms 200 text/html 
+ 
+2019-02-07 15:33:05,016 [8] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-07 15:33:05,047 [6] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/favicon-32x32.png   
+ 
+2019-02-07 15:33:05,060 [6] INFO  App  
+ Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+ 
+2019-02-07 15:33:05,063 [6] INFO  App  
+ Request finished in 16.1974ms 200 image/png 
+ 
+2019-02-07 15:33:05,066 [11] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/favicon-16x16.png   
+ 
+2019-02-07 15:33:05,069 [11] INFO  App  
+ Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A' 
+ 
+2019-02-07 15:33:05,071 [11] INFO  App  
+ Request finished in 5.3189ms 200 image/png 
+ 
+2019-02-07 15:33:05,208 [8] INFO  App  
+ Request finished in 192.0052ms 200 application/json;charset=utf-8 
+ 
+2019-02-07 15:33:11,977 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/api/Login   
+ 
+2019-02-07 15:33:12,080 [7] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.LoginController.GetCurrent (GoodMarket.Api)' 
+ 
+2019-02-07 15:33:12,102 [7] INFO  App  
+ Route matched with {action = "GetCurrent", controller = "Login"}. Executing action GoodMarket.Api.Controllers.LoginController.GetCurrent (GoodMarket.Api) 
+ 
+2019-02-07 15:33:12,116 [7] INFO  App  
+ Authorization failed. 
+ 
+2019-02-07 15:33:12,119 [7] INFO  App  
+ Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+ 
+2019-02-07 15:33:12,128 [7] INFO  App  
+ Executing ChallengeResult with authentication schemes (). 
+ 
+2019-02-07 15:33:12,137 [7] INFO  App  
+ AuthenticationScheme: Bearer was challenged. 
+ 
+2019-02-07 15:33:12,142 [7] INFO  App  
+ Executed action GoodMarket.Api.Controllers.LoginController.GetCurrent (GoodMarket.Api) in 34.0788ms 
+ 
+2019-02-07 15:33:12,145 [7] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.LoginController.GetCurrent (GoodMarket.Api)' 
+ 
+2019-02-07 15:33:12,147 [7] INFO  App  
+ Request finished in 170.8404ms 401  
+ 
+2019-02-07 15:33:36,343 [6] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/api/Login   
+ 
+2019-02-07 15:33:36,360 [6] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.LoginController.GetCurrent (GoodMarket.Api)' 
+ 
+2019-02-07 15:33:36,368 [6] INFO  App  
+ Route matched with {action = "GetCurrent", controller = "Login"}. Executing action GoodMarket.Api.Controllers.LoginController.GetCurrent (GoodMarket.Api) 
+ 
+2019-02-07 15:33:36,371 [6] INFO  App  
+ Authorization failed. 
+ 
+2019-02-07 15:33:36,374 [6] INFO  App  
+ Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+ 
+2019-02-07 15:33:36,377 [6] INFO  App  
+ Executing ChallengeResult with authentication schemes (). 
+ 
+2019-02-07 15:33:36,379 [6] INFO  App  
+ AuthenticationScheme: Bearer was challenged. 
+ 
+2019-02-07 15:33:36,381 [6] INFO  App  
+ Executed action GoodMarket.Api.Controllers.LoginController.GetCurrent (GoodMarket.Api) in 10.1109ms 
+ 
+2019-02-07 15:33:36,382 [6] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.LoginController.GetCurrent (GoodMarket.Api)' 
+ 
+2019-02-07 15:33:36,384 [6] INFO  App  
+ Request finished in 40.9781ms 401  
+ 

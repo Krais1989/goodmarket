@@ -1,0 +1,86 @@
+2019-02-08 18:05:27,138 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-08 18:06:18,911 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-08 18:06:43,074 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-08 18:06:44,798 [8] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-08 18:06:45,043 [8] INFO  App  
+ Request finished in 245.7311ms 200 text/html 
+ 
+2019-02-08 18:06:45,354 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-08 18:06:45,485 [7] INFO  App  
+ Request finished in 131.4652ms 200 application/json;charset=utf-8 
+ 
+2019-02-08 18:06:51,584 [13] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/api/Users   
+ 
+2019-02-08 18:06:51,696 [13] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.UsersController.Get (GoodMarket.Api)' 
+ 
+2019-02-08 18:06:51,722 [13] INFO  App  
+ Route matched with {action = "Get", controller = "Users"}. Executing action GoodMarket.Api.Controllers.UsersController.Get (GoodMarket.Api) 
+ 
+2019-02-08 18:06:52,342 [13] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None 
+ 
+2019-02-08 18:06:52,348 [13] INFO  App  
+ Executing action method GoodMarket.Api.Controllers.UsersController.Get (GoodMarket.Api) - Validation state: Valid 
+ 
+2019-02-08 18:06:53,005 [13] INFO  App  
+ Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT u."Id", u."Details", u."Email", u."Password", u."Role"
+FROM "Users" AS u 
+ 
+2019-02-08 18:06:53,024 [13] INFO  App  
+ Executed action method GoodMarket.Api.Controllers.UsersController.Get (GoodMarket.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 672.842ms. 
+ 
+2019-02-08 18:06:53,036 [13] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GoodMarket.Domain.User, GoodMarket.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2019-02-08 18:06:53,050 [13] INFO  App  
+ Executed action GoodMarket.Api.Controllers.UsersController.Get (GoodMarket.Api) in 1325.3975ms 
+ 
+2019-02-08 18:06:53,052 [13] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.UsersController.Get (GoodMarket.Api)' 
+ 
+2019-02-08 18:06:53,059 [13] INFO  App  
+ Request finished in 1475.236ms 200 application/json; charset=utf-8 
+ 
+2019-02-08 19:59:41,404 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-08 19:59:42,990 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-08 19:59:43,257 [7] INFO  App  
+ Request finished in 266.7365ms 200 text/html 
+ 
+2019-02-08 19:59:43,639 [8] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-08 19:59:43,782 [8] INFO  App  
+ Request finished in 142.9142ms 200 application/json;charset=utf-8 
+ 
+2019-02-08 20:12:49,588 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-08 20:12:51,089 [10] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-08 20:12:51,349 [10] INFO  App  
+ Request finished in 260.7226ms 200 text/html 
+ 
+2019-02-08 20:12:51,578 [9] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-08 20:12:51,722 [9] INFO  App  
+ Request finished in 144.8212ms 200 application/json;charset=utf-8 
+ 

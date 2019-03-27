@@ -1,0 +1,846 @@
+2019-02-18 13:39:30,495 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-18 13:41:39,709 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-18 13:42:41,359 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-18 13:55:19,511 [1] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 13:55:19,542 [1] INFO  App  
+ Saved 0 entities to in-memory store. 
+ 
+2019-02-18 13:55:25,522 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-18 13:56:44,709 [1] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 13:56:44,737 [1] INFO  App  
+ Saved 0 entities to in-memory store. 
+ 
+2019-02-18 13:56:44,826 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-18 13:56:46,829 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger   
+ 
+2019-02-18 13:56:46,963 [7] INFO  App  
+ Request finished in 133.8207ms 301  
+ 
+2019-02-18 13:56:46,968 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-18 13:56:47,169 [7] INFO  App  
+ Request finished in 200.9083ms 200 text/html 
+ 
+2019-02-18 13:56:47,195 [9] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui.css   
+ 
+2019-02-18 13:56:47,206 [12] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js   
+ 
+2019-02-18 13:56:47,228 [8] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js   
+ 
+2019-02-18 13:56:47,237 [9] INFO  App  
+ Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+ 
+2019-02-18 13:56:47,239 [9] INFO  App  
+ Request finished in 43.4114ms 200 text/css 
+ 
+2019-02-18 13:56:47,254 [4] INFO  App  
+ Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+ 
+2019-02-18 13:56:47,265 [4] INFO  App  
+ Request finished in 36.545ms 200 application/javascript 
+ 
+2019-02-18 13:56:47,274 [15] INFO  App  
+ Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+ 
+2019-02-18 13:56:47,275 [15] INFO  App  
+ Request finished in 69.3972ms 200 application/javascript 
+ 
+2019-02-18 13:56:47,610 [4] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-18 13:56:47,640 [8] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/favicon-32x32.png   
+ 
+2019-02-18 13:56:47,647 [8] INFO  App  
+ Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+ 
+2019-02-18 13:56:47,648 [8] INFO  App  
+ Request finished in 8.1413ms 200 image/png 
+ 
+2019-02-18 13:56:47,749 [4] INFO  App  
+ Request finished in 138.9337ms 200 application/json;charset=utf-8 
+ 
+2019-02-18 13:57:08,460 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/api/Products   
+ 
+2019-02-18 13:57:08,605 [7] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api)' 
+ 
+2019-02-18 13:57:08,637 [7] INFO  App  
+ Route matched with {action = "Get", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) 
+ 
+2019-02-18 13:57:23,594 [7] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 13:57:23,606 [7] INFO  App  
+ Executing action method GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) - Validation state: Valid 
+ 
+2019-02-18 13:57:23,695 [7] INFO  App  
+ Executed action method GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 86.0639ms. 
+ 
+2019-02-18 13:57:23,704 [7] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GoodMarket.Domain.Product, GoodMarket.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2019-02-18 13:57:23,714 [7] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) in 15074.7199ms 
+ 
+2019-02-18 13:57:23,715 [7] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api)' 
+ 
+2019-02-18 13:57:23,716 [7] INFO  App  
+ Request finished in 15255.95ms 200 application/json; charset=utf-8 
+ 
+2019-02-18 13:57:40,964 [20] INFO  App  
+ Request starting HTTP/1.1 POST https://localhost:5001/api/Products application/json-patch+json 35 
+ 
+2019-02-18 13:57:40,972 [20] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:57:40,982 [20] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 13:57:40,997 [20] INFO  App  
+ Route matched with {action = "Post", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) 
+ 
+2019-02-18 13:57:40,999 [20] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 13:57:41,067 [20] INFO  App  
+ Executing action method GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) with arguments (GoodMarket.Domain.Product) - Validation state: Valid 
+ 
+2019-02-18 13:57:41,133 [20] INFO  App  
+ Saved 1 entities to in-memory store. 
+ 
+2019-02-18 13:57:41,135 [20] INFO  App  
+ Executed action method GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 65.9307ms. 
+ 
+2019-02-18 13:57:41,137 [20] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Int32'. 
+ 
+2019-02-18 13:57:41,138 [20] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) in 140.124ms 
+ 
+2019-02-18 13:57:41,139 [20] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 13:57:41,140 [20] INFO  App  
+ Request finished in 176.1524ms 200 application/json; charset=utf-8 
+ 
+2019-02-18 13:57:43,567 [15] INFO  App  
+ Request starting HTTP/1.1 POST https://localhost:5001/api/Products application/json-patch+json 35 
+ 
+2019-02-18 13:57:43,569 [15] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:57:43,571 [15] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 13:57:43,572 [15] INFO  App  
+ Route matched with {action = "Post", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) 
+ 
+2019-02-18 13:57:43,573 [15] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 13:57:43,575 [15] INFO  App  
+ Executing action method GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) with arguments (GoodMarket.Domain.Product) - Validation state: Valid 
+ 
+2019-02-18 13:57:43,578 [15] INFO  App  
+ Saved 1 entities to in-memory store. 
+ 
+2019-02-18 13:57:43,579 [15] INFO  App  
+ Executed action method GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.7201ms. 
+ 
+2019-02-18 13:57:43,582 [15] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Int32'. 
+ 
+2019-02-18 13:57:43,584 [15] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) in 11.0287ms 
+ 
+2019-02-18 13:57:43,584 [15] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 13:57:43,585 [15] INFO  App  
+ Request finished in 18.0564ms 200 application/json; charset=utf-8 
+ 
+2019-02-18 13:57:47,146 [16] INFO  App  
+ Request starting HTTP/1.1 POST https://localhost:5001/api/Products application/json-patch+json 35 
+ 
+2019-02-18 13:57:47,147 [16] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:57:47,149 [16] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 13:57:47,150 [16] INFO  App  
+ Route matched with {action = "Post", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) 
+ 
+2019-02-18 13:57:47,151 [16] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 13:57:47,152 [16] INFO  App  
+ Executing action method GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) with arguments (GoodMarket.Domain.Product) - Validation state: Valid 
+ 
+2019-02-18 13:57:47,154 [16] INFO  App  
+ Saved 1 entities to in-memory store. 
+ 
+2019-02-18 13:57:47,155 [16] INFO  App  
+ Executed action method GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.0771ms. 
+ 
+2019-02-18 13:57:47,155 [16] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Int32'. 
+ 
+2019-02-18 13:57:47,156 [16] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) in 5.7347ms 
+ 
+2019-02-18 13:57:47,160 [16] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 13:57:47,161 [16] INFO  App  
+ Request finished in 14.9529ms 200 application/json; charset=utf-8 
+ 
+2019-02-18 13:57:53,067 [15] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/api/Products   
+ 
+2019-02-18 13:57:53,069 [15] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api)' 
+ 
+2019-02-18 13:57:53,072 [15] INFO  App  
+ Route matched with {action = "Get", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) 
+ 
+2019-02-18 13:57:53,073 [15] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 13:57:53,074 [15] INFO  App  
+ Executing action method GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) - Validation state: Valid 
+ 
+2019-02-18 13:57:53,091 [15] INFO  App  
+ Executed action method GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 16.2066ms. 
+ 
+2019-02-18 13:57:53,092 [15] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GoodMarket.Domain.Product, GoodMarket.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2019-02-18 13:57:53,098 [15] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) in 24.6764ms 
+ 
+2019-02-18 13:57:53,099 [15] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api)' 
+ 
+2019-02-18 13:57:53,100 [15] INFO  App  
+ Request finished in 33.4534ms 200 application/json; charset=utf-8 
+ 
+2019-02-18 13:59:14,249 [19] INFO  App  
+ Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/products   
+ 
+2019-02-18 13:59:14,251 [19] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:59:14,254 [19] INFO  App  
+ Request finished in 5.0769ms 204  
+ 
+2019-02-18 13:59:14,299 [19] INFO  App  
+ Request starting HTTP/1.1 POST https://localhost:5001/api/products application/json 0 
+ 
+2019-02-18 13:59:14,301 [19] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:59:14,386 [19] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 13:59:14,391 [19] INFO  App  
+ Route matched with {action = "Post", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) 
+ 
+2019-02-18 13:59:14,406 [19] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 13:59:14,463 [26] INFO  App  
+ Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/products   
+ 
+2019-02-18 13:59:14,464 [19] INFO  App  
+ Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+ 
+2019-02-18 13:59:14,468 [26] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:59:14,480 [19] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) in 75.0531ms 
+ 
+2019-02-18 13:59:14,482 [26] INFO  App  
+ Request finished in 19.4328ms 204  
+ 
+2019-02-18 13:59:14,483 [19] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 13:59:14,487 [19] INFO  App  
+ Request finished in 188.0271ms 400 application/problem+json; charset=utf-8 
+ 
+2019-02-18 13:59:14,520 [15] INFO  App  
+ Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/products   
+ 
+2019-02-18 13:59:14,520 [19] INFO  App  
+ Request starting HTTP/1.1 POST https://localhost:5001/api/products application/json 0 
+ 
+2019-02-18 13:59:14,522 [15] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:59:14,527 [19] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:59:14,528 [15] INFO  App  
+ Request finished in 8.069ms 204  
+ 
+2019-02-18 13:59:14,529 [19] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 13:59:14,537 [19] INFO  App  
+ Route matched with {action = "Post", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) 
+ 
+2019-02-18 13:59:14,538 [19] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 13:59:14,539 [15] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/api/products application/json  
+ 
+2019-02-18 13:59:14,540 [19] INFO  App  
+ Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+ 
+2019-02-18 13:59:14,540 [15] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:59:14,541 [19] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) in 3.3202ms 
+ 
+2019-02-18 13:59:14,542 [15] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api)' 
+ 
+2019-02-18 13:59:14,546 [19] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 13:59:14,546 [15] INFO  App  
+ Route matched with {action = "Get", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) 
+ 
+2019-02-18 13:59:14,547 [19] INFO  App  
+ Request finished in 26.717ms 400 application/problem+json; charset=utf-8 
+ 
+2019-02-18 13:59:14,548 [15] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 13:59:14,550 [15] INFO  App  
+ Executing action method GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) - Validation state: Valid 
+ 
+2019-02-18 13:59:14,551 [15] INFO  App  
+ Executed action method GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.5867ms. 
+ 
+2019-02-18 13:59:14,552 [15] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GoodMarket.Domain.Product, GoodMarket.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2019-02-18 13:59:14,553 [15] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) in 5.4623ms 
+ 
+2019-02-18 13:59:14,558 [15] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api)' 
+ 
+2019-02-18 13:59:14,561 [26] INFO  App  
+ Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/products   
+ 
+2019-02-18 13:59:14,562 [15] INFO  App  
+ Request finished in 22.6048ms 200 application/json; charset=utf-8 
+ 
+2019-02-18 13:59:14,565 [26] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:59:14,569 [26] INFO  App  
+ Request finished in 7.5863ms 204  
+ 
+2019-02-18 13:59:14,577 [16] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/api/products application/json  
+ 
+2019-02-18 13:59:14,579 [16] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:59:14,579 [16] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api)' 
+ 
+2019-02-18 13:59:14,580 [16] INFO  App  
+ Route matched with {action = "Get", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) 
+ 
+2019-02-18 13:59:14,582 [16] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 13:59:14,583 [16] INFO  App  
+ Executing action method GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) - Validation state: Valid 
+ 
+2019-02-18 13:59:14,584 [16] INFO  App  
+ Executed action method GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.3743ms. 
+ 
+2019-02-18 13:59:14,585 [16] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GoodMarket.Domain.Product, GoodMarket.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2019-02-18 13:59:14,586 [16] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) in 4.4126ms 
+ 
+2019-02-18 13:59:14,587 [16] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api)' 
+ 
+2019-02-18 13:59:14,591 [16] INFO  App  
+ Request finished in 14.028ms 200 application/json; charset=utf-8 
+ 
+2019-02-18 13:59:14,917 [28] INFO  App  
+ Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/products   
+ 
+2019-02-18 13:59:14,918 [28] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:59:14,920 [28] INFO  App  
+ Request finished in 2.6837ms 204  
+ 
+2019-02-18 13:59:14,969 [28] INFO  App  
+ Request starting HTTP/1.1 POST https://localhost:5001/api/products application/json 0 
+ 
+2019-02-18 13:59:14,970 [28] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:59:14,972 [28] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 13:59:14,972 [28] INFO  App  
+ Route matched with {action = "Post", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) 
+ 
+2019-02-18 13:59:14,973 [28] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 13:59:14,974 [28] INFO  App  
+ Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+ 
+2019-02-18 13:59:14,975 [28] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) in 2.337ms 
+ 
+2019-02-18 13:59:14,978 [28] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 13:59:14,979 [28] INFO  App  
+ Request finished in 10.2574ms 400 application/problem+json; charset=utf-8 
+ 
+2019-02-18 13:59:15,062 [14] INFO  App  
+ Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/products   
+ 
+2019-02-18 13:59:15,063 [14] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:59:15,064 [14] INFO  App  
+ Request finished in 2.8345ms 204  
+ 
+2019-02-18 13:59:15,073 [14] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/api/products application/json  
+ 
+2019-02-18 13:59:15,074 [14] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:59:15,075 [14] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api)' 
+ 
+2019-02-18 13:59:15,076 [14] INFO  App  
+ Route matched with {action = "Get", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) 
+ 
+2019-02-18 13:59:15,077 [14] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 13:59:15,078 [14] INFO  App  
+ Executing action method GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) - Validation state: Valid 
+ 
+2019-02-18 13:59:15,079 [14] INFO  App  
+ Executed action method GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.3352ms. 
+ 
+2019-02-18 13:59:15,079 [14] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GoodMarket.Domain.Product, GoodMarket.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2019-02-18 13:59:15,081 [14] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) in 4.8551ms 
+ 
+2019-02-18 13:59:15,083 [14] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api)' 
+ 
+2019-02-18 13:59:15,087 [14] INFO  App  
+ Request finished in 14.0853ms 200 application/json; charset=utf-8 
+ 
+2019-02-18 13:59:50,375 [29] INFO  App  
+ Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/products   
+ 
+2019-02-18 13:59:50,377 [29] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:59:50,393 [29] INFO  App  
+ Request finished in 18.2796ms 204  
+ 
+2019-02-18 13:59:50,444 [16] INFO  App  
+ Request starting HTTP/1.1 POST https://localhost:5001/api/products application/json 0 
+ 
+2019-02-18 13:59:50,446 [16] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:59:50,449 [16] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 13:59:50,451 [16] INFO  App  
+ Route matched with {action = "Post", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) 
+ 
+2019-02-18 13:59:50,452 [16] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 13:59:50,453 [16] INFO  App  
+ Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+ 
+2019-02-18 13:59:50,454 [16] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) in 2.7295ms 
+ 
+2019-02-18 13:59:50,455 [16] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 13:59:50,456 [16] INFO  App  
+ Request finished in 24.7116ms 400 application/problem+json; charset=utf-8 
+ 
+2019-02-18 13:59:50,490 [29] INFO  App  
+ Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/products   
+ 
+2019-02-18 13:59:50,491 [29] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:59:50,495 [29] INFO  App  
+ Request finished in 4.6026ms 204  
+ 
+2019-02-18 13:59:50,512 [16] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/api/products application/json  
+ 
+2019-02-18 13:59:50,513 [16] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 13:59:50,515 [16] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api)' 
+ 
+2019-02-18 13:59:50,517 [16] INFO  App  
+ Route matched with {action = "Get", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) 
+ 
+2019-02-18 13:59:50,519 [16] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 13:59:50,520 [16] INFO  App  
+ Executing action method GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) - Validation state: Valid 
+ 
+2019-02-18 13:59:50,523 [16] INFO  App  
+ Executed action method GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.9523ms. 
+ 
+2019-02-18 13:59:50,526 [16] INFO  App  
+ Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GoodMarket.Domain.Product, GoodMarket.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ 
+2019-02-18 13:59:50,528 [16] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api) in 9.8782ms 
+ 
+2019-02-18 13:59:50,528 [16] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Get (GoodMarket.Api)' 
+ 
+2019-02-18 13:59:50,530 [16] INFO  App  
+ Request finished in 17.9261ms 200 application/json; charset=utf-8 
+ 
+2019-02-18 14:01:07,917 [33] INFO  App  
+ Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/products   
+ 
+2019-02-18 14:01:07,920 [33] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 14:01:07,922 [33] INFO  App  
+ Request finished in 5.2816ms 204  
+ 
+2019-02-18 14:01:08,039 [33] INFO  App  
+ Request starting HTTP/1.1 POST https://localhost:5001/api/products application/json 0 
+ 
+2019-02-18 14:01:08,054 [33] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 14:01:08,070 [16] INFO  App  
+ Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/products   
+ 
+2019-02-18 14:01:08,076 [33] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 14:01:08,116 [16] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 14:01:08,117 [33] INFO  App  
+ Route matched with {action = "Post", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) 
+ 
+2019-02-18 14:01:08,118 [16] INFO  App  
+ Request finished in 47.9926ms 204  
+ 
+2019-02-18 14:01:08,121 [33] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 14:01:08,124 [33] INFO  App  
+ Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+ 
+2019-02-18 14:01:08,130 [33] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) in 10.2416ms 
+ 
+2019-02-18 14:01:08,135 [33] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 14:01:08,139 [33] INFO  App  
+ Request finished in 100.2102ms 400 application/problem+json; charset=utf-8 
+ 
+2019-02-18 14:01:08,195 [37] INFO  App  
+ Request starting HTTP/1.1 POST https://localhost:5001/api/products application/json 0 
+ 
+2019-02-18 14:01:08,262 [37] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 14:01:08,264 [37] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 14:01:08,266 [37] INFO  App  
+ Route matched with {action = "Post", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) 
+ 
+2019-02-18 14:01:08,268 [37] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 14:01:08,271 [37] INFO  App  
+ Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+ 
+2019-02-18 14:01:08,273 [37] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) in 5.4824ms 
+ 
+2019-02-18 14:01:08,276 [37] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 14:01:08,277 [37] INFO  App  
+ Request finished in 87.0457ms 400 application/problem+json; charset=utf-8 
+ 
+2019-02-18 14:01:08,737 [37] INFO  App  
+ Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/products   
+ 
+2019-02-18 14:01:08,738 [37] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 14:01:08,741 [37] INFO  App  
+ Request finished in 4.0131ms 204  
+ 
+2019-02-18 14:01:08,783 [29] INFO  App  
+ Request starting HTTP/1.1 POST https://localhost:5001/api/products application/json 0 
+ 
+2019-02-18 14:01:08,784 [29] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 14:01:08,787 [29] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 14:01:08,789 [29] INFO  App  
+ Route matched with {action = "Post", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) 
+ 
+2019-02-18 14:01:08,790 [29] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 14:01:08,791 [29] INFO  App  
+ Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+ 
+2019-02-18 14:01:08,793 [29] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) in 3.0388ms 
+ 
+2019-02-18 14:01:08,796 [29] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 14:01:08,797 [29] INFO  App  
+ Request finished in 14.1547ms 400 application/problem+json; charset=utf-8 
+ 
+2019-02-18 14:01:10,223 [29] INFO  App  
+ Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/products   
+ 
+2019-02-18 14:01:10,224 [29] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 14:01:10,226 [29] INFO  App  
+ Request finished in 2.6034ms 204  
+ 
+2019-02-18 14:01:10,264 [29] INFO  App  
+ Request starting HTTP/1.1 POST https://localhost:5001/api/products application/json 0 
+ 
+2019-02-18 14:01:10,265 [29] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 14:01:10,267 [29] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 14:01:10,270 [29] INFO  App  
+ Route matched with {action = "Post", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) 
+ 
+2019-02-18 14:01:10,271 [29] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 14:01:10,273 [29] INFO  App  
+ Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+ 
+2019-02-18 14:01:10,275 [29] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) in 3.7746ms 
+ 
+2019-02-18 14:01:10,279 [29] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 14:01:10,280 [29] INFO  App  
+ Request finished in 16.5044ms 400 application/problem+json; charset=utf-8 
+ 
+2019-02-18 14:03:02,348 [1] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 14:03:02,378 [1] INFO  App  
+ Saved 0 entities to in-memory store. 
+ 
+2019-02-18 14:03:02,468 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-18 14:03:03,648 [13] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-18 14:03:03,916 [13] INFO  App  
+ Request finished in 269.0443ms 200 text/html 
+ 
+2019-02-18 14:03:04,317 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-18 14:03:04,481 [7] INFO  App  
+ Request finished in 163.8243ms 200 application/json;charset=utf-8 
+ 
+2019-02-18 14:04:54,764 [1] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 14:04:54,791 [1] INFO  App  
+ Saved 0 entities to in-memory store. 
+ 
+2019-02-18 14:04:54,876 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-18 14:04:56,820 [6] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-18 14:04:57,073 [6] INFO  App  
+ Request finished in 252.8376ms 200 text/html 
+ 
+2019-02-18 14:04:57,364 [9] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-18 14:04:57,508 [9] INFO  App  
+ Request finished in 143.5314ms 200 application/json;charset=utf-8 
+ 
+2019-02-18 14:05:10,328 [14] INFO  App  
+ Request starting HTTP/1.1 POST https://localhost:5001/api/products  0 
+ 
+2019-02-18 14:05:10,335 [14] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 14:05:10,478 [14] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 14:05:10,511 [14] INFO  App  
+ Route matched with {action = "Post", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) 
+ 
+2019-02-18 14:05:10,518 [14] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 14:05:10,542 [14] INFO  App  
+ Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+ 
+2019-02-18 14:05:10,557 [14] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) in 42.4517ms 
+ 
+2019-02-18 14:05:10,558 [14] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 14:05:10,559 [14] INFO  App  
+ Request finished in 230.8958ms 415 application/problem+json; charset=utf-8 
+ 
+2019-02-18 14:05:19,752 [9] INFO  App  
+ Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/products   
+ 
+2019-02-18 14:05:19,754 [9] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 14:05:19,759 [9] INFO  App  
+ Request finished in 6.4771ms 204  
+ 
+2019-02-18 14:05:19,808 [6] INFO  App  
+ Request starting HTTP/1.1 POST https://localhost:5001/api/products application/json 0 
+ 
+2019-02-18 14:05:19,810 [6] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 14:05:19,816 [6] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 14:05:19,821 [6] INFO  App  
+ Route matched with {action = "Post", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) 
+ 
+2019-02-18 14:05:19,822 [6] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 14:05:19,827 [6] INFO  App  
+ Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+ 
+2019-02-18 14:05:19,837 [6] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) in 15.6591ms 
+ 
+2019-02-18 14:05:19,839 [6] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 14:05:19,840 [6] INFO  App  
+ Request finished in 32.5429ms 400 application/problem+json; charset=utf-8 
+ 
+2019-02-18 14:05:19,891 [10] INFO  App  
+ Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/products   
+ 
+2019-02-18 14:05:19,892 [10] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 14:05:19,894 [10] INFO  App  
+ Request finished in 2.7057ms 204  
+ 
+2019-02-18 14:05:19,950 [7] INFO  App  
+ Request starting HTTP/1.1 POST https://localhost:5001/api/products application/json 0 
+ 
+2019-02-18 14:05:19,952 [7] INFO  App  
+ CORS policy execution successful. 
+ 
+2019-02-18 14:05:19,953 [7] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 14:05:19,954 [7] INFO  App  
+ Route matched with {action = "Post", controller = "Products"}. Executing action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) 
+ 
+2019-02-18 14:05:19,955 [7] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=db_dbmarket  
+ 
+2019-02-18 14:05:19,956 [7] INFO  App  
+ Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+ 
+2019-02-18 14:05:19,957 [7] INFO  App  
+ Executed action GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api) in 2.2354ms 
+ 
+2019-02-18 14:05:19,959 [7] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.ProductsController.Post (GoodMarket.Api)' 
+ 
+2019-02-18 14:05:19,961 [7] INFO  App  
+ Request finished in 10.177ms 400 application/problem+json; charset=utf-8 
+ 

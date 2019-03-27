@@ -1,0 +1,174 @@
+2019-02-07 20:05:05,052 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-07 20:05:09,117 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-07 20:05:09,448 [7] INFO  App  
+ Request finished in 331.7989ms 200 text/html 
+ 
+2019-02-07 20:05:09,796 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-07 20:05:10,010 [7] INFO  App  
+ Request finished in 213.7668ms 200 application/json;charset=utf-8 
+ 
+2019-02-07 20:43:35,109 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-07 20:43:36,873 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-07 20:43:37,139 [7] INFO  App  
+ Request finished in 265.9265ms 200 text/html 
+ 
+2019-02-07 20:43:37,416 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-07 20:43:37,566 [7] INFO  App  
+ Request finished in 150.0642ms 200 application/json;charset=utf-8 
+ 
+2019-02-07 20:44:50,345 [18] INFO  App  
+ Request starting HTTP/1.1 POST https://localhost:5001/api/Customers application/json-patch+json 182 
+ 
+2019-02-07 20:44:50,442 [18] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.CustomersController.Post (GoodMarket.Api)' 
+ 
+2019-02-07 20:44:50,480 [18] INFO  App  
+ Route matched with {action = "Post", controller = "Customers"}. Executing action GoodMarket.Api.Controllers.CustomersController.Post (GoodMarket.Api) 
+ 
+2019-02-07 20:45:52,511 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-07 20:45:53,955 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-07 20:45:54,228 [7] INFO  App  
+ Request finished in 273.7844ms 200 text/html 
+ 
+2019-02-07 20:45:54,498 [14] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-07 20:45:54,664 [14] INFO  App  
+ Request finished in 165.5867ms 200 application/json;charset=utf-8 
+ 
+2019-02-07 20:46:07,052 [7] INFO  App  
+ Request starting HTTP/1.1 POST https://localhost:5001/api/Customers application/json-patch+json 187 
+ 
+2019-02-07 20:46:07,165 [7] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.CustomersController.Post (GoodMarket.Api)' 
+ 
+2019-02-07 20:46:07,205 [7] INFO  App  
+ Route matched with {action = "Post", controller = "Customers"}. Executing action GoodMarket.Api.Controllers.CustomersController.Post (GoodMarket.Api) 
+ 
+2019-02-07 20:46:07,667 [7] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None 
+ 
+2019-02-07 20:46:07,764 [7] INFO  App  
+ Executing action method GoodMarket.Api.Controllers.CustomersController.Post (GoodMarket.Api) with arguments (GoodMarket.Domain.Customer) - Validation state: Valid 
+ 
+2019-02-07 20:46:07,963 [7] INFO  App  
+ Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA foreign_keys=ON; 
+ 
+2019-02-07 20:46:08,006 [7] ERROR App  
+ Failed executing DbCommand (7ms) [Parameters=[@p0='?' (Size = 21), @p1='?' (Size = 59), @p2='?' (Size = 11)], CommandType='Text', CommandTimeout='30']
+INSERT INTO "Customers" ("Cart", "Details", "Email")
+VALUES (@p0, @p1, @p2);
+SELECT "Id"
+FROM "Customers"
+WHERE changes() = 1 AND "Id" = last_insert_rowid(); 
+ 
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such table: Customers'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+2019-02-07 20:46:08,067 [7] ERROR App  
+ An exception occurred in the database while saving changes for context type 'GoodMarket.Persistence.GoodMarketDb'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Microsoft.Data.Sqlite.SqliteException: SQLite Error 1: 'no such table: Customers'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) 
+ 
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Microsoft.Data.Sqlite.SqliteException: SQLite Error 1: 'no such table: Customers'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2019-02-07 20:46:08,237 [7] INFO  App  
+ Executed action GoodMarket.Api.Controllers.CustomersController.Post (GoodMarket.Api) in 1027.7163ms 
+ 
+2019-02-07 20:46:08,239 [7] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.CustomersController.Post (GoodMarket.Api)' 
+ 
+2019-02-07 20:46:08,242 [7] ERROR App  
+ An unhandled exception has occurred while executing the request. 
+ 
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Microsoft.Data.Sqlite.SqliteException: SQLite Error 1: 'no such table: Customers'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at GoodMarket.Application.Queries.BaseCreateCommandHandler`1.Handle(BaseCreateCommand`1 request, CancellationToken cancellationToken) in C:\Users\Norix\source\repos\GoodMarket\GoodMarket.Application\CRUD\BaseCreateCommandHandler.cs:line 34
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at GoodMarket.Api.Controllers.BaseRestController`1.Post(TEntity value) in C:\Users\Norix\source\repos\GoodMarket\GoodMarket.Api\Controllers\REST\BaseRestController.cs:line 48
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-02-07 20:48:34,020 [1] INFO  App  
+ Entity Framework Core 2.2.1-servicing-10028 initialized 'GoodMarketDb' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None 
+ 
+2019-02-07 23:34:44,190 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 

@@ -1,0 +1,45 @@
+2019-02-07 14:57:08,485 [1] INFO  App  
+ User profile is available. Using 'C:\Users\Norix\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ 
+2019-02-07 14:57:10,333 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html   
+ 
+2019-02-07 14:57:10,626 [7] INFO  App  
+ Request finished in 293.6093ms 200 text/html 
+ 
+2019-02-07 14:57:10,926 [7] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json   
+ 
+2019-02-07 14:57:11,087 [7] INFO  App  
+ Request finished in 160.5111ms 200 application/json;charset=utf-8 
+ 
+2019-02-07 14:57:20,794 [6] INFO  App  
+ Request starting HTTP/1.1 GET https://localhost:5001/api/Auth   
+ 
+2019-02-07 14:57:20,904 [6] INFO  App  
+ Executing endpoint 'GoodMarket.Api.Controllers.AuthController.GetCurrent (GoodMarket.Api)' 
+ 
+2019-02-07 14:57:20,926 [6] INFO  App  
+ Route matched with {action = "GetCurrent", controller = "Auth"}. Executing action GoodMarket.Api.Controllers.AuthController.GetCurrent (GoodMarket.Api) 
+ 
+2019-02-07 14:57:20,939 [6] INFO  App  
+ Authorization failed. 
+ 
+2019-02-07 14:57:20,941 [6] INFO  App  
+ Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+ 
+2019-02-07 14:57:20,948 [6] INFO  App  
+ Executing ChallengeResult with authentication schemes (). 
+ 
+2019-02-07 14:57:20,955 [6] INFO  App  
+ AuthenticationScheme: Bearer was challenged. 
+ 
+2019-02-07 14:57:20,959 [6] INFO  App  
+ Executed action GoodMarket.Api.Controllers.AuthController.GetCurrent (GoodMarket.Api) in 29.4263ms 
+ 
+2019-02-07 14:57:20,960 [6] INFO  App  
+ Executed endpoint 'GoodMarket.Api.Controllers.AuthController.GetCurrent (GoodMarket.Api)' 
+ 
+2019-02-07 14:57:20,963 [6] INFO  App  
+ Request finished in 168.7587ms 401  
+ 

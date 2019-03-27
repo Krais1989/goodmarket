@@ -1,0 +1,49 @@
+#
+version: '3.7'
+
+services:
+
+  app_gm:
+    restart: always
+    image: goodmarket
+    build:
+      context: ./
+      #dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      net_backend:
+        aliases:
+        - app_gm
+    depends_on:
+      - db_psql
+    
+  db_psql:
+    image: postgres
+    restart: always
+    environment: 
+      POSTGRES_USER: gmuser
+      POSTGRES_PASSWORD: gmpass
+    ports:
+      - 11060:5432
+    networks:
+      net_backend:
+          aliases:
+          - db_psql
+    
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+    - 8080:8080
+    networks:
+      net_backend:
+          aliases:
+          - adminer
+    
+networks:
+  net_backend:
+      # driver: bridge
+      # external: true
+      # name: host
+      
