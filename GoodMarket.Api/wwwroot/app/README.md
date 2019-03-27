@@ -11,6 +11,6 @@ SPA-приложение на React.
     <br/>
     Порт можно поменять в package.json, scripts > start. По умолчанию 5002.
 
-Настройка адрессов API
+Настройка адрессов API:
     <br/>
     В файле app/src/index.js, переменная apiUrl
