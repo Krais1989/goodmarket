@@ -1,20 +1,31 @@
-## GoodMarket.API
+## Структура проектов серверной части
+
+### GoodMarket.API
   .Net Core WebApi приложение.
   
-## GoodMarket.Application.Tests
+### GoodMarket.Application.Tests
   Unit-Тесты на xUnit
   
-## GoodMarket.Application
+### GoodMarket.Application
   Библиотека с бизнес-логикой
   
-## GoodMarket.Domain
+### GoodMarket.Domain
   Библиотека с классами доменных объектов.
   
-## GoodMarket.Persistence
+### GoodMarket.Persistence
   Библиотека с функциями доступа к хранилищу
   
-## GoodMarket.Common
+### GoodMarket.Common
   Библиотека с общим функционалом.
+  
+  
+## Запуск серверной части
+
+### Локально 
+
+### Через Docker
+  Образ собирается через Dockerfile.
+  Развёртывать через Docker-Compose с конфигом gm.yml.
   
   
 ## Клиенская часть 
