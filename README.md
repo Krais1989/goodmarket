@@ -19,4 +19,4 @@
   Библиотека с общим функционалом.
   
 # Клиенская часть 
-  Сейчас располагается в GoodMarket.Api/wwwroot/app/
+  Сейчас располагается в [GoodMarket.Api/wwwroot/app/](GoodMarket.Api/wwwroot/app/)
