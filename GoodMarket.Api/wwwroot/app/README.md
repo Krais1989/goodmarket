@@ -13,4 +13,4 @@ SPA-приложение на React.
 
 Настройка адрессов API:
     <br/>
-    В файле app/src/index.js, переменная apiUrl.
+    В файле src/index.js, переменная apiUrl.
