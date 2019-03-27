@@ -9,13 +9,13 @@ import GmContext from './context/gm-context';
 
 /* Services */
 const http = new HttpService();
-const hostUrl = "https://localhost:5001/api";
+const apiUrl = "https://localhost:5001/api";
 const gmapi = {
     http: http,
-    products:  new RestApiService(hostUrl, "/products", http),
-    users:  new RestApiService(hostUrl, "/users", http),
-    orders: new RestApiService(hostUrl, "/orders", http),
-    customers: new RestApiService(hostUrl, "/customers", http),
+    products:  new RestApiService(apiUrl, "/products", http),
+    users:  new RestApiService(apiUrl, "/users", http),
+    orders: new RestApiService(apiUrl, "/orders", http),
+    customers: new RestApiService(apiUrl, "/customers", http),
 }
 
 /* Injectibles */

@@ -3,10 +3,10 @@ import HttpService from './http-service'
 
 export default class RestApiService {
     
-    fullPath = ()=>{ return this.host+this.path; }
+    fullPath = ()=>{ return this.apiUrl+this.path; }
 
-    constructor(host, path, httpService){
-        this.host = host; // "https://localhost:5001/api";
+    constructor(apiUrl, path, httpService){
+        this.apiUrl = apiUrl; // "https://localhost:5001/api";
         this.path = path;
         this.httpService = httpService ? httpService: new HttpService();
     }
