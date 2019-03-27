@@ -3,9 +3,10 @@ SPA-приложение на React.
 
 Постройка проекта:
 1) Выкачать указанные в package.json пакеты через npm:<br/>
-    npm install
+    <b>```npm install```</b>
 2) Запустить сценарий start:
-    npm start<br/>
+    <br/>
+    <b>```npm start```<br/>
     Порт можно поменять в package.json, scripts > start. По умолчанию 5002.
 
 Настройка адрессов API:
