@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace GoodMarket.Domain
 {
-    public class Cart : IEntity
+    public class Cart
     {
         public class Record
         {

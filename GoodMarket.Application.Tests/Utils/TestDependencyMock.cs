@@ -1,7 +1,10 @@
-﻿using GoodMarket.Application.CQRS;
+﻿using GoodMarket.Application;
 using GoodMarket.Domain;
+using GoodMarket.Persistence;
 using MediatR;
 using MediatR.Pipeline;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -17,23 +20,38 @@ namespace GoodMarket.Application.Tests
     {
         public static IServiceCollection Create()
         {
-            return Configure(new ServiceCollection());
+            return new ServiceCollection().ConfigureTest();
         }
 
-        public static IServiceCollection Configure(IServiceCollection services)
+        public static IServiceCollection ConfigureTest(this IServiceCollection services)
         {
             /* Test factories */
-            services.AddSingleton<TestEntityFactory<User>>();
-            services.AddSingleton<TestEntityFactory<Product>>();
+            //services.AddSingleton<TestEntityFactory<Account>>();
+            //services.AddSingleton<TestEntityFactory<Product>>();
 
-            services.AddMediatR();
-            services.AddScoped(typeof(BaseGetQueryHandler<>));
-            services.AddScoped(typeof(BaseGetAllQueryHandler<>));
-            services.AddScoped(typeof(BaseCreateCommandHandler<>));
-            services.AddScoped(typeof(BaseUpdateCommandHandler<>));
-            services.AddScoped(typeof(BaseDeleteCommandHandler<>));
+            services.AddDbContext<TestGoodMarketDb>(opt=> {
+                opt.UseInMemoryDatabase(databaseName: "db_test");
+            });
+
+            services.AddIdentity<Account, Role>(opt => { })
+                .AddUserManager<AccountManager>()
+                .AddRoleManager<AccountRoleManager>()
+                .AddSignInManager<AccountSignManager>()
+                .AddEntityFrameworkStores<TestGoodMarketDb>()
+                .AddDefaultTokenProviders();
+
+            //services.AddIdentityCore<Account>(opt => { })
+            //    .AddRoles<Role>()
+            //    .AddUserManager<AccountManager>()
+            //    .AddRoleManager<AccountRoleManager>()
+            //    .AddEntityFrameworkStores<TestGoodMarketDb>()
+            //    .AddDefaultTokenProviders();
+
+            services.AddScoped<UserManager<Account>, AccountManager>();
+
+            services.AddMediatR(typeof(BaseGetQueryHandler<>).Assembly);
             return services;
         }
-        
+
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using GoodMarket.Api.Authorization;
+using GoodMarket.Application;
 using GoodMarket.Application.Serialization;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -24,8 +24,6 @@ namespace GoodMarket.Api.Controllers
         public async Task Register([FromBody]RegistrationRequest request)
         {
             var result = await _mediator.Send(request);
-            Response.StatusCode = result.Success ? 200 : 400;
-            Response.ContentType = "application/json";
             await Response.WriteAsync(SSerializer.Serialize(result));
         }
     }

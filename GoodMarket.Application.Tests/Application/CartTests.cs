@@ -1,4 +1,4 @@
-﻿using GoodMarket.Application.CQRS;
+﻿using GoodMarket.Application;
 using GoodMarket.Domain;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace GoodMarket.Application.Tests.Application
             int cartId = -1;
             var ct = new CancellationToken();
 
-            using (var db = new TestGoodMarketDb())
+            using (var db = TestGoodMarketDb.Create())
             {
                 var crudCart = new CRUDWrapper<Cart>(db);
 
@@ -43,13 +43,13 @@ namespace GoodMarket.Application.Tests.Application
                 //await db.SaveChangesAsync();
             }
 
-            using (var db2 = new TestGoodMarketDb())
+            using (var db2 = TestGoodMarketDb.Create())
             {
                 var crudCart = new CRUDWrapper<Cart>(db2);
                 var recQuantity = new CartRecordQuantity(db2);
                 var recRemove = new CartRecordRemove(db2);
 
-                var cart = await crudCart.Get.Handle(new BaseGetQuery<Cart>(cartId, false), ct);
+                var cart = await crudCart.Get.Handle(new BaseGetQuery<Cart>(cartId), ct);
                 Assert.NotNull(cart);
                 Assert.DoesNotContain(1, cart.Records);
                 Assert.Contains(2, cart.Records);
@@ -58,7 +58,7 @@ namespace GoodMarket.Application.Tests.Application
                 cart.Add(66, 100);
                 //await db2.SaveChangesAsync();
 
-                var testCart = await crudCart.Get.Handle(new BaseGetQuery<Cart>(cartId, false), ct);
+                var testCart = await crudCart.Get.Handle(new BaseGetQuery<Cart>(cartId), ct);
                 Assert.NotNull(testCart);
                 Assert.Contains(66, testCart.Records);
                 Assert.Equal(100, testCart[66]);
@@ -71,7 +71,8 @@ namespace GoodMarket.Application.Tests.Application
             int cartId = -1;
             var ct = new CancellationToken();
 
-            using (var db = new TestGoodMarketDb())
+            
+            using (var db = TestGoodMarketDb.Create())
             {
                 var crudCart = new CRUDWrapper<Cart>(db);
                 var recQuantity = new CartRecordQuantity(db);
@@ -83,13 +84,13 @@ namespace GoodMarket.Application.Tests.Application
                 await recQuantity.Handle(new CartRecordQuantityMessage(cart.Id, 1, 10, false), ct);
             }
 
-            using (var db = new TestGoodMarketDb())
+            using (var db = TestGoodMarketDb.Create())
             {
                 var crudCart = new CRUDWrapper<Cart>(db);
                 var recQuantity = new CartRecordQuantity(db);
                 var recRemove = new CartRecordRemove(db);
 
-                var cart = await crudCart.Get.Handle(new BaseGetQuery<Cart>(cartId, false), ct);
+                var cart = await crudCart.Get.Handle(new BaseGetQuery<Cart>(cartId), ct);
                 Assert.DoesNotContain(1, cart.Records);
             }
         }

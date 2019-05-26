@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace GoodMarket.Application.Tests.Application
 {
-    public class TestEntity : IEntity
+    public class TestEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -14,7 +14,7 @@ namespace GoodMarket.Application.Tests.Application
         public IList<TestEntity2> SubList { get; set; }
     }
 
-    public class TestEntity2 : IEntity
+    public class TestEntity2
     {
         public int Id { get; set; }
         public string Name { get; set; }

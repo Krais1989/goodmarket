@@ -22,9 +22,6 @@ namespace GoodMarket.Persistence
                 {
                     dbContext.Database.Migrate();
                 }
-#if DEBUG
-                dbContext.Populate();
-#endif
             }
 
             return webHost;

@@ -25,7 +25,7 @@ namespace GoodMarket.Application.Tests.Application
         [Fact]
         public void SQLTest()
         {
-            using (var db = new TestGoodMarketDb())
+            using (var db = TestGoodMarketDb.Create())
             {
                 var crud = new CRUDWrapper<TestEntity>(db);
                 var result = db.Add(new TestEntity() {
@@ -71,7 +71,7 @@ namespace GoodMarket.Application.Tests.Application
 
             }
 
-            using (var db = new TestGoodMarketDb())
+            using (var db = TestGoodMarketDb.Create())
             {
                 var crud = new CRUDWrapper<TestEntity>(db);
                 var crudSub = new CRUDWrapper<TestEntity2>(db);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GoodMarket.Application;
-using GoodMarket.Application.CQRS;
+using GoodMarket.Application;
 using GoodMarket.Domain;
 using GoodMarket.Persistence;
 using MediatR;
@@ -15,7 +15,7 @@ namespace GoodMarket.Api.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class BaseRestController<TEntity> : ControllerBase
-        where TEntity : class, IEntity, new()
+        where TEntity : class, new()
     {
         protected GoodMarketDb _db;
         protected DbSet<TEntity> _set;
@@ -55,16 +55,15 @@ namespace GoodMarket.Api.Controllers
         public virtual async Task<IActionResult> Post([FromBody] TEntity value)
         {
             var result = await _mediator.Send(new BaseCreateCommand<TEntity>(value));
-            return Ok(result.Id);
+            return Ok(result);
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
         public virtual async Task<IActionResult> Put(int id, [FromBody] TEntity value)
         {
-            value.Id = id;
-            var result = await _mediator.Send(new BaseUpdateCommand<TEntity>(value));
-            if (result == null) return NotFound();            
+            var result = await _mediator.Send(new BaseUpdateCommand<TEntity>(id, value));
+            if (result == null) return NotFound();
             return Ok();
         }
 

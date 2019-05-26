@@ -11,13 +11,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MediatR;
-using GoodMarket.Persistence;
 using Microsoft.EntityFrameworkCore;
-using GoodMarket.Application;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using GoodMarket.Api.Authorization;
-using GoodMarket.Application.CQRS;
+using GoodMarket.Persistence;
+using GoodMarket.Application;
+using GoodMarket.Application;
 using GoodMarket.Domain;
 using GoodMarket.Api.Middlewares;
 
@@ -67,15 +66,15 @@ namespace GoodMarket.Api
                     opt.TokenValidationParameters = new TokenValidationParameters()
                     {
                         ValidateIssuer = true,
-                        ValidIssuer = AuthOptions.ISSUER,
+                        ValidIssuer = JwtSettings.ISSUER,
 
                         ValidateAudience = true,
-                        ValidAudience = AuthOptions.AUDIENCE,
+                        ValidAudience = JwtSettings.AUDIENCE,
 
                         ValidateLifetime = true,
 
                         ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = AuthOptions.GetSymmetricSecurityKey(),
+                        IssuerSigningKey = JwtSettings.GetSymmetricSecurityKey(),
                     };
                 });
 

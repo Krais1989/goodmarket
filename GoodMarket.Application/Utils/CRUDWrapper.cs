@@ -1,4 +1,4 @@
-﻿using GoodMarket.Application.CQRS;
+﻿using GoodMarket.Application;
 using GoodMarket.Domain;
 using GoodMarket.Persistence;
 
@@ -8,7 +8,7 @@ namespace GoodMarket.Application
     /// Обёртка под CRUD CQRS
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class CRUDWrapper<T> where T: class, IEntity, new()
+    public class CRUDWrapper<T> where T: class, new()
     {
         public BaseGetQueryHandler<T> Get { get; private set; }
         public BaseGetAllQueryHandler<T> GetAll { get; private set; }
