@@ -7,13 +7,18 @@
   <ItemGroup>
     <PackageReference Include="MediatR" Version="7.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.2.0" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GoodMarket.Authentication\GoodMarket.Authentication.csproj" />
     <ProjectReference Include="..\GoodMarket.Domain\GoodMarket.Domain.csproj" />
+    <ProjectReference Include="..\GoodMarket.Logger\GoodMarket.Logger.csproj" />
     <ProjectReference Include="..\GoodMarket.Persistence\GoodMarket.Persistence.csproj" />
   </ItemGroup>
 

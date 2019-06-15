@@ -11,6 +11,7 @@ using GoodMarket.Application.Serialization;
 using GoodMarket.Persistence;
 using Microsoft.EntityFrameworkCore;
 using GoodMarket.Application.Exceptions;
+using GoodMarket.Authentication;
 
 namespace GoodMarket.Application
 {
@@ -28,17 +29,31 @@ namespace GoodMarket.Application
 
     public class SignInHandler : IRequestHandler<SignInRequest, SignInResponse>
     {
-        private GoodMarketDb _db;
+        private readonly IJwtFactory _jwtFactory;
+        private readonly GoodMarketDb _db;
         private DbSet<Account> _dbUser;
-        public SignInHandler(GoodMarketDb db)
+
+
+        public SignInHandler(IJwtFactory jwtFactory, GoodMarketDb db)
         {
             _db = db;
             _dbUser = _db.Set<Account>();
+            _jwtFactory = jwtFactory;
         }
 
         public async Task<SignInResponse> Handle(SignInRequest request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var claims = new List<Claim>()
+            {
+                new Claim(ClaimTypes.Name, request.Email)
+            };
+
+            var response = new SignInResponse()
+            {
+                Login = request.Email,
+                Token = _jwtFactory.Generate(claims)
+            };
+            return response;
         }
     }
 

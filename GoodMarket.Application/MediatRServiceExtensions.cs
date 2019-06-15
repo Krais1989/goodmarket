@@ -9,7 +9,7 @@ namespace GoodMarket.Application
 {
     public static class MediatRServiceExtensions
     {
-        public static IServiceCollection AddApplicationMediatR(this IServiceCollection service)
+        public static IServiceCollection AddGMMediatoR(this IServiceCollection service)
         {
             return service.AddMediatR(typeof(MediatRServiceExtensions).Assembly);
         }

@@ -22,7 +22,7 @@ namespace GoodMarket.OrderProcessor
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddApplicationMediatR();
+            services.AddGMMediatoR();
             services.AddMediatR(typeof(Startup).Assembly);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -40,7 +40,7 @@ namespace GoodMarket.OrderProcessor
                 app.UseHsts();
             }
 
-            app.UseMiddleware<ExceptionHandlerMiddleware>();
+            app.UseGMExceptionHandling();
                         
             app.UseHttpsRedirection();
             app.UseMvc();

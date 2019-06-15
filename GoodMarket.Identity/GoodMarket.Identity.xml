@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GoodMarket.IdentityApi</name>
+    </assembly>
+    <members>
+        <member name="M:GoodMarket.Api.Controllers.SignInController.SignIn(GoodMarket.Application.SignInRequest)">
+            <summary>
+            Войти по имени/паролю
+            </summary>
+        </member>
+        <member name="M:GoodMarket.Api.Controllers.SignInController.SignOut">
+            <summary>
+            Выйти
+            </summary>
+        </member>
+        <member name="M:GoodMarket.Api.Controllers.SignInController.GetCurrent">
+            <summary>
+            Текущий юзер
+            </summary>
+        </member>
+    </members>
+</doc>
