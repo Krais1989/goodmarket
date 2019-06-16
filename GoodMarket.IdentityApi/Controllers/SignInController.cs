@@ -5,15 +5,12 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using GoodMarket.Application;
 using GoodMarket.Application.Exceptions;
-using GoodMarket.Application.Serialization;
 using GoodMarket.Domain;
-using GoodMarket.Persistence;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GoodMarket.Api.Controllers
+namespace GoodMarket.IdentityApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

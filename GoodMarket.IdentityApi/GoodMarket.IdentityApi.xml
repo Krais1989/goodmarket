@@ -4,24 +4,29 @@
         <name>GoodMarket.IdentityApi</name>
     </assembly>
     <members>
-        <member name="M:GoodMarket.Api.Controllers.SignInController.SignIn(GoodMarket.Application.SignInRequest)">
+        <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.SignIn(GoodMarket.Application.SignInRequest)">
             <summary>
             Войти по имени/паролю
             </summary>
         </member>
-        <member name="M:GoodMarket.Api.Controllers.SignInController.SignOut">
+        <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.SignOut">
             <summary>
             Выйти
             </summary>
         </member>
-        <member name="M:GoodMarket.Api.Controllers.SignInController.GetCurrent">
+        <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.GetCurrent">
             <summary>
             Текущий юзер
             </summary>
         </member>
-        <member name="M:GoodMarket.Api.Controllers.SignInController.Exception">
+        <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.Exception">
             <summary>
             Тестовое исключение
+            </summary>
+        </member>
+        <member name="T:GoodMarket.IdentityApi.GoodMarketIdentityDbContext">
+            <summary>
+            Контекст БД для обслуживания аккаунтов
             </summary>
         </member>
     </members>

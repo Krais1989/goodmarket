@@ -1,5 +1,6 @@
 ﻿using GoodMarket.Domain;
 using GoodMarket.Persistence;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,10 @@ using System.Threading.Tasks;
 
 namespace GoodMarket.IdentityApi
 {
-    public class GoodMarketIdentityDbContext : IdentityDbContext<int, User, Role, UserClaim, UserRole, UserLogin, RoleClaim, UserToken>
+    /// <summary>
+    /// Контекст БД для обслуживания аккаунтов
+    /// </summary>
+    public class GoodMarketIdentityDbContext : IdentityDbContext<User, Role, int, UserClaim, UserRole, UserLogin, RoleClaim, UserToken>
     {
         public GoodMarketIdentityDbContext(DbContextOptions options) : base(options)
         {

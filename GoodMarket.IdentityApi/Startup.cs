@@ -23,7 +23,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace GoodMarket.Identity
+namespace GoodMarket.IdentityApi
 {
     public class Startup
     {

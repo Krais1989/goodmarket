@@ -9,29 +9,11 @@ using System.Reflection;
 
 namespace GoodMarket.Persistence
 {
-    public abstract class IdentityDbContext<
-    TKey, TUser, TRole, TUserClaim, TUserRole, TUserLogin, TRoleClaim, TUserToken> : IdentityUserContext<TUser, TKey, TUserClaim, TUserLogin, TUserToken>
-     where TKey : IEquatable<TKey>
-     where TUser : IdentityUser<TKey>
-     where TRole : IdentityRole<TKey>
-     where TUserClaim : IdentityUserClaim<TKey>
-     where TUserRole : IdentityUserRole<TKey>
-     where TUserLogin : IdentityUserLogin<TKey>
-     where TRoleClaim : IdentityRoleClaim<TKey>
-     where TUserToken : IdentityUserToken<TKey>
+    /// <summary>
+    /// Контекст БД с основными доменными объектами
+    /// </summary>
+    public class GoodMarketDb : DbContext
     {
-        public DbSet<Role> Roles { get; set; }
-
-        public IdentityDbContext(DbContextOptions options) : base(options)
-        {
-        }
-    }
-
-
-    public class GoodMarketDb : IdentityDbContext<int, User, Role, UserClaim, UserRole, UserLogin, RoleClaim, UserToken>
-    {
-        /* Identity-юзеры */
-
         /* Юзеры бизнес-логики */
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Employee> Employees { get; set; }
