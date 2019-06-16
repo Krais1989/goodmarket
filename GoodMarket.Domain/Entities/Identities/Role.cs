@@ -8,7 +8,7 @@ namespace GoodMarket.Domain
     /// Роль
     /// </summary>
     public class Role : IdentityRole<int> {
-        public virtual ICollection<AccountRole> AccountRoles { get; set; }
+        public virtual ICollection<UserRole> UserRoles { get; set; }
         public virtual ICollection<RoleClaim> RoleClaims { get; set; }
     }
 }

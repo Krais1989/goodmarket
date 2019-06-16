@@ -5,7 +5,7 @@ namespace GoodMarket.Application
 {
     // TODO: Обработчики Запросов элемента для сущностей
 
-    public class AccountGetQueryHandler : BaseGetQueryHandler<Account>
+    public class AccountGetQueryHandler : BaseGetQueryHandler<User>
     {
         public AccountGetQueryHandler(GoodMarketDb db) : base(db) { }
     }

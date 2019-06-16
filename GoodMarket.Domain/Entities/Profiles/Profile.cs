@@ -15,7 +15,7 @@ namespace GoodMarket.Domain
         public DateTime BirthDate { get; set; }
         public Address Address { get; set; }
 
-        public Account Account { get; set; }
+        public User Account { get; set; }
     }
 
     /// <summary>

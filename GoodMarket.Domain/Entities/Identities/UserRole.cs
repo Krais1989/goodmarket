@@ -5,9 +5,9 @@ namespace GoodMarket.Domain
     /// <summary>
     /// Связь юзер - роль
     /// </summary>
-    public class AccountRole : IdentityUserRole<int> {
+    public class UserRole : IdentityUserRole<int> {
 
-        public virtual Account Account { get; set; }
+        public virtual User User { get; set; }
         public virtual Role Role { get; set; }
     }
 }

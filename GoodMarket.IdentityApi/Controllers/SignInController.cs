@@ -21,7 +21,7 @@ namespace GoodMarket.Api.Controllers
     {
         private IMediator _mediator;
 
-        public SignInController(GoodMarketDb db, IMediator mediator)
+        public SignInController(IMediator mediator)
         {
             _mediator = mediator;
         }
@@ -30,11 +30,11 @@ namespace GoodMarket.Api.Controllers
         /// Войти по имени/паролю
         /// </summary>
         [HttpPost]
-        public async Task SignIn([FromBody]SignInRequest request)
+        [ProducesResponseType(typeof(SignInResponse), 200)]
+        public async Task<IActionResult> SignIn([FromBody]SignInRequest request)
         {
             var result = await _mediator.Send(request);
-            Response.ContentType = "application/json";
-            await Response.WriteAsync(SSerializer.Serialize(result));
+            return Ok(result);
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace GoodMarket.Api.Controllers
         [HttpGet("Exception")]
         public IActionResult Exception()
         {
-            throw new EntityNotFoundException<Order>("Order not found!");
+            throw new AccountNotFoundException("Account not found!");
         }
                     
     }

@@ -28,7 +28,7 @@ namespace GoodMarket.Persistence
     }
 
 
-    public class GoodMarketDb : IdentityDbContext<int, Account, Role, AccountClaim, AccountRole, AccountLogin, RoleClaim, AccountToken>
+    public class GoodMarketDb : IdentityDbContext<int, User, Role, UserClaim, UserRole, UserLogin, RoleClaim, UserToken>
     {
         /* Identity-юзеры */
 

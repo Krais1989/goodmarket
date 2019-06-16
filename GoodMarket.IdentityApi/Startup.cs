@@ -5,12 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using GoodMarket.Application;
 using GoodMarket.Authentication;
+using GoodMarket.Domain;
+using GoodMarket.IdentityApi;
 using GoodMarket.Persistence;
 using GoodMarket.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -34,9 +38,29 @@ namespace GoodMarket.Identity
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddGMMediatoR();
-            services.AddDbContext<GoodMarketDb>(b => {
+            services.AddDbContext<GoodMarketIdentityDbContext>(b =>
+            {
                 b.UseInMemoryDatabase("db_test_identity");
             });
+            
+            services
+                .AddIdentityCore<User>(opt =>
+                {
+                    opt.Password.RequireDigit = false;
+                    opt.Password.RequiredLength = 3;
+                    opt.Password.RequireNonAlphanumeric = false;
+                    opt.Password.RequireUppercase = false;
+                    opt.Password.RequireLowercase = false;
+                })
+                .AddRoles<Role>()
+                .AddUserStore<UserStore<User, Role, GoodMarketIdentityDbContext, int, UserClaim, UserRole, UserLogin, UserToken, RoleClaim>>()
+                .AddRoleStore<RoleStore<Role, GoodMarketIdentityDbContext, int, UserRole, RoleClaim>>()
+                .AddUserManager<GMUserManager>()
+                .AddRoleManager<GMRoleManager>()
+                .AddSignInManager<GMSignInManager>()
+                .AddDefaultTokenProviders()
+                .AddEntityFrameworkStores<GoodMarketIdentityDbContext>();
+
             services.AddGMAuthentication(Configuration);
             services.AddGMSwagger();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

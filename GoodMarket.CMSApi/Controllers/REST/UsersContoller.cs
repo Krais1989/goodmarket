@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace GoodMarket.Api.Controllers
 {
     [Route("api/[controller]")]
-    public class UsersController : BaseRestController<Account>
+    public class UsersController : BaseRestController<User>
     {
         public UsersController(GoodMarketDb context, IMediator mediator) : base(context, mediator)
         {

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using GoodMarket.Application.Exceptions;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -10,6 +11,19 @@ using System.Threading.Tasks;
 
 namespace GoodMarket.Application.Middlewares
 {
+    public class ErrorResponse
+    {
+        public string ExceptionType { get; set; }
+        public string Message { get; set; }
+        public ErrorResponse() { }
+
+        public ErrorResponse(string exceptionType, string message)
+        {
+            ExceptionType = exceptionType;
+            Message = message;
+        }
+    }
+
     /// <summary>
     /// Централизованная обработка исключений
     /// </summary>
@@ -32,34 +46,46 @@ namespace GoodMarket.Application.Middlewares
             }
             catch (Exception e)
             {
-                string agent = context.Request.Headers["User-Agent"].ToString();
-                string rem_ip = context.Connection.RemoteIpAddress.ToString();
-                string rem_port = context.Connection.RemotePort.ToString();
-                string loc_ip = context.Connection.LocalIpAddress.ToString();
-                string loc_port = context.Connection.LocalPort.ToString();
+                string userAgent = context.Request.Headers["User-Agent"].ToString();
+                string remIp = context.Connection.RemoteIpAddress.ToString();
+                string remPort = context.Connection.RemotePort.ToString();
+                string locIp = context.Connection.LocalIpAddress.ToString();
+                string locPort = context.Connection.LocalPort.ToString();
                 bool isAuthenticated = context.User.Identity.IsAuthenticated;
                 string userName = isAuthenticated ? context.User.FindFirst(ClaimTypes.Name)?.Value : "[Anonymous]";
 
-                var errLog = new StringBuilder();
-                errLog.AppendLine($"IP: ({rem_ip}:{rem_port}) => ({loc_ip}:{loc_port}) | User: {userName}");
-                errLog.AppendLine($"Browser: {agent}");
+                var reqInfo = new StringBuilder();
+                reqInfo.AppendLine($"IP: ({remIp}:{remPort}) => ({locIp}:{locPort}) | User: {userName}");
+                reqInfo.AppendLine($"Browser: {userAgent}");
+                context.Response.ContentType = "application/json";
 
-                /* Выборка информации в исключении */
-                if (env.IsProduction())
+                _logger.LogError(e, reqInfo.ToString());
+
+                int statusCode = StatusCodes.Status500InternalServerError;
+                string exceptionType = e.GetType().Name;
+                string responseMessage = e.Message;
+
+                /* Исключение бизнес-логики */
+                if (e is IGMException)
                 {
-                    errLog.AppendLine($"Exception: {e.Message}");
-                    if (e.InnerException != null)
-                        errLog.AppendLine($"Inner Exception: {e.InnerException.Message}");
-                    _logger.LogError(errLog.ToString());
+                    statusCode = ((IGMException)e).ResponseCode;
                 }
+                /* Необработанное исключение */
                 else
                 {
-                    _logger.LogError(e, errLog.ToString());            // Девелоп - полное описание исключения
+                    statusCode = StatusCodes.Status500InternalServerError;
+                    /* Выборка информации в исключении */
+                    if (env.IsProduction())
+                    {
+                        responseMessage = "Internal server error";
+                    }
+                    else
+                    {
+                    }
                 }
 
-                context.Response.ContentType = "application/json";
-                context.Response.StatusCode = StatusCodes.Status500InternalServerError;
-                await context.Response.WriteAsync(JsonConvert.SerializeObject(new { ExceptionType = e.GetType().Name, e.Message }));
+                context.Response.StatusCode = statusCode;
+                await context.Response.WriteAsync(JsonConvert.SerializeObject(new ErrorResponse(exceptionType, responseMessage)));
             }
         }
     }

@@ -5,7 +5,7 @@ namespace GoodMarket.Application
 {
     // TODO: Обработчики Удаления элемента для сущностей
 
-    public class AccountDeleteCommandHandler : BaseDeleteCommandHandler<Account>
+    public class AccountDeleteCommandHandler : BaseDeleteCommandHandler<User>
     {
         public AccountDeleteCommandHandler(GoodMarketDb db) : base(db) { }
     }

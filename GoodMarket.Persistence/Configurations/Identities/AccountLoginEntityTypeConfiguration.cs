@@ -7,12 +7,12 @@ namespace GoodMarket.Persistence.Configurations
     /// <summary>
     /// Конфигурация Аккаунт - Утверждение
     /// </summary>
-    public class AccountLoginEntityTypeConfiguration : IEntityTypeConfiguration<AccountLogin>
+    public class AccountLoginEntityTypeConfiguration : IEntityTypeConfiguration<UserLogin>
     {
-        public void Configure(EntityTypeBuilder<AccountLogin> builder)
+        public void Configure(EntityTypeBuilder<UserLogin> builder)
         {
             builder.HasKey(e => e.UserId);
-            builder.HasOne(e => e.Account).WithMany(e => e.Logins).HasForeignKey(e => e.UserId);
+            builder.HasOne(e => e.User).WithMany(e => e.UserLogins).HasForeignKey(e => e.UserId);
         }
     }
 

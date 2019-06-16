@@ -12,7 +12,7 @@ namespace GoodMarket.Persistence.Configurations
         public void Configure(EntityTypeBuilder<Role> builder)
         {
             builder.HasKey(e => e.Id);
-            builder.HasMany(e => e.AccountRoles).WithOne(e => e.Role).HasForeignKey(e => e.RoleId);
+            builder.HasMany(e => e.UserRoles).WithOne(e => e.Role).HasForeignKey(e => e.RoleId);
             builder.HasMany(e => e.RoleClaims).WithOne(e => e.Role).HasForeignKey(e => e.RoleId);
         }
     }

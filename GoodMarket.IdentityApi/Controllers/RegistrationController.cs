@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using GoodMarket.Application;
 using GoodMarket.Application.Serialization;
+using GoodMarket.Domain;
+using GoodMarket.IdentityApi;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,16 +17,18 @@ namespace GoodMarket.Api.Controllers
     public class RegistrationController : ControllerBase
     {
         private readonly IMediator _mediator;
+
         public RegistrationController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
         [HttpPost]
-        public async Task Register([FromBody]RegistrationRequest request)
+        [ProducesResponseType(typeof(RegistrationResponse), 200)]
+        public async Task<IActionResult> Register([FromBody]RegistrationRequest request)
         {
             var result = await _mediator.Send(request);
-            await Response.WriteAsync(SSerializer.Serialize(result));
+            return Ok(result);
         }
     }
 }

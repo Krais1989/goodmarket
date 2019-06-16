@@ -10,17 +10,16 @@ namespace GoodMarket.Persistence.Configurations
     /// <summary>
     /// Базовая конфигурация для Юзера
     /// </summary>
-    public class AccountEntityTypeConfiguration : IEntityTypeConfiguration<Account>
+    public class AccountEntityTypeConfiguration : IEntityTypeConfiguration<User>
     {
-        public void Configure(EntityTypeBuilder<Account> builder)
+        public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.HasKey(e => e.Id);
-            builder.HasOne(a => a.Profile).WithOne(p => p.Account).HasForeignKey<Profile>(p => p.AccountId);
 
-            builder.HasMany(e => e.AccountRoles).WithOne(e => e.Account).HasForeignKey(e => e.UserId);
-            builder.HasMany(e => e.Claims).WithOne(e => e.Account).HasForeignKey(e => e.UserId);
-            builder.HasMany(e => e.Logins).WithOne(e => e.Account).HasForeignKey(e => e.UserId);
-            builder.HasMany(e => e.Tokens).WithOne(e => e.Account).HasForeignKey(e => e.UserId);
+            builder.HasMany(e => e.UserRoles).WithOne(e => e.User).HasForeignKey(e => e.UserId);
+            builder.HasMany(e => e.UserClaims).WithOne(e => e.User).HasForeignKey(e => e.UserId);
+            builder.HasMany(e => e.UserLogins).WithOne(e => e.User).HasForeignKey(e => e.UserId);
+            builder.HasMany(e => e.UserTokens).WithOne(e => e.User).HasForeignKey(e => e.UserId);
         }
     }
 }

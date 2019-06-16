@@ -33,7 +33,7 @@ namespace GoodMarket.Application.Tests
                 opt.UseInMemoryDatabase(databaseName: "db_test");
             });
 
-            services.AddIdentity<Account, Role>(opt => { })
+            services.AddIdentity<User, Role>(opt => { })
                 .AddUserManager<AccountManager>()
                 .AddRoleManager<AccountRoleManager>()
                 .AddSignInManager<AccountSignManager>()
@@ -47,7 +47,7 @@ namespace GoodMarket.Application.Tests
             //    .AddEntityFrameworkStores<TestGoodMarketDb>()
             //    .AddDefaultTokenProviders();
 
-            services.AddScoped<UserManager<Account>, AccountManager>();
+            services.AddScoped<UserManager<User>, AccountManager>();
 
             services.AddMediatR(typeof(BaseGetQueryHandler<>).Assembly);
             return services;

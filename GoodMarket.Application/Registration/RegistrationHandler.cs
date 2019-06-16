@@ -1,4 +1,4 @@
-﻿using GoodMarket.Application.Registration;
+﻿using GoodMarket.Application.Exceptions;
 using GoodMarket.Domain;
 using GoodMarket.Persistence;
 using MediatR;
@@ -11,6 +11,13 @@ using System.Threading.Tasks;
 
 namespace GoodMarket.Application
 {
+    public class RegistrationRequest : IRequest<RegistrationResponse>
+    {
+        public string Email { get; set; }
+        public string Password { get; set; }
+        //public Profile Profile { get; set; }
+    }
+
     public class RegistrationResponse
     {
         public int Id { get; set; }
@@ -22,41 +29,31 @@ namespace GoodMarket.Application
         }
     }
 
-    public class RegistrationRequest : IRequest<RegistrationResponse>
-    {
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public Profile Profile { get; set; }
-
-    }
-
     public class RegistrationHandler : IRequestHandler<RegistrationRequest, RegistrationResponse>
     {
-        private readonly GoodMarketDb _db;
-        private readonly DbSet<Account> _dbUser;
-        private readonly AccountManager _accMan;
-        public RegistrationHandler(GoodMarketDb db, AccountManager accMan)
+        private readonly GMUserManager _userMan;
+
+        public RegistrationHandler(GMUserManager userMan)
         {
-            _db = db;
-            _dbUser = _db.Set<Account>();
-            _accMan = accMan;
+            _userMan = userMan;
         }
 
         public async Task<RegistrationResponse> Handle(RegistrationRequest request, CancellationToken cancellationToken)
         {
-            var acc = await _accMan.FindByEmailAsync(request.Email);
+            var acc = await _userMan.FindByEmailAsync(request.Email);
             if (acc != null)
-                throw new RegistrationException();
+                throw new AccountAlreadyExistsException($"Account with email {request.Email} already exists!");
 
-            acc = new Account()
+            acc = new User()
             {
                 Email = request.Email,
-                UserName = request.Email,
-                Profile = request.Profile
+                UserName = request.Email
             };
-            var result = await _accMan.CreateAsync(acc);
+            
+            var result = await _userMan.CreateAsync(acc, request.Password);
             if (!result.Succeeded)
-                throw new RegistrationException(string.Join("\n", result.Errors.Select(e => e.Description)));
+                throw new AccountCreateException(string.Join("\n", result.Errors.Select(e => e.Description)));
+
             return await Task.FromResult(new RegistrationResponse(acc.Id));
         }
     }

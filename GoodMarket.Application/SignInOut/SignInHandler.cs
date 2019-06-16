@@ -12,6 +12,7 @@ using GoodMarket.Persistence;
 using Microsoft.EntityFrameworkCore;
 using GoodMarket.Application.Exceptions;
 using GoodMarket.Authentication;
+using Microsoft.AspNetCore.Identity;
 
 namespace GoodMarket.Application
 {
@@ -29,25 +30,28 @@ namespace GoodMarket.Application
 
     public class SignInHandler : IRequestHandler<SignInRequest, SignInResponse>
     {
+        private readonly GMSignInManager _signMan;
+        private readonly GMUserManager _userMan;
         private readonly IJwtFactory _jwtFactory;
-        private readonly GoodMarketDb _db;
-        private DbSet<Account> _dbUser;
 
-
-        public SignInHandler(IJwtFactory jwtFactory, GoodMarketDb db)
+        public SignInHandler(IJwtFactory jwtFactory, GMUserManager userMan, GMSignInManager signMan)
         {
-            _db = db;
-            _dbUser = _db.Set<Account>();
             _jwtFactory = jwtFactory;
+            _userMan = userMan;
+            _signMan = signMan;
         }
 
         public async Task<SignInResponse> Handle(SignInRequest request, CancellationToken cancellationToken)
         {
+            var user = await _userMan.FindByNameAsync(request.Email);
+            var result = await _userMan.CheckPasswordAsync(user, request.Password);
+            if (!result)
+                throw new InvalidUserNameOrPasswordException();
+
             var claims = new List<Claim>()
             {
                 new Claim(ClaimTypes.Name, request.Email)
             };
-
             var response = new SignInResponse()
             {
                 Login = request.Email,

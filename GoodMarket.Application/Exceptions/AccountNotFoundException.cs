@@ -2,11 +2,11 @@
 
 namespace GoodMarket.Application.Exceptions
 {
-    public class AccountNotFoundException : EntityNotFoundException<Account>
+    public class AccountNotFoundException : GMException
     {
+
         public AccountNotFoundException(string message) : base(message)
         {
         }
     }
-
 }
