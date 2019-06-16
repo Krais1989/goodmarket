@@ -11,8 +11,8 @@ namespace GoodMarket.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<UserClaim> builder)
         {
-            builder.HasKey(e => e.Id);
-            builder.HasOne(e => e.User).WithMany(e => e.UserClaims).HasForeignKey(e => e.UserId);
+            builder.HasKey(e => new { e.Id, e.UserId });
+            //builder.HasOne(e => e.User).WithMany(e => e.UserClaims).HasForeignKey(e => e.UserId);
         }
     }
 }

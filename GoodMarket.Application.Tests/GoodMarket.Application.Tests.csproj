@@ -22,4 +22,8 @@
     <ProjectReference Include="..\GoodMarket.Application\GoodMarket.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Identity\" />
+  </ItemGroup>
+
 </Project>

@@ -7,6 +7,6 @@ namespace GoodMarket.Domain
     /// Связь юзер - утверждение
     /// </summary>
     public class UserClaim : IdentityUserClaim<int> {
-        public virtual User User { get; set; }
+        //public virtual User User { get; set; }
     }
 }

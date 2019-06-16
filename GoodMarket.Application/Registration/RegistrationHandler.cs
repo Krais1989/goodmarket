@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -47,12 +48,24 @@ namespace GoodMarket.Application
             acc = new User()
             {
                 Email = request.Email,
-                UserName = request.Email
+                UserName = request.Email,
+                //UserClaims = new List<UserClaim>()
+                //{
+                //    new UserClaim(){ ClaimType = ClaimTypes.Role, ClaimValue = "Employee"  }
+                //}
             };
-            
+
             var result = await _userMan.CreateAsync(acc, request.Password);
             if (!result.Succeeded)
                 throw new AccountCreateException(string.Join("\n", result.Errors.Select(e => e.Description)));
+
+            /* Claim юзера */
+            var claimResult = await _userMan.AddClaimAsync(acc, new Claim(ClaimTypes.Role, "Employee"));
+            if (!claimResult.Succeeded)
+                throw new AccountCreateException(string.Join("\n", claimResult.Errors.Select(e => e.Description)));
+
+            var employees = await _userMan.GetUsersForClaimAsync(new Claim(ClaimTypes.Role, "Employee"));
+
 
             return await Task.FromResult(new RegistrationResponse(acc.Id));
         }

@@ -48,14 +48,16 @@ namespace GoodMarket.Application
             if (!result)
                 throw new InvalidUserNameOrPasswordException();
 
-            var claims = new List<Claim>()
+            var claims = await _userMan.GetClaimsAsync(user);
+
+            var tokenClaims = new List<Claim>()
             {
                 new Claim(ClaimTypes.Name, request.Email)
             };
             var response = new SignInResponse()
             {
                 Login = request.Email,
-                Token = _jwtFactory.Generate(claims)
+                Token = _jwtFactory.Generate(tokenClaims)
             };
             return response;
         }

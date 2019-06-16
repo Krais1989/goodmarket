@@ -28,7 +28,7 @@ namespace GoodMarket.IdentityApi
 
                 e.Property(x => x.ConcurrencyStamp).IsConcurrencyToken();
 
-                e.HasMany(x => x.UserClaims).WithOne(x => x.User).HasForeignKey(x => x.UserId);
+                e.HasMany(x => x.UserClaims).WithOne().HasForeignKey(x => x.UserId);
                 e.HasMany(x => x.UserLogins).WithOne(x => x.User).HasForeignKey(x => x.UserId);
                 e.HasMany(x => x.UserTokens).WithOne(x => x.User).HasForeignKey(x => x.UserId);
                 e.HasMany(x => x.UserRoles).WithOne(x => x.User).HasForeignKey(x => x.UserId);

@@ -17,7 +17,7 @@ namespace GoodMarket.Persistence.Configurations
             builder.HasKey(e => e.Id);
 
             builder.HasMany(e => e.UserRoles).WithOne(e => e.User).HasForeignKey(e => e.UserId);
-            builder.HasMany(e => e.UserClaims).WithOne(e => e.User).HasForeignKey(e => e.UserId);
+            builder.HasMany(e => e.UserClaims).WithOne().HasForeignKey(e => e.UserId);
             builder.HasMany(e => e.UserLogins).WithOne(e => e.User).HasForeignKey(e => e.UserId);
             builder.HasMany(e => e.UserTokens).WithOne(e => e.User).HasForeignKey(e => e.UserId);
         }

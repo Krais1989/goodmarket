@@ -53,7 +53,9 @@ namespace GoodMarket.Identity
                     opt.Password.RequireLowercase = false;
                 })
                 .AddRoles<Role>()
+                /* Необходимо переопределить UserStore, иначе, к примеру, падает при попытке получить IdentityUserClaim */
                 .AddUserStore<UserStore<User, Role, GoodMarketIdentityDbContext, int, UserClaim, UserRole, UserLogin, UserToken, RoleClaim>>()
+                /* Необходимо переопределить RoleStore, иначе, к примеру, падает при попытке получить IdentityUserRole */
                 .AddRoleStore<RoleStore<Role, GoodMarketIdentityDbContext, int, UserRole, RoleClaim>>()
                 .AddUserManager<GMUserManager>()
                 .AddRoleManager<GMRoleManager>()

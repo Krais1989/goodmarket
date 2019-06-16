@@ -20,10 +20,12 @@ namespace GoodMarket.Api.Controllers
     public class SignInController : ControllerBase
     {
         private IMediator _mediator;
+        private readonly GMUserManager _userMan;
 
-        public SignInController(IMediator mediator)
+        public SignInController(IMediator mediator, GMUserManager userMan)
         {
             _mediator = mediator;
+            _userMan = userMan;
         }
 
         /// <summary>
@@ -52,10 +54,12 @@ namespace GoodMarket.Api.Controllers
         /// </summary>
         [HttpGet("Current")]
         [Authorize]
-        public IActionResult GetCurrent()
+        [ProducesResponseType(typeof(User), 200)]
+        public async Task<IActionResult> GetCurrent()
         {
             var nameClaim = User.Claims.FirstOrDefault(e => e.Type == ClaimTypes.Name);
-            return Ok(nameClaim.Value);
+            var user = await _userMan.FindByNameAsync(nameClaim.Value);
+            return Ok(user);
         }
 
         /// <summary>
@@ -66,6 +70,6 @@ namespace GoodMarket.Api.Controllers
         {
             throw new AccountNotFoundException("Account not found!");
         }
-                    
+
     }
 }
