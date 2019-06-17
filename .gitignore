@@ -31,6 +31,7 @@ msbuild.err
 msbuild.wrn
 
 node_modules/
+publish/
 
 # Visual Studio 2015
 .vs/
