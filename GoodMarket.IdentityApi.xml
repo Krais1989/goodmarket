@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GoodMarket.IdentityApi</name>
+    </assembly>
+    <members>
+        <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.SignIn(GoodMarket.Application.SignInRequest)">
+            <summary>
+            Войти по имени/паролю
+            </summary>
+        </member>
+        <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.SignOut">
+            <summary>
+            Выйти
+            </summary>
+        </member>
+        <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.GetCurrent">
+            <summary>
+            Текущий юзер
+            </summary>
+        </member>
+        <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.Exception">
+            <summary>
+            Тестовое исключение
+            </summary>
+        </member>
+        <member name="T:GoodMarket.IdentityApi.GoodMarketIdentityDbContext">
+            <summary>
+            Контекст БД для обслуживания аккаунтов
+            </summary>
+        </member>
+    </members>
+</doc>

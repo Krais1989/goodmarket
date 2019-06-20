@@ -46,6 +46,9 @@ namespace GoodMarket.IdentityApi
             services
                 .AddIdentityCore<User>(opt =>
                 {
+                    opt.User.RequireUniqueEmail = true;
+                    opt.SignIn.RequireConfirmedEmail = true;
+
                     opt.Password.RequireDigit = false;
                     opt.Password.RequiredLength = 3;
                     opt.Password.RequireNonAlphanumeric = false;
@@ -57,6 +60,7 @@ namespace GoodMarket.IdentityApi
                 .AddUserStore<UserStore<User, Role, GoodMarketIdentityDbContext, int, UserClaim, UserRole, UserLogin, UserToken, RoleClaim>>()
                 /* Необходимо переопределить RoleStore, иначе, к примеру, падает при попытке получить IdentityUserRole */
                 .AddRoleStore<RoleStore<Role, GoodMarketIdentityDbContext, int, UserRole, RoleClaim>>()
+                .AddClaimsPrincipalFactory<UserClaimsPrincipalFactory<User,Role>>()
                 .AddUserManager<GMUserManager>()
                 .AddRoleManager<GMRoleManager>()
                 .AddSignInManager<GMSignInManager>()
@@ -80,9 +84,9 @@ namespace GoodMarket.IdentityApi
             app.UseGMExceptionHandling();
             app.UseGMExecutionTimeTracking();
             app.UseCors(opt => opt.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
-            app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseGMSwagger();
+            app.UseAuthentication();
             app.UseMvc();
         }
     }

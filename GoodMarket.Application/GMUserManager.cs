@@ -23,6 +23,14 @@ namespace GoodMarket.Application
             : base(store, optionsAccessor, passwordHasher, userValidators, passwordValidators, keyNormalizer, errors, services, logger)
         {
         }
+
+        public override Task<User> FindByNameAsync(string userName)
+        {
+            return base.FindByNameAsync(userName);
+            //var result = await base.FindByNameAsync(userName);
+            //result.UserClaims = await GetClaimsAsync(result);
+            //return result;
+        }
     }
 
     /// <summary>

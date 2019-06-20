@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using GoodMarket.Application;
+using GoodMarket.Application.Registration;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,5 +25,14 @@ namespace GoodMarket.IdentityApi.Controllers
             var result = await _mediator.Send(request);
             return Ok(result);
         }
+
+        [HttpPost("Confirmation")]
+        public async Task<IActionResult> ConfirmByEmail([FromBody]EmailConfirmationRequest request)
+        {
+            await _mediator.Send(request);
+            return Ok();
+        }
+
+
     }
 }

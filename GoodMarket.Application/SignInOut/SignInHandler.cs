@@ -45,8 +45,13 @@ namespace GoodMarket.Application
         {
             var user = await _userMan.FindByNameAsync(request.Email);
             var result = await _userMan.CheckPasswordAsync(user, request.Password);
+
             if (!result)
                 throw new InvalidUserNameOrPasswordException();
+
+            var signInRes = await _signMan.PasswordSignInAsync(user, request.Password, false, false);
+            if (!signInRes.Succeeded)
+                throw new LogInException(signInRes);
 
             var claims = await _userMan.GetClaimsAsync(user);
 

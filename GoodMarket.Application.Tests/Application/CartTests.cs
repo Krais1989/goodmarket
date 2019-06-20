@@ -1,5 +1,7 @@
 ﻿using GoodMarket.Application;
 using GoodMarket.Domain;
+using GoodMarket.Persistence;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,22 +10,26 @@ using Xunit;
 
 namespace GoodMarket.Application.Tests.Application
 {
-    
+
     public class CartTests
     {
+        DbContextOptionsBuilder<GoodMarketDb> testOpt => new DbContextOptionsBuilder<GoodMarketDb>().UseInMemoryDatabase("test");
+
         [Fact]
         public async void RecordsTest()
         {
             int cartId = -1;
             var ct = new CancellationToken();
 
-            using (var db = TestGoodMarketDb.Create())
+            
+
+            using (var db = new GoodMarketDb(testOpt.Options))
             {
                 var crudCart = new CRUDWrapper<Cart>(db);
 
                 var recQuantity = new CartRecordQuantity(db);
                 var recRemove = new CartRecordRemove(db);
-                
+
                 var cart = await crudCart.Create.Handle(new BaseCreateCommand<Cart>(new Cart(), false), ct);
                 cartId = cart.Id;
                 await recQuantity.Handle(new CartRecordQuantityMessage(cart.Id, 1, 10, false), ct);
@@ -43,7 +49,7 @@ namespace GoodMarket.Application.Tests.Application
                 //await db.SaveChangesAsync();
             }
 
-            using (var db2 = TestGoodMarketDb.Create())
+            using (var db2 = new GoodMarketDb(testOpt.Options))
             {
                 var crudCart = new CRUDWrapper<Cart>(db2);
                 var recQuantity = new CartRecordQuantity(db2);
@@ -71,8 +77,8 @@ namespace GoodMarket.Application.Tests.Application
             int cartId = -1;
             var ct = new CancellationToken();
 
-            
-            using (var db = TestGoodMarketDb.Create())
+
+            using (var db = new GoodMarketDb(testOpt.Options))
             {
                 var crudCart = new CRUDWrapper<Cart>(db);
                 var recQuantity = new CartRecordQuantity(db);
@@ -84,7 +90,7 @@ namespace GoodMarket.Application.Tests.Application
                 await recQuantity.Handle(new CartRecordQuantityMessage(cart.Id, 1, 10, false), ct);
             }
 
-            using (var db = TestGoodMarketDb.Create())
+            using (var db = new GoodMarketDb(testOpt.Options))
             {
                 var crudCart = new CRUDWrapper<Cart>(db);
                 var recQuantity = new CartRecordQuantity(db);

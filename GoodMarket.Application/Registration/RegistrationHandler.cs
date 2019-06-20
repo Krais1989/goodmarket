@@ -1,4 +1,5 @@
 ﻿using GoodMarket.Application.Exceptions;
+using GoodMarket.Application.Registration;
 using GoodMarket.Domain;
 using GoodMarket.Persistence;
 using MediatR;
@@ -22,6 +23,7 @@ namespace GoodMarket.Application
     public class RegistrationResponse
     {
         public int Id { get; set; }
+        public string DebugEmailToken { get; set; }
 
         public RegistrationResponse() { }
         public RegistrationResponse(int id)
@@ -33,19 +35,23 @@ namespace GoodMarket.Application
     public class RegistrationHandler : IRequestHandler<RegistrationRequest, RegistrationResponse>
     {
         private readonly GMUserManager _userMan;
+        private readonly GMRoleManager _roleMan;
+        private readonly IMediator _mediator;
 
-        public RegistrationHandler(GMUserManager userMan)
+        public RegistrationHandler(GMUserManager userMan, GMRoleManager roleMan, IMediator mediator)
         {
             _userMan = userMan;
+            _roleMan = roleMan;
+            _mediator = mediator;
         }
-
+        
         public async Task<RegistrationResponse> Handle(RegistrationRequest request, CancellationToken cancellationToken)
         {
-            var acc = await _userMan.FindByEmailAsync(request.Email);
-            if (acc != null)
+            var user = await _userMan.FindByEmailAsync(request.Email);
+            if (user != null)
                 throw new AccountAlreadyExistsException($"Account with email {request.Email} already exists!");
 
-            acc = new User()
+            user = new User()
             {
                 Email = request.Email,
                 UserName = request.Email,
@@ -55,19 +61,49 @@ namespace GoodMarket.Application
                 //}
             };
 
-            var result = await _userMan.CreateAsync(acc, request.Password);
-            if (!result.Succeeded)
-                throw new AccountCreateException(string.Join("\n", result.Errors.Select(e => e.Description)));
+            var userCreateRes = await _userMan.CreateAsync(user, request.Password);
+            if (!userCreateRes.Succeeded)
+                throw new AccountCreateException(string.Join("\n", userCreateRes.Errors.Select(e => e.Description)));
+
+            /* Новая роль Employee */
+            if (!(await _roleMan.RoleExistsAsync("Employee")))
+            {
+                var roleCreateRes = await _roleMan.CreateAsync(new Role()
+                {
+                    Name = "Employee",
+                    RoleClaims = new List<RoleClaim>()
+                    {
+                        new RoleClaim(){ ClaimType="RoleClaim", ClaimValue = "RoleEmployee" }
+                    }
+
+                });
+                if (!roleCreateRes.Succeeded)
+                {
+                    throw new AccountCreateException(string.Join("\n", roleCreateRes.Errors.Select(e => e.Description)));
+                }
+            }
+
+            /* Добавление юзера в Employee */
+            var userRoleAdd = await _userMan.AddToRoleAsync(user, "Employee");
+            if (!userRoleAdd.Succeeded)
+            {
+                throw new AccountCreateException(string.Join("\n", userRoleAdd.Errors.Select(e => e.Description)));
+            }
 
             /* Claim юзера */
-            var claimResult = await _userMan.AddClaimAsync(acc, new Claim(ClaimTypes.Role, "Employee"));
+            var claimResult = await _userMan.AddClaimAsync(user, new Claim(ClaimTypes.Role, "Employee"));
             if (!claimResult.Succeeded)
                 throw new AccountCreateException(string.Join("\n", claimResult.Errors.Select(e => e.Description)));
 
+            var emailConfirmToken = await _userMan.GenerateEmailConfirmationTokenAsync(user);
+            
+            /* тест - Получение Claim и Roles юзера */
             var employees = await _userMan.GetUsersForClaimAsync(new Claim(ClaimTypes.Role, "Employee"));
+            var userClaims = await _userMan.GetClaimsAsync(user);
+            var roles = await _userMan.GetRolesAsync(user);
+            var roleClaims = await _roleMan.GetClaimsAsync(await _roleMan.FindByNameAsync(roles.First()));
 
-
-            return await Task.FromResult(new RegistrationResponse(acc.Id));
+            return await Task.FromResult(new RegistrationResponse(user.Id) { DebugEmailToken = emailConfirmToken });
         }
     }
 }

@@ -32,10 +32,10 @@ namespace GoodMarket.IdentityApi
 
                 e.Property(x => x.ConcurrencyStamp).IsConcurrencyToken();
 
-                e.HasMany(x => x.UserClaims).WithOne().HasForeignKey(x => x.UserId);
-                e.HasMany(x => x.UserLogins).WithOne(x => x.User).HasForeignKey(x => x.UserId);
-                e.HasMany(x => x.UserTokens).WithOne(x => x.User).HasForeignKey(x => x.UserId);
-                e.HasMany(x => x.UserRoles).WithOne(x => x.User).HasForeignKey(x => x.UserId);
+                e.HasMany(u => u.UserClaims).WithOne().HasForeignKey(uc => uc.UserId).IsRequired();
+                e.HasMany(u => u.UserLogins).WithOne(ul => ul.User).HasForeignKey(ul => ul.UserId);
+                e.HasMany(u => u.UserTokens).WithOne(ut => ut.User).HasForeignKey(ut => ut.UserId);
+                e.HasMany(u => u.UserRoles).WithOne(ur => ur.User).HasForeignKey(ur => ur.UserId);
             });
 
             /* Настройка identity-роли */
@@ -47,8 +47,8 @@ namespace GoodMarket.IdentityApi
 
                 e.Property(x => x.ConcurrencyStamp).IsConcurrencyToken();
 
-                e.HasMany(x => x.UserRoles).WithOne(x => x.Role).HasForeignKey(x => x.RoleId);
-                e.HasMany(x => x.RoleClaims).WithOne(x => x.Role).HasForeignKey(x => x.RoleId);
+                e.HasMany(r => r.UserRoles).WithOne(ur => ur.Role).HasForeignKey(ur => ur.RoleId);
+                e.HasMany(r => r.RoleClaims).WithOne(rc => rc.Role).HasForeignKey(rc => rc.RoleId);
             });
 
             /* Настройка пользователь-утверждение */
