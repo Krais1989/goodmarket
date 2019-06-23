@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Serilog;
 using System;
 
 namespace GoodMarket.Logger
@@ -9,6 +10,10 @@ namespace GoodMarket.Logger
     {
         public static IWebHostBuilder ConfigureGMLogger(this IWebHostBuilder webHostBuilder, IConfiguration config)
         {
+            webHostBuilder.UseSerilog((context, log) =>
+            {
+                log.ReadFrom.Configuration(config);
+            });
             return webHostBuilder;
         }
 

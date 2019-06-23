@@ -26,8 +26,8 @@ namespace GoodMarket.Application
 
     public class CartRecordRemove : IRequestHandler<CartRecordRemoveMessage>
     {
-        private GoodMarketDb _db;
-        public CartRecordRemove(GoodMarketDb db)
+        private GoodMarketDbContext _db;
+        public CartRecordRemove(GoodMarketDbContext db)
         {
             _db = db;
         }

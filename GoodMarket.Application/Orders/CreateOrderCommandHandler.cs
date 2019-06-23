@@ -18,8 +18,8 @@ namespace GoodMarket.Application
 
     public class CreateOrderCommandHandler : IRequestHandler<CreateOrderRequest, Order>
     {
-        private GoodMarketDb _db;
-        public CreateOrderCommandHandler(GoodMarketDb db)
+        private GoodMarketDbContext _db;
+        public CreateOrderCommandHandler(GoodMarketDbContext db)
         {
             _db = db;
         }

@@ -5,6 +5,6 @@ namespace GoodMarket.Application
 {
     public class ProductCreateCommandHandler : BaseCreateCommandHandler<Product>
     {
-        public ProductCreateCommandHandler(GoodMarketDb db) : base(db) { }
+        public ProductCreateCommandHandler(GoodMarketDbContext db) : base(db) { }
     }
 }

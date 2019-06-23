@@ -7,6 +7,6 @@ namespace GoodMarket.Application
 
     public class AccountCreateCommandHandler : BaseCreateCommandHandler<User>
     {
-        public AccountCreateCommandHandler(GoodMarketDb db) : base(db) { }
+        public AccountCreateCommandHandler(GoodMarketDbContext db) : base(db) { }
     }
 }

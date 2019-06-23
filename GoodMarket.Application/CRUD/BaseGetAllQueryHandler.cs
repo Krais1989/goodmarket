@@ -28,7 +28,7 @@ namespace GoodMarket.Application
         //where TQuery : BaseGetAllQuery<TEntity>
     {
         private DbSet<TEntity> _set;
-        public BaseGetAllQueryHandler(GoodMarketDb db)
+        public BaseGetAllQueryHandler(GoodMarketDbContext db)
         {
             _set = db.Set<TEntity>();
         }

@@ -5,6 +5,6 @@ namespace GoodMarket.Application
 {
     public class ProductCategoryUpdate : BaseUpdateCommandHandler<Category>
     {
-        public ProductCategoryUpdate(GoodMarketDb db) : base(db) { }
+        public ProductCategoryUpdate(GoodMarketDbContext db) : base(db) { }
     }
 }

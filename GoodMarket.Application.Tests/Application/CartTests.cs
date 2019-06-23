@@ -13,7 +13,7 @@ namespace GoodMarket.Application.Tests.Application
 
     public class CartTests
     {
-        DbContextOptionsBuilder<GoodMarketDb> testOpt => new DbContextOptionsBuilder<GoodMarketDb>().UseInMemoryDatabase("test");
+        DbContextOptionsBuilder<GoodMarketDbContext> testOpt => new DbContextOptionsBuilder<GoodMarketDbContext>().UseInMemoryDatabase("test");
 
         [Fact]
         public async void RecordsTest()
@@ -23,7 +23,7 @@ namespace GoodMarket.Application.Tests.Application
 
             
 
-            using (var db = new GoodMarketDb(testOpt.Options))
+            using (var db = new GoodMarketDbContext(testOpt.Options))
             {
                 var crudCart = new CRUDWrapper<Cart>(db);
 
@@ -49,7 +49,7 @@ namespace GoodMarket.Application.Tests.Application
                 //await db.SaveChangesAsync();
             }
 
-            using (var db2 = new GoodMarketDb(testOpt.Options))
+            using (var db2 = new GoodMarketDbContext(testOpt.Options))
             {
                 var crudCart = new CRUDWrapper<Cart>(db2);
                 var recQuantity = new CartRecordQuantity(db2);
@@ -78,7 +78,7 @@ namespace GoodMarket.Application.Tests.Application
             var ct = new CancellationToken();
 
 
-            using (var db = new GoodMarketDb(testOpt.Options))
+            using (var db = new GoodMarketDbContext(testOpt.Options))
             {
                 var crudCart = new CRUDWrapper<Cart>(db);
                 var recQuantity = new CartRecordQuantity(db);
@@ -90,7 +90,7 @@ namespace GoodMarket.Application.Tests.Application
                 await recQuantity.Handle(new CartRecordQuantityMessage(cart.Id, 1, 10, false), ct);
             }
 
-            using (var db = new GoodMarketDb(testOpt.Options))
+            using (var db = new GoodMarketDbContext(testOpt.Options))
             {
                 var crudCart = new CRUDWrapper<Cart>(db);
                 var recQuantity = new CartRecordQuantity(db);

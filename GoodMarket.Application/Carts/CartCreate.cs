@@ -5,6 +5,6 @@ namespace GoodMarket.Application
 {
     public class CartCreate : BaseCreateCommandHandler<Cart>
     {
-        public CartCreate(GoodMarketDb db) : base(db) { }
+        public CartCreate(GoodMarketDbContext db) : base(db) { }
     }
 }

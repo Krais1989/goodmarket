@@ -5,6 +5,6 @@ namespace GoodMarket.Application
 {
     public class CartGet : BaseGetQueryHandler<Cart>
     {
-        public CartGet(GoodMarketDb db) : base(db) { }
+        public CartGet(GoodMarketDbContext db) : base(db) { }
     }
 }

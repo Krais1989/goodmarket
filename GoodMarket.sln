@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoodMarket.Common", "GoodMa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoodMarket.Application.Tests", "GoodMarket.Application.Tests\GoodMarket.Application.Tests.csproj", "{5A073D67-5A6D-4AB9-988F-27EEDF3B5AD2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoodMarket.CMSApi", "GoodMarket.CMSApi\GoodMarket.CMSApi.csproj", "{A2044F13-D6C5-4910-BEA7-0B126BA67A19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoodMarket.AdminApi", "GoodMarket.CMSApi\GoodMarket.AdminApi.csproj", "{A2044F13-D6C5-4910-BEA7-0B126BA67A19}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoodMarket.ShopApi", "GoodMarket.ShopApi\GoodMarket.ShopApi.csproj", "{7E14FC61-4007-4E00-9D89-E54224579BBB}"
 EndProject

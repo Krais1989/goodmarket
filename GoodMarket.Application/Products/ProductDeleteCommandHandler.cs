@@ -5,6 +5,6 @@ namespace GoodMarket.Application
 {
     public class ProductDeleteCommandHandler : BaseDeleteCommandHandler<Product>
     {
-        public ProductDeleteCommandHandler(GoodMarketDb db) : base(db) { }
+        public ProductDeleteCommandHandler(GoodMarketDbContext db) : base(db) { }
     }
 }

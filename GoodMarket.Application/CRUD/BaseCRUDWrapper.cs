@@ -17,7 +17,7 @@ namespace GoodMarket.Application
         public BaseUpdateCommandHandler<T> Update { get; private set; }
         public BaseDeleteCommandHandler<T> Delete { get; private set; }
 
-        public BaseCRUDWrapper(GoodMarketDb db)
+        public BaseCRUDWrapper(GoodMarketDbContext db)
         {
             Get = new BaseGetQueryHandler<T>(db);
             GetAll = new BaseGetAllQueryHandler<T>(db);

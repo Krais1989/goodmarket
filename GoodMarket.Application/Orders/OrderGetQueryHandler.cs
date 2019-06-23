@@ -5,6 +5,6 @@ namespace GoodMarket.Application
 {
     public class OrderGetQueryHandler : BaseGetQueryHandler<Order>
     {
-        public OrderGetQueryHandler(GoodMarketDb db) : base(db) { }
+        public OrderGetQueryHandler(GoodMarketDbContext db) : base(db) { }
     }
 }

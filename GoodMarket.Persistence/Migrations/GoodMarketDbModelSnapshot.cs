@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace GoodMarket.Persistence.Migrations
 {
-    [DbContext(typeof(GoodMarketDb))]
+    [DbContext(typeof(GoodMarketDbContext))]
     partial class GoodMarketDbModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -7,6 +7,6 @@ namespace GoodMarket.Application
 
     public class AccountGetAllQueryHandler : BaseGetAllQueryHandler<User>
     {
-        public AccountGetAllQueryHandler(GoodMarketDb db) : base(db) { }
+        public AccountGetAllQueryHandler(GoodMarketDbContext db) : base(db) { }
     }
 }

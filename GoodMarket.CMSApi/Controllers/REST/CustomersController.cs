@@ -8,12 +8,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GoodMarket.Api.Controllers
+namespace GoodMarket.AdminApi.Controllers
 {
     [Route("api/[controller]")]
     public class CustomersController : BaseRestController<Customer>
     {
-        public CustomersController(GoodMarketDb context, IMediator mediator) : base(context, mediator)
+        public CustomersController(GoodMarketDbContext context, IMediator mediator) : base(context, mediator)
         {
         }
         public override Task<ActionResult<Customer>> Get(int id)

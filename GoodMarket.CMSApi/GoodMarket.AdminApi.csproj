@@ -7,11 +7,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\GoodMarket.Application\GoodMarket.Application.csproj" />
+    <ProjectReference Include="..\GoodMarket.Swagger\GoodMarket.Swagger.csproj" />
   </ItemGroup>
 
 </Project>

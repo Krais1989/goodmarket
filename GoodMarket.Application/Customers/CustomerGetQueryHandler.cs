@@ -9,7 +9,7 @@ namespace GoodMarket.Application
 {
     public class CustomerGetQueryHandler : BaseGetQueryHandler<Customer>
     {
-        public CustomerGetQueryHandler(GoodMarketDb db) : base(db) { }
+        public CustomerGetQueryHandler(GoodMarketDbContext db) : base(db) { }
         public override async Task<Customer> Handle(BaseGetQuery<Customer> request, CancellationToken cancellationToken)
         {
             return await _set

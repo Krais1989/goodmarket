@@ -20,7 +20,7 @@ namespace GoodMarket.Application
     {
         protected DbSet<TEntity> _set;
 
-        public BaseGetQueryHandler(GoodMarketDb db)
+        public BaseGetQueryHandler(GoodMarketDbContext db)
         {
             _set = db.Set<TEntity>();
         }

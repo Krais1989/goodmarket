@@ -8,7 +8,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace GoodMarket.Persistence.Migrations
 {
-    [DbContext(typeof(GoodMarketDb))]
+    [DbContext(typeof(GoodMarketDbContext))]
     [Migration("20190208144840_InitialCreate")]
     partial class InitialCreate
     {

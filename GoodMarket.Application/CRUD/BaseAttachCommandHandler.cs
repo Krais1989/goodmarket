@@ -23,9 +23,9 @@ namespace GoodMarket.Application
     public class BaseAttachCommandHandler<TEntity> : IRequestHandler<BaseAttachCommand<TEntity>, TEntity>
         where TEntity : class
     {
-        private GoodMarketDb _db;
+        private GoodMarketDbContext _db;
         private DbSet<TEntity> _set;
-        public BaseAttachCommandHandler(GoodMarketDb db)
+        public BaseAttachCommandHandler(GoodMarketDbContext db)
         {
             _db = db;
             _set = db.Set<TEntity>();

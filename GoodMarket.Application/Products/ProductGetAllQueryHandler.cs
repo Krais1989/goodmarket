@@ -5,6 +5,6 @@ namespace GoodMarket.Application
 {
     public class ProductGetAllQueryHandler : BaseGetAllQueryHandler<Product>
     {
-        public ProductGetAllQueryHandler(GoodMarketDb db) : base(db) { }
+        public ProductGetAllQueryHandler(GoodMarketDbContext db) : base(db) { }
     }
 }

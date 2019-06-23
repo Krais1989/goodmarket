@@ -7,14 +7,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GoodMarket.IdentityApi
+namespace GoodMarket.Persistence
 {
     /// <summary>
     /// Контекст БД для обслуживания аккаунтов
     /// </summary>
     public class GoodMarketIdentityDbContext : IdentityDbContext<User, Role, int, UserClaim, UserRole, UserLogin, RoleClaim, UserToken>
     {
-        public GoodMarketIdentityDbContext(DbContextOptions options) : base(options)
+        public GoodMarketIdentityDbContext(DbContextOptions<GoodMarketIdentityDbContext> options) : base(options)
         {
         }
 

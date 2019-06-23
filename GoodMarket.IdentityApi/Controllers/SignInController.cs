@@ -9,19 +9,25 @@ using GoodMarket.Domain;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace GoodMarket.IdentityApi.Controllers
 {
+    /// <summary>
+    /// Контроллер входа
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class SignInController : ControllerBase
     {
-        private IMediator _mediator;
+        private readonly IMediator _mediator;
         private readonly GMUserManager _userMan;
+        private readonly ILogger<SignInController> _logger;
 
-        public SignInController(IMediator mediator, GMUserManager userMan)
+        public SignInController(ILogger<SignInController> logger, IMediator mediator, GMUserManager userMan)
         {
             _mediator = mediator;
+            _logger = logger;
             _userMan = userMan;
         }
 
@@ -32,6 +38,7 @@ namespace GoodMarket.IdentityApi.Controllers
         [ProducesResponseType(typeof(SignInResponse), 200)]
         public async Task<IActionResult> SignIn([FromBody]SignInRequest request)
         {
+            _logger.LogInformation($"Try sign in {request.Email}");
             var result = await _mediator.Send(request);
             return Ok(result);
         }
@@ -43,6 +50,7 @@ namespace GoodMarket.IdentityApi.Controllers
         [Authorize]
         public IActionResult SignOut()
         {
+            _logger.LogInformation($"Sign out {User.Identity.Name}");
             return Ok("ok");
         }
 
@@ -56,6 +64,7 @@ namespace GoodMarket.IdentityApi.Controllers
         {
             var nameClaim = User.Claims.FirstOrDefault(e => e.Type == ClaimTypes.Name);
             var user = await _userMan.FindByNameAsync(nameClaim.Value);
+            _logger.LogInformation($"Get current user: {user.Email}");
             return Ok(user);
         }
 

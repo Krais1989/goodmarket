@@ -12,7 +12,7 @@ namespace GoodMarket.Persistence
     /// <summary>
     /// Контекст БД с основными доменными объектами
     /// </summary>
-    public class GoodMarketDb : DbContext
+    public class GoodMarketDbContext : DbContext
     {
         /* Юзеры бизнес-логики */
         public DbSet<Customer> Customers { get; set; }
@@ -34,7 +34,7 @@ namespace GoodMarket.Persistence
         /* Поставщики */
         public DbSet<Supplier> Suppliers { get; set; }
         
-        public GoodMarketDb(DbContextOptions options) : base(options)
+        public GoodMarketDbContext(DbContextOptions<GoodMarketDbContext> options) : base(options)
         {
             Database.EnsureCreated();
         }
@@ -48,7 +48,7 @@ namespace GoodMarket.Persistence
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             /* Автоматической применение всех конфигов IEntityTypeConfiguration из текущей сборки */
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(GoodMarketDb).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(GoodMarketDbContext).Assembly);
         }
     }
 }

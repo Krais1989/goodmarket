@@ -5,6 +5,6 @@ namespace GoodMarket.Application
 {
     public class OrderUpdateCommandHandler : BaseUpdateCommandHandler<Order>
     {
-        public OrderUpdateCommandHandler(GoodMarketDb db) : base(db) { }
+        public OrderUpdateCommandHandler(GoodMarketDbContext db) : base(db) { }
     }
 }

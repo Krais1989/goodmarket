@@ -4,6 +4,26 @@
         <name>GoodMarket.IdentityApi</name>
     </assembly>
     <members>
+        <member name="T:GoodMarket.IdentityApi.Controllers.ConfirmController">
+            <summary>
+            Контроллер подтверждения аккаунтов
+            </summary>
+        </member>
+        <member name="T:GoodMarket.IdentityApi.Controllers.ExternalSignInController">
+            <summary>
+            Контроллер входа через внешние сервисы
+            </summary>
+        </member>
+        <member name="T:GoodMarket.IdentityApi.Controllers.RegistrationController">
+            <summary>
+            Контроллер регистрации аккаунтов
+            </summary>
+        </member>
+        <member name="T:GoodMarket.IdentityApi.Controllers.SignInController">
+            <summary>
+            Контроллер входа
+            </summary>
+        </member>
         <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.SignIn(GoodMarket.Application.SignInRequest)">
             <summary>
             Войти по имени/паролю
@@ -22,11 +42,6 @@
         <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.Exception">
             <summary>
             Тестовое исключение
-            </summary>
-        </member>
-        <member name="T:GoodMarket.IdentityApi.GoodMarketIdentityDbContext">
-            <summary>
-            Контекст БД для обслуживания аккаунтов
             </summary>
         </member>
     </members>

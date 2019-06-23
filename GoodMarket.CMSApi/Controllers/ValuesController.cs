@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GoodMarket.CMSApi.Controllers
+namespace GoodMarket.AdminApi
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -7,6 +7,6 @@ namespace GoodMarket.Application
 
     public class AccountUpdateCommandHandler : BaseUpdateCommandHandler<User>
     {
-        public AccountUpdateCommandHandler(GoodMarketDb db) : base(db) { }
+        public AccountUpdateCommandHandler(GoodMarketDbContext db) : base(db) { }
     }
 }

@@ -8,12 +8,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GoodMarket.Api.Controllers
+namespace GoodMarket.AdminApi.Controllers
 {
     [Route("api/[controller]")]
     public class OrdersController : BaseRestController<Order>
     {
-        public OrdersController(GoodMarketDb context, IMediator mediator) : base(context, mediator)
+        public OrdersController(GoodMarketDbContext context, IMediator mediator) : base(context, mediator)
         {
         }
     }

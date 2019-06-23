@@ -28,8 +28,8 @@ namespace GoodMarket.Application
 
     public class CartRecordQuantity : IRequestHandler<CartRecordQuantityMessage>
     {
-        private GoodMarketDb _db;
-        public CartRecordQuantity(GoodMarketDb db)
+        private GoodMarketDbContext _db;
+        public CartRecordQuantity(GoodMarketDbContext db)
         {
             _db = db;
         }

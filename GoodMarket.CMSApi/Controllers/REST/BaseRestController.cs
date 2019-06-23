@@ -9,18 +9,18 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace GoodMarket.Api.Controllers
+namespace GoodMarket.AdminApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class BaseRestController<TEntity> : ControllerBase
         where TEntity : class, new()
     {
-        protected GoodMarketDb _db;
+        protected GoodMarketDbContext _db;
         protected DbSet<TEntity> _set;
         protected IMediator _mediator;
 
-        public BaseRestController(GoodMarketDb context, IMediator mediator)
+        public BaseRestController(GoodMarketDbContext context, IMediator mediator)
         {
             _db = context;
             _set = _db.Set<TEntity>();

@@ -37,36 +37,39 @@ namespace GoodMarket.IdentityApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddGMMediatoR();
-            services.AddDbContext<GoodMarketIdentityDbContext>(b =>
+            services.AddDbContext<GoodMarketIdentityDbContext>(db =>
             {
-                b.UseInMemoryDatabase("db_test_identity");
+                db.UseInMemoryDatabase("db_test_identity");
             });
-            
-            services
-                .AddIdentityCore<User>(opt =>
-                {
-                    opt.User.RequireUniqueEmail = true;
-                    opt.SignIn.RequireConfirmedEmail = true;
 
-                    opt.Password.RequireDigit = false;
-                    opt.Password.RequiredLength = 3;
-                    opt.Password.RequireNonAlphanumeric = false;
-                    opt.Password.RequireUppercase = false;
-                    opt.Password.RequireLowercase = false;
-                })
-                .AddRoles<Role>()
-                /* Необходимо переопределить UserStore, иначе, к примеру, падает при попытке получить IdentityUserClaim */
-                .AddUserStore<UserStore<User, Role, GoodMarketIdentityDbContext, int, UserClaim, UserRole, UserLogin, UserToken, RoleClaim>>()
-                /* Необходимо переопределить RoleStore, иначе, к примеру, падает при попытке получить IdentityUserRole */
-                .AddRoleStore<RoleStore<Role, GoodMarketIdentityDbContext, int, UserRole, RoleClaim>>()
-                .AddClaimsPrincipalFactory<UserClaimsPrincipalFactory<User,Role>>()
-                .AddUserManager<GMUserManager>()
-                .AddRoleManager<GMRoleManager>()
-                .AddSignInManager<GMSignInManager>()
-                .AddDefaultTokenProviders()
-                .AddEntityFrameworkStores<GoodMarketIdentityDbContext>();
+            services.AddDbContext<GoodMarketDbContext>(db =>
+            {
+                db.UseInMemoryDatabase("db_test");
+            });
 
+            /* Конфигурация Identity */
+            var confSection = Configuration.GetSection("IdentityOptions");
+            services.Configure<IdentityOptions>(confSection);
+            var idOpts = confSection.Get<IdentityOptions>();
+            services.AddIdentityCore<User>(opt => {
+                opt.User = idOpts.User;
+                opt.Password = idOpts.Password;
+                opt.SignIn = idOpts.SignIn;
+                opt.Lockout = idOpts.Lockout;
+            })
+            .AddRoles<Role>()
+            /* Необходимо переопределить UserStore, иначе, к примеру, падает при попытке получить IdentityUserClaim */
+            .AddUserStore<UserStore<User, Role, GoodMarketIdentityDbContext, int, UserClaim, UserRole, UserLogin, UserToken, RoleClaim>>()
+            /* Необходимо переопределить RoleStore, иначе, к примеру, падает при попытке получить IdentityUserRole */
+            .AddRoleStore<RoleStore<Role, GoodMarketIdentityDbContext, int, UserRole, RoleClaim>>()
+            .AddClaimsPrincipalFactory<UserClaimsPrincipalFactory<User, Role>>()
+            .AddUserManager<GMUserManager>()
+            .AddRoleManager<GMRoleManager>()
+            .AddSignInManager<GMSignInManager>()
+            .AddDefaultTokenProviders()
+            .AddEntityFrameworkStores<GoodMarketIdentityDbContext>();
+
+            services.AddGMMediatoR();
             services.AddGMAuthentication(Configuration);
             services.AddGMSwagger();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
