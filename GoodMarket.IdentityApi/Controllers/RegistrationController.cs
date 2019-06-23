@@ -9,6 +9,15 @@ using Newtonsoft.Json;
 
 namespace GoodMarket.IdentityApi.Controllers
 {
+    public class RegistrationRequestDto
+    {
+    }
+
+    public class RegistrationResponseDto
+    {
+
+    }
+
     /// <summary>
     /// Контроллер регистрации аккаунтов
     /// </summary>

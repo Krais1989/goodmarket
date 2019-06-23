@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 
 namespace GoodMarket.IdentityApi.Controllers
 {
+
     /// <summary>
     /// Контроллер входа
     /// </summary>
@@ -44,6 +45,23 @@ namespace GoodMarket.IdentityApi.Controllers
         }
 
         /// <summary>
+        /// Текущий юзер
+        /// </summary>
+        [HttpGet("Current")]
+        [Authorize]
+        [ProducesResponseType(typeof(GetCurrentUserResponseDto), 200)]
+        public async Task<IActionResult> GetCurrentUser()
+        {
+            var nameClaim = User.Claims.FirstOrDefault(e => e.Type == ClaimTypes.Name);
+            var user = await _userMan.FindByNameAsync(nameClaim.Value);
+            _logger.LogInformation($"Get current user: {user.Email}");
+            return Ok(new GetCurrentUserResponseDto()
+            {
+                Email = user.Email
+            });
+        }
+
+        /// <summary>
         /// Выйти
         /// </summary>
         [HttpGet("SignOut")]
@@ -54,28 +72,6 @@ namespace GoodMarket.IdentityApi.Controllers
             return Ok("ok");
         }
 
-        /// <summary>
-        /// Текущий юзер
-        /// </summary>
-        [HttpGet("Current")]
-        [Authorize]
-        [ProducesResponseType(typeof(User), 200)]
-        public async Task<IActionResult> GetCurrent()
-        {
-            var nameClaim = User.Claims.FirstOrDefault(e => e.Type == ClaimTypes.Name);
-            var user = await _userMan.FindByNameAsync(nameClaim.Value);
-            _logger.LogInformation($"Get current user: {user.Email}");
-            return Ok(user);
-        }
-
-        /// <summary>
-        /// Тестовое исключение
-        /// </summary>
-        [HttpGet("Exception")]
-        public IActionResult Exception()
-        {
-            throw new AccountNotFoundException("Account not found!");
-        }
 
     }
 }

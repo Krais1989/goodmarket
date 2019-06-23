@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GoodMarket.Application;
+using GoodMarket.Application.Mappers;
 using GoodMarket.Authentication;
 using GoodMarket.Domain;
 using GoodMarket.IdentityApi;
@@ -72,7 +73,10 @@ namespace GoodMarket.IdentityApi
             services.AddGMMediatoR();
             services.AddGMAuthentication(Configuration);
             services.AddGMSwagger();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddGMAutoMapping();
+            services.AddMvc()
+                .AddGMValidators()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
