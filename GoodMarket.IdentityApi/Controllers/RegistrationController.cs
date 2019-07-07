@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using GoodMarket.Application;
 using GoodMarket.Application.Registration;
+using GoodMarket.RabbitMQ;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -27,11 +28,16 @@ namespace GoodMarket.IdentityApi.Controllers
     {
         private readonly IMediator _mediator;
         private readonly ILogger<RegistrationController> _logger;
+        private readonly IBaseQueueProducer _queueProducer;
 
-        public RegistrationController(IMediator mediator, ILogger<RegistrationController> logger)
+        public RegistrationController(
+            IBaseQueueProducer queueProducer,
+            IMediator mediator,
+            ILogger<RegistrationController> logger)
         {
             _mediator = mediator;
             _logger = logger;
+            _queueProducer = queueProducer;
         }
 
         [HttpPost]

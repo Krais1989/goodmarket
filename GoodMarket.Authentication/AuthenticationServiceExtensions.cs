@@ -10,12 +10,18 @@ namespace GoodMarket.Authentication
 {
     public static class AuthenticationServiceExtensions
     {
+        /// <summary>
+        /// Включить GM аутентификацию
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="config"></param>
+        /// <returns></returns>
         public static IServiceCollection AddGMAuthentication(this IServiceCollection services, IConfiguration config)
         {
             services.Configure<JwtSettings>(config.GetSection("JwtSettings"));
             var token = config.GetSection("JwtSettings").Get<JwtSettings>();
 
-            /* Валидация токена */
+            /* Валидация JWT токена */
             services.AddAuthentication(opt => {
                 opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;

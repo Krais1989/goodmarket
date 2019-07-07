@@ -9,6 +9,7 @@ using GoodMarket.Authentication;
 using GoodMarket.Domain;
 using GoodMarket.IdentityApi;
 using GoodMarket.Persistence;
+using GoodMarket.RabbitMQ;
 using GoodMarket.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -70,6 +71,7 @@ namespace GoodMarket.IdentityApi
             .AddDefaultTokenProviders()
             .AddEntityFrameworkStores<GoodMarketIdentityDbContext>();
 
+            services.AddGMRabbit(Configuration);
             services.AddGMMediatoR();
             services.AddGMAuthentication(Configuration);
             services.AddGMSwagger();

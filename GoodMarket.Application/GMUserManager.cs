@@ -1,12 +1,13 @@
 ﻿using GoodMarket.Domain;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Security.Claims;
 using System.Text;
 using System.Threading;
@@ -24,34 +25,20 @@ namespace GoodMarket.Application
         {
         }
 
-        public override Task<User> FindByNameAsync(string userName)
-        {
-            return base.FindByNameAsync(userName);
-            //var result = await base.FindByNameAsync(userName);
-            //result.UserClaims = await GetClaimsAsync(result);
-            //return result;
-        }
-    }
+        //public async override Task<User> GetUserAsync(ClaimsPrincipal principal)
+        //{
+        //    var result = await Users
+        //        .Include(e => e.UserClaims)
+        //        .SingleOrDefaultAsync(e => e.UserName == principal.GetName());
+        //    return result;
+        //}
 
-    /// <summary>
-    /// Менеджер юзеров
-    /// </summary>
-    public class GMRoleManager : RoleManager<Role>
-    {
-        public GMRoleManager(IRoleStore<Role> store, IEnumerable<IRoleValidator<Role>> roleValidators, ILookupNormalizer keyNormalizer, IdentityErrorDescriber errors, ILogger<RoleManager<Role>> logger) 
-            : base(store, roleValidators, keyNormalizer, errors, logger)
+        public async virtual Task<User> GetUserAsync<TProperty>(ClaimsPrincipal principal, Expression<Func<User, TProperty>> navigationPropertyPath = null)
         {
-        }
-    }
+            var result = await (navigationPropertyPath == null ? Users : Users.Include(e => navigationPropertyPath))
+                .SingleOrDefaultAsync(e => e.UserName == principal.GetName());
 
-    /// <summary>
-    /// Менеджер входа
-    /// </summary>
-    public class GMSignInManager : SignInManager<User>
-    {
-        public GMSignInManager(UserManager<User> userManager, IHttpContextAccessor contextAccessor, IUserClaimsPrincipalFactory<User> claimsFactory, IOptions<IdentityOptions> optionsAccessor, ILogger<SignInManager<User>> logger, IAuthenticationSchemeProvider schemes) 
-            : base(userManager, contextAccessor, claimsFactory, optionsAccessor, logger, schemes)
-        {
+            return result;
         }
     }
 }

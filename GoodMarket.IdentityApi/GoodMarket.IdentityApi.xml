@@ -24,9 +24,14 @@
             Контроллер входа
             </summary>
         </member>
-        <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.SignIn(GoodMarket.Application.SignInRequest)">
+        <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.SignIn(GoodMarket.Application.EmailSignInRequest)">
             <summary>
             Войти по имени/паролю
+            </summary>
+        </member>
+        <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.GetCurrentUser">
+            <summary>
+            Текущий юзер
             </summary>
         </member>
         <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.SignOut">
@@ -34,14 +39,19 @@
             Выйти
             </summary>
         </member>
-        <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.GetCurrent">
+        <member name="T:GoodMarket.IdentityApi.Controllers.EmailSignInRequestDto">
             <summary>
-            Текущий юзер
+            Вход по почте
             </summary>
         </member>
-        <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.Exception">
+        <member name="T:GoodMarket.IdentityApi.Controllers.PhoneSignInRequestDto">
             <summary>
-            Тестовое исключение
+            Вход по телефону
+            </summary>
+        </member>
+        <member name="T:GoodMarket.IdentityApi.Controllers.SignInResponseDto">
+            <summary>
+            Результат входа - токен
             </summary>
         </member>
     </members>

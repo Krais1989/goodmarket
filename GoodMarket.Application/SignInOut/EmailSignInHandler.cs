@@ -16,52 +16,50 @@ using Microsoft.AspNetCore.Identity;
 
 namespace GoodMarket.Application
 {
-    public class SignInRequest : IRequest<SignInResponse>
+    /// <summary>
+    /// Запрос входа по почте
+    /// </summary>
+    public class EmailSignInRequest : IRequest<EmailSignInResponse>
     {
         public string Email { get; set; }
         public string Password { get; set; }
     }
 
-    public class SignInResponse
+    /// <summary>
+    /// Ответ на запрос входа по почте
+    /// </summary>
+    public class EmailSignInResponse
     {
         public string Login { get; set; }
         public string Token { get; set; }
     }
 
-    public class SignInHandler : IRequestHandler<SignInRequest, SignInResponse>
+    public class EmailSignInHandler : IRequestHandler<EmailSignInRequest, EmailSignInResponse>
     {
-        private readonly GMSignInManager _signMan;
         private readonly GMUserManager _userMan;
         private readonly IJwtFactory _jwtFactory;
 
-        public SignInHandler(IJwtFactory jwtFactory, GMUserManager userMan, GMSignInManager signMan)
+        public EmailSignInHandler(IJwtFactory jwtFactory, GMUserManager userMan)
         {
             _jwtFactory = jwtFactory;
             _userMan = userMan;
-            _signMan = signMan;
         }
 
-        public async Task<SignInResponse> Handle(SignInRequest request, CancellationToken cancellationToken)
+        public async Task<EmailSignInResponse> Handle(EmailSignInRequest request, CancellationToken cancellationToken)
         {
             var user = await _userMan.FindByNameAsync(request.Email);
             var result = await _userMan.CheckPasswordAsync(user, request.Password);
 
             if (!result)
                 throw new InvalidUserNameOrPasswordException();
-
-            var signInRes = await _signMan.PasswordSignInAsync(user, request.Password, false, false);
-            if (!signInRes.Succeeded)
-                throw new LogInException(signInRes);
-
-            var claims = await _userMan.GetClaimsAsync(user);
-
+            
             var tokenClaims = new List<Claim>()
             {
-                new Claim(ClaimTypes.Name, request.Email)
+                new Claim(ClaimTypes.Email, user.Email)
             };
-            var response = new SignInResponse()
+            var response = new EmailSignInResponse()
             {
-                Login = request.Email,
+                Login = user.Email,
                 Token = _jwtFactory.Generate(tokenClaims)
             };
             return response;

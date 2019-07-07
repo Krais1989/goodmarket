@@ -12,10 +12,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\GoodMarket.Application\GoodMarket.Application.csproj" />
+    <ProjectReference Include="..\GoodMarket.RabbitMQ\GoodMarket.RabbitMQ.csproj" />
     <ProjectReference Include="..\GoodMarket.Swagger\GoodMarket.Swagger.csproj" />
   </ItemGroup>
 

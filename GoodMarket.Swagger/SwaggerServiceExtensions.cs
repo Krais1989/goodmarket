@@ -13,7 +13,7 @@ namespace GoodMarket.Swagger
     public static class SwaggerServiceExtensions
     {
         /// <summary>
-        /// Конфигурация Swagger
+        /// Конфигурация Swagger 
         /// </summary>
         public static IServiceCollection AddGMSwagger(this IServiceCollection services, IConfiguration config = null)
         {
@@ -26,12 +26,6 @@ namespace GoodMarket.Swagger
                     {
                         Title = $"{AppDomain.CurrentDomain.FriendlyName} Api",
                         Version = "v1",
-                    });
-                opt.SwaggerDoc("v2",
-                    new Info()
-                    {
-                        Title = $"{AppDomain.CurrentDomain.FriendlyName} Api",
-                        Version = "v2"
                     });
 
                 //options.CustomSchemaIds(x => x.FullName);
@@ -75,8 +69,6 @@ namespace GoodMarket.Swagger
             app.UseSwaggerUI(opt =>
             {
                 opt.SwaggerEndpoint("/swagger/v1/swagger.json", "GoodMarket API v1");
-                opt.SwaggerEndpoint("/swagger/v2/swagger.json", "GoodMarket API v2");
-
                 // http://localhost:<port>/<route_prefix>/swagger/v1/swagger.json
                 //opt.RoutePrefix = "swagger";
             });

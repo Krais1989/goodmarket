@@ -26,11 +26,11 @@ namespace GoodMarket.Persistence
             builder.Entity<User>(e =>
             {
                 e.ToTable("AspNetUsers");
-                e.HasKey(x => x.Id);
-                e.HasIndex(x => x.NormalizedUserName).HasName("UserNameIndex").IsUnique();
-                e.HasIndex(x => x.NormalizedEmail).HasName("EmailIndex");
+                e.HasKey(u => u.Id);
+                e.HasIndex(u => u.NormalizedUserName).HasName("UserNameIndex").IsUnique();
+                e.HasIndex(u => u.NormalizedEmail).HasName("EmailIndex");
 
-                e.Property(x => x.ConcurrencyStamp).IsConcurrencyToken();
+                e.Property(u => u.ConcurrencyStamp).IsConcurrencyToken();
 
                 e.HasMany(u => u.UserClaims).WithOne().HasForeignKey(uc => uc.UserId).IsRequired();
                 e.HasMany(u => u.UserLogins).WithOne(ul => ul.User).HasForeignKey(ul => ul.UserId);
@@ -42,10 +42,10 @@ namespace GoodMarket.Persistence
             builder.Entity<Role>(e =>
             {
                 e.ToTable("AspNetRoles");
-                e.HasKey(x => x.Id);
-                e.HasIndex(x => x.NormalizedName).HasName("RoleNameIndex").IsUnique();
+                e.HasKey(r => r.Id);
+                e.HasIndex(r => r.NormalizedName).HasName("RoleNameIndex").IsUnique();
 
-                e.Property(x => x.ConcurrencyStamp).IsConcurrencyToken();
+                e.Property(r => r.ConcurrencyStamp).IsConcurrencyToken();
 
                 e.HasMany(r => r.UserRoles).WithOne(ur => ur.Role).HasForeignKey(ur => ur.RoleId);
                 e.HasMany(r => r.RoleClaims).WithOne(rc => rc.Role).HasForeignKey(rc => rc.RoleId);
@@ -55,7 +55,7 @@ namespace GoodMarket.Persistence
             builder.Entity<UserClaim>(e =>
             {
                 e.ToTable("AspNetUserClaims");
-                e.HasKey(x => new { x.Id, x.UserId });
+                e.HasKey(uc => new { uc.Id, uc.UserId });
             });
 
             /* Настройка пользователь-вход */
@@ -69,21 +69,21 @@ namespace GoodMarket.Persistence
             builder.Entity<UserToken>(e =>
             {
                 e.ToTable("AspNetUserTokens");
-                e.HasKey(x => new { x.UserId, x.LoginProvider, x.Name });
+                e.HasKey(ut => new { ut.UserId, ut.LoginProvider, ut.Name });
             });
 
             /* Настройка роль-утверждение */
             builder.Entity<RoleClaim>(e =>
             {
                 e.ToTable("AspNetRoleClaims");
-                e.HasKey(x => x.Id);
+                e.HasKey(rc => rc.Id);
             });
 
             /* Настройка пользователь-роль */
             builder.Entity<UserRole>(e =>
             {
                 e.ToTable("AspNetUserRoles");
-                e.HasKey(x => new { x.UserId, x.RoleId });
+                e.HasKey(ur => new { ur.UserId, ur.RoleId });
             });
         }
     }

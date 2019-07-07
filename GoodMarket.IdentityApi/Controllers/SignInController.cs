@@ -36,8 +36,8 @@ namespace GoodMarket.IdentityApi.Controllers
         /// Войти по имени/паролю
         /// </summary>
         [HttpPost]
-        [ProducesResponseType(typeof(SignInResponse), 200)]
-        public async Task<IActionResult> SignIn([FromBody]SignInRequest request)
+        [ProducesResponseType(typeof(EmailSignInResponse), 200)]
+        public async Task<IActionResult> SignIn([FromBody]EmailSignInRequest request)
         {
             _logger.LogInformation($"Try sign in {request.Email}");
             var result = await _mediator.Send(request);
@@ -52,8 +52,8 @@ namespace GoodMarket.IdentityApi.Controllers
         [ProducesResponseType(typeof(GetCurrentUserResponseDto), 200)]
         public async Task<IActionResult> GetCurrentUser()
         {
-            var nameClaim = User.Claims.FirstOrDefault(e => e.Type == ClaimTypes.Name);
-            var user = await _userMan.FindByNameAsync(nameClaim.Value);
+            var user = await _userMan.GetUserAsync(User);
+            //var user2 = await _userMan.GetUserAsync(User, e => e.UserClaims);
             _logger.LogInformation($"Get current user: {user.Email}");
             return Ok(new GetCurrentUserResponseDto()
             {
