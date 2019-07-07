@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GoodMarket.Application;
 using GoodMarket.Application.Mappers;
+using GoodMarket.Application.RabbitMq;
 using GoodMarket.Authentication;
 using GoodMarket.Domain;
 using GoodMarket.IdentityApi;
@@ -71,6 +72,7 @@ namespace GoodMarket.IdentityApi
             .AddDefaultTokenProviders()
             .AddEntityFrameworkStores<GoodMarketIdentityDbContext>();
 
+            services.AddTransient<AccountRegistrationQueueProducer>();
             services.AddGMRabbit(Configuration);
             services.AddGMMediatoR();
             services.AddGMAuthentication(Configuration);

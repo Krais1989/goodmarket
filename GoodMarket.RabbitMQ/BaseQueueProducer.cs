@@ -14,27 +14,10 @@ namespace GoodMarket.RabbitMQ
         void Publish(byte[] message);
     }
 
-    public class AccountRegistrationQueueProducer : BaseQueueProducer
-    {
-        public ExchangeOptions ExchangeOptions;
-
-        public override string ExchangeName => "";
-        public override bool Mandatory => true;
-        public override string RoutingKey => "";
-
-        public AccountRegistrationQueueProducer(ExchangeOptions options,
-                                            ILogger<BaseQueueProducer> logger,
-                                            IConnection conn) : base(logger, conn)
-        {
-
-        }
-    }
-
     public class BaseQueueProducer : IBaseQueueProducer, IDisposable
     {
         private ILogger<BaseQueueProducer> _logger;
         private IModel _model;
-        private IConnection _conn;
 
         public virtual string ExchangeName { get; } = "";
         public virtual string RoutingKey { get; } = "";
@@ -46,17 +29,13 @@ namespace GoodMarket.RabbitMQ
             IConnection conn)
         {
             _logger = logger;
-            _conn = conn;
-            _model = _conn.CreateModel();
+            _model = conn.CreateModel();
         }
 
         public void Dispose()
         {
             if (_model != null && _model.IsOpen)
                 _model.Close();
-
-            if (_conn != null && _conn.IsOpen)
-                _conn.Close();
         }
 
         public void Publish<T>(T message)

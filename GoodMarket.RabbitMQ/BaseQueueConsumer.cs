@@ -16,7 +16,6 @@ namespace GoodMarket.RabbitMQ
     {
         protected readonly ILogger _logger;
         protected string _consumerName;
-        private IConnection _connection { get; }
 
         public IModel Model { get; }
         public event EventHandler<ConsumerEventArgs> ConsumerCancelled;
@@ -45,10 +44,8 @@ namespace GoodMarket.RabbitMQ
             IConnection connection,
             ILogger logger)
         {
-            _connection = connection;
             _logger = logger;
-
-            Model = _connection.CreateModel();
+            Model = connection.CreateModel();
         }
 
         public virtual void StartConsume()
