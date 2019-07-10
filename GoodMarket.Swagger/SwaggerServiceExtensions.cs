@@ -63,12 +63,12 @@ namespace GoodMarket.Swagger
         /// <summary>
         /// Подключение Swagger и Swagger UI в обработку
         /// </summary>
-        public static IApplicationBuilder UseGMSwagger(this IApplicationBuilder app)
+        public static IApplicationBuilder UseGMSwagger(this IApplicationBuilder app, string appName)
         {
             app.UseSwagger();
             app.UseSwaggerUI(opt =>
             {
-                opt.SwaggerEndpoint("/swagger/v1/swagger.json", "GoodMarket API v1");
+                opt.SwaggerEndpoint("/swagger/v1/swagger.json", appName);
                 // http://localhost:<port>/<route_prefix>/swagger/v1/swagger.json
                 //opt.RoutePrefix = "swagger";
             });

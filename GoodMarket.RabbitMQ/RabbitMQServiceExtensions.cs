@@ -14,8 +14,8 @@ namespace GoodMarket.RabbitMQ
             config.GetSection("RabbitConnection").Bind(connFactory);
             service.Configure<RabbitOptions>(config.GetSection("RabbitOptions"));
             service.AddSingleton(sp => connFactory.CreateConnection(AppDomain.CurrentDomain.FriendlyName));
-            service.AddScoped<IBaseQueueProducer, BaseQueueProducer>();
-            service.AddScoped<IRabbitManager, RabbitManager>();
+            service.AddTransient<IBaseQueueProducer, BaseQueueProducer>();
+            service.AddTransient<IRabbitManager, RabbitManager>();
             return service;
         }
     }

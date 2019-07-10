@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="rabbitsettings.json" />
+    <None Remove="rabbitschema.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="rabbitsettings.json">
+    <Content Include="rabbitschema.json">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

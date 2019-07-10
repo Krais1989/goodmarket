@@ -24,7 +24,7 @@ namespace GoodMarket.QueueProcessor
                 .ConfigureAppConfiguration((context, appBuilder) =>
                 {
                     appBuilder.AddJsonFile("appsettings.json");
-                    appBuilder.AddJsonFile("rabbitsettings.json");
+                    appBuilder.AddJsonFile("rabbitschema.json");
                 })
                 .ConfigureGMLogger()
                 .ConfigureServices((context, services) =>

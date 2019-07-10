@@ -52,6 +52,7 @@ namespace GoodMarket.RabbitMQ
         {
             Model.BasicQos(0, PrefetchCount, false);
             Model.BasicConsume(this, QueueName, AutoAck, ConsumerName, NoLocal, Exclusive);
+            LogInformation($"StartConsume");
         }
 
         public virtual void HandleBasicCancel(string consumerTag)

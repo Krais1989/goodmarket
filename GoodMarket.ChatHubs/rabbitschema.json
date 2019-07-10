@@ -1,0 +1,34 @@
+{
+  "RabbitOptions": {
+    "Queues": [
+      {
+        "Queue": "ChatNotifyQueue",
+        "Durable": false,
+        "Exclusive": false,
+        "AutoDelete": false
+      }
+    ],
+    "Exchanges": [
+      {
+        "Exchange": "ChatNotifyExchange",
+        "Type": "direct",
+        "Durable": false,
+        "AutoDelete": false
+      }
+    ],
+    "ExchangeBinds": [
+      {
+        "Destination": "",
+        "Source": "",
+        "RoutingKey": ""
+      }
+    ],
+    "QueueBinds": [
+      {
+        "Queue": "ChatNotifyQueue",
+        "Exchange": "ChatNotifyExchange",
+        "RoutingKey": ""
+      }
+    ]
+  }
+}

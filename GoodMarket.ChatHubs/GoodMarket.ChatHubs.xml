@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GoodMarket.ChatHubs</name>
+    </assembly>
+    <members>
+        <member name="M:GoodMarket.ChatHubs.Controllers.ChatStatisticsController.GetGroups">
+            <summary>
+            Получить названия всех групп SignalR
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GoodMarket.ChatHubs.Controllers.ChatStatisticsController.GetGroup(System.String)">
+            <summary>
+            Информация по группе
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GoodMarket.ChatHubs.Controllers.ChatStatisticsController.GetGroupUsers(System.String)">
+            <summary>
+            Получить всех юзеров группы
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GoodMarket.ChatHubs.ChatNotifyHostedService">
+            <summary>
+            Чтение сообщений с очереди 
+            </summary>
+        </member>
+        <member name="T:GoodMarket.ChatHubs.IClientChatHub">
+            <summary>
+            Интерфейс клиента SignalR
+            </summary>
+        </member>
+        <member name="T:GoodMarket.ChatHubs.MainChatHub">
+            <summary>
+            Интерфейс серверного хаба  SignalR
+            </summary>
+        </member>
+    </members>
+</doc>

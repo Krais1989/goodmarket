@@ -96,7 +96,7 @@ namespace GoodMarket.IdentityApi
             app.UseGMExecutionTimeTracking();
             app.UseCors(opt => opt.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
             app.UseHttpsRedirection();
-            app.UseGMSwagger();
+            app.UseGMSwagger("GoodMarket Identity v1");
             app.UseAuthentication();
             app.UseMvc();
         }
