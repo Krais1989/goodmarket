@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Norix\.nuget\packages\microsoft.net.test.sdk\16.1.0\build\netcoreapp1.0" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="C:\Users\Norix\.nuget\packages\xunit.runner.visualstudio\2.4.1\build\netcoreapp1.0\xunit.runner.reporters.netcoreapp10.dll" t="Include" />
+    <e p="C:\Users\Norix\.nuget\packages\xunit.runner.visualstudio\2.4.1\build\netcoreapp1.0\xunit.runner.utility.netcoreapp10.dll" t="Include" />
+    <e p="C:\Users\Norix\.nuget\packages\xunit.runner.visualstudio\2.4.1\build\netcoreapp1.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
+    <e p="C:\Users\Norix\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Norix\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_GoodMarket.1780574357.00" t="ExcludeRecursive" />
+    <e p="E:\Projects\NetCore\GoodMarket" t="IncludeFlat">
+      <e p="Common" t="Include" />
+      <e p="Core" t="Include" />
+      <e p="GoodMarket.Application" t="IncludeRecursive">
+        <e p="Accounts" t="Include">
+          <e p="AccountCreateCommandHandler.cs" t="Include" />
+          <e p="AccountDeleteCommandHandler.cs" t="Include" />
+          <e p="AccountGetAllQueryHandler.cs" t="Include" />
+          <e p="AccountGetQueryHandler.cs" t="Include" />
+          <e p="AccountUpdateCommandHandler.cs" t="Include" />
+        </e>
+        <e p="ApplicationBuilderExtensions.cs" t="Include" />
+        <e p="ApplicationServiceExtensions.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Carts" t="Include">
+          <e p="CartCreate.cs" t="Include" />
+          <e p="CartDelete.cs" t="Include" />
+          <e p="CartGet.cs" t="Include" />
+          <e p="CartGetAll.cs" t="Include" />
+          <e p="CartRecordQuantity.cs" t="Include" />
+          <e p="CartRecordRemove.cs" t="Include" />
+          <e p="CartUpdate.cs" t="Include" />
+        </e>
+        <e p="CRUD" t="Include">
+          <e p="BaseAttachCommandHandler.cs" t="Include" />
+          <e p="BaseCreateCommandHandler.cs" t="Include" />
+          <e p="BaseCRUDWrapper.cs" t="Include" />
+          <e p="BaseDeleteCommandHandler.cs" t="Include" />
+          <e p="BaseGetAllQueryHandler.cs" t="Include" />
+          <e p="BaseGetQueryHandler.cs" t="Include" />
+          <e p="BaseUpdateCommandHandler.cs" t="Include" />
+        </e>
+        <e p="Customers" t="Include">
+          <e p="CustomerCreateCommandHandler.cs" t="Include" />
+          <e p="CustomerDeleteCommandHandler.cs" t="Include" />
+          <e p="CustomerGetAllQueryHandler.cs" t="Include" />
+          <e p="CustomerGetQueryHandler.cs" t="Include" />
+          <e p="CustomerUpdateCommandHandler.cs" t="Include" />
+        </e>
+        <e p="Exceptions" t="Include">
+          <e p="AccountAlreadyExistsException.cs" t="Include" />
+          <e p="AccountCreateException.cs" t="Include" />
+          <e p="AccountNotFoundException.cs" t="Include" />
+          <e p="Basics" t="Include">
+            <e p="GMException.cs" t="Include" />
+            <e p="IGMException.cs" t="Include" />
+          </e>
+          <e p="EmailConfirmationException.cs" t="Include" />
+          <e p="LogInException.cs" t="Include" />
+        </e>
+        <e p="GMRoleManager.cs" t="Include" />
+        <e p="GMSignInManager.cs" t="Include" />
+        <e p="GMUserManager.cs" t="Include" />
+        <e p="GoodMarket.Application.csproj" t="IncludeRecursive" />
+        <e p="IdentityUserExtensions.cs" t="Include" />
+        <e p="Mappers" t="Include">
+          <e p="GMMappingExtensions.cs" t="Include" />
+          <e p="MappingProfileGM.cs" t="Include" />
+        </e>
+        <e p="MediatRs" t="Include">
+          <e p="RequestLoggerPreProcessor.cs" t="Include" />
+        </e>
+        <e p="MediatRServiceExtensions.cs" t="Include" />
+        <e p="Middlewares" t="Include">
+          <e p="ExceptionHandlingMiddleware.cs" t="Include" />
+          <e p="ExecutionTimeTrackingMiddleware.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.Application.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Orders" t="Include">
+          <e p="CreateOrderCommandHandler.cs" t="Include" />
+          <e p="OrderCreateCommandHandler.cs" t="Include" />
+          <e p="OrderDeleteCommandHandler.cs" t="Include" />
+          <e p="OrderGetAllQueryHandler.cs" t="Include" />
+          <e p="OrderGetQueryHandler.cs" t="Include" />
+          <e p="OrderProcessHandler.cs" t="Include" />
+          <e p="OrderUpdateCommandHandler.cs" t="Include" />
+        </e>
+        <e p="ProductCategories" t="Include">
+          <e p="ProductCategoryCreate.cs" t="Include" />
+          <e p="ProductCategoryDelete.cs" t="Include" />
+          <e p="ProductCategoryGet.cs" t="Include" />
+          <e p="ProductCategoryGetAll.cs" t="Include" />
+          <e p="ProductCategoryUpdate.cs" t="Include" />
+        </e>
+        <e p="Products" t="Include">
+          <e p="ProductCreateCommandHandler.cs" t="Include" />
+          <e p="ProductDeleteCommandHandler.cs" t="Include" />
+          <e p="ProductGetAllQueryHandler.cs" t="Include" />
+          <e p="ProductGetQueryHandler.cs" t="Include" />
+          <e p="ProductUpdateCommandHandler.cs" t="Include" />
+        </e>
+        <e p="RabbitMq" t="Include">
+          <e p="AccountRegistrationQueueProducer.cs" t="Include" />
+        </e>
+        <e p="rabbitschema.json" t="Include" />
+        <e p="Registration" t="Include">
+          <e p="EmailConfirmationHandler.cs" t="Include" />
+          <e p="PhoneConfirmationHandler.cs" t="Include" />
+          <e p="RegistrationHandler.cs" t="Include" />
+        </e>
+        <e p="SignInOut" t="Include">
+          <e p="EmailSignInHandler.cs" t="Include" />
+          <e p="GetCurrentUserHandler.cs" t="Include" />
+          <e p="SignOutHandler.cs" t="Include" />
+        </e>
+        <e p="Utils" t="Include">
+          <e p="CRUDWrapper.cs" t="Include" />
+          <e p="EntityDefaultFactory.cs" t="Include" />
+          <e p="QueryableExtensions.cs" t="Include" />
+        </e>
+        <e p="Validators" t="Include">
+          <e p="GMValidatorExtensions.cs" t="Include" />
+        </e>
+      </e>
+      <e p="GoodMarket.Application.Tests" t="IncludeRecursive">
+        <e p="Application" t="Include">
+          <e p="CartTests.cs" t="Include" />
+          <e p="ProductsTests.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DbContextTests" t="Include">
+          <e p="TestEntity.cs" t="Include" />
+        </e>
+        <e p="GoodMarket.Application.Tests.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.Application.Tests.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="GoodMarket.Authentication" t="IncludeRecursive">
+        <e p="AuthenticationServiceExtensions.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="GoodMarket.Authentication.csproj" t="IncludeRecursive" />
+        <e p="JwtFactory.cs" t="Include" />
+        <e p="JwtSettings.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.Authentication.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="GoodMarket.ChatHubs" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Consumers" t="Include">
+          <e p="ChatNotifyQueueConsumer.cs" t="Include" />
+          <e p="UserQueueConsumer.cs" t="Include" />
+        </e>
+        <e p="Controllers" t="Include">
+          <e p="ChatStatisticsController.cs" t="Include" />
+        </e>
+        <e p="GoodMarket.ChatHubs.csproj" t="IncludeRecursive" />
+        <e p="GoodMarket.ChatHubs.xml" t="Include" />
+        <e p="HostedServices" t="Include">
+          <e p="ChatHubRabbitHostedService.cs" t="Include" />
+        </e>
+        <e p="Hubs" t="Include">
+          <e p="MainChatHub.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.ChatHubs.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="rabbitschema.json" t="Include" />
+        <e p="README.md" t="Include" />
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="GoodMarket.CMSApi" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="REST" t="Include">
+            <e p="BaseRestController.cs" t="Include" />
+            <e p="CustomersController.cs" t="Include" />
+            <e p="OrdersController.cs" t="Include" />
+            <e p="ProductGroupsController.cs" t="Include" />
+            <e p="ProductsController.cs" t="Include" />
+            <e p="UsersContoller.cs" t="Include" />
+          </e>
+          <e p="ValuesController.cs" t="Include" />
+        </e>
+        <e p="GoodMarket.AdminApi.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.AdminApi.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="GoodMarket.Common" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="GoodMarket.Common.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.Common.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="PasswordHasher.cs" t="Include" />
+        <e p="Serializer.cs" t="Include" />
+      </e>
+      <e p="GoodMarket.Domain" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Entities" t="Include">
+          <e p="Cart.cs" t="Include" />
+          <e p="Customers" t="Include">
+            <e p="Customer.cs" t="Include" />
+          </e>
+          <e p="Employees" t="Include">
+            <e p="Employee.cs" t="Include" />
+          </e>
+          <e p="Identities" t="Include">
+            <e p="Role.cs" t="Include" />
+            <e p="RoleClaim.cs" t="Include" />
+            <e p="User.cs" t="Include" />
+            <e p="UserClaim.cs" t="Include" />
+            <e p="UserLogin.cs" t="Include" />
+            <e p="UserRole.cs" t="Include" />
+            <e p="UserToken.cs" t="Include" />
+          </e>
+          <e p="IEntity.cs" t="Include" />
+          <e p="Orders" t="Include">
+            <e p="Order.cs" t="Include" />
+            <e p="OrderHistory.cs" t="Include" />
+            <e p="OrderProduct.cs" t="Include" />
+          </e>
+          <e p="Products" t="Include">
+            <e p="Attribute.cs" t="Include" />
+            <e p="Category.cs" t="Include" />
+            <e p="Product.cs" t="Include" />
+            <e p="ProductAttribute.cs" t="Include" />
+          </e>
+          <e p="Profiles" t="Include">
+            <e p="Profile.cs" t="Include" />
+          </e>
+          <e p="Shared" t="Include">
+            <e p="AddressDetails.cs" t="Include" />
+            <e p="PersonDetails.cs" t="Include" />
+          </e>
+          <e p="Suppliers" t="Include">
+            <e p="Supplier.cs" t="Include" />
+          </e>
+        </e>
+        <e p="GoodMarket.Domain.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="GoodMarket.IdentityApi" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="appsettings.Production.json" t="Include" />
+        <e p="appsettings.Staging.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="ConfirmController.cs" t="Include" />
+          <e p="ExternalSignInController.cs" t="Include" />
+          <e p="QueueController.cs" t="Include" />
+          <e p="RegistrationController.cs" t="Include" />
+          <e p="SignInController.cs" t="Include" />
+        </e>
+        <e p="GoodMarket.IdentityApi.csproj" t="IncludeRecursive" />
+        <e p="GoodMarket.IdentityApi.xml" t="Include" />
+        <e p="Middlewares" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.IdentityApi.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="GoodMarket.Logger" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="GoodMarket.Logger.csproj" t="IncludeRecursive" />
+        <e p="LoggerServiceExtensions.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.Logger.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="GoodMarket.OrderProcessor" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="appsettings.Stage.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="OrderProcessController.cs" t="Include" />
+        </e>
+        <e p="GoodMarket.OrderProcessor.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.OrderProcessor.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="OrderMessageReceiver.cs" t="Include" />
+        <e p="Orders" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="RoboKassa" t="Include" />
+        <e p="Startup.cs" t="Include" />
+        <e p="YandexKassa" t="Include">
+          <e p="YandexOrderHandler.cs" t="Include" />
+        </e>
+      </e>
+      <e p="GoodMarket.Persistence" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Configurations" t="Include">
+          <e p="Accounts" t="Include">
+            <e p="CustomerEntityTypeConfiguration.cs" t="Include" />
+            <e p="EmployeeEntityTypeConfiguration.cs" t="Include" />
+            <e p="ProfileEntityTypeConfiguration.cs" t="Include" />
+          </e>
+          <e p="CartConfiguration.cs" t="Include" />
+          <e p="Identities" t="Include">
+            <e p="AccountClaimEntityTypeConfiguration.cs" t="Include" />
+            <e p="AccountEntityTypeConfiguration.cs" t="Include" />
+            <e p="AccountLoginEntityTypeConfiguration.cs" t="Include" />
+            <e p="AccountRoleEntityTypeConfiguration.cs" t="Include" />
+            <e p="AccountTokenEntityTypeConfiguration.cs" t="Include" />
+            <e p="RoleClaimEntityTypeConfiguration.cs" t="Include" />
+            <e p="RoleEntityTypeConfiguration.cs" t="Include" />
+          </e>
+          <e p="Orders" t="Include">
+            <e p="OrderEntityTypeConfiguration.cs" t="Include" />
+            <e p="OrderHistoryEntityTypeConfiguration.cs" t="Include" />
+            <e p="OrderProductEntityTypeConfiguration.cs" t="Include" />
+          </e>
+          <e p="Products" t="Include">
+            <e p="AttributeEntityTypeConfiguration.cs" t="Include" />
+            <e p="CategoryEntityTypeConfiguration.cs" t="Include" />
+            <e p="ProductAttributeEntityTypeConfiguration.cs" t="Include" />
+            <e p="ProductEntityTypeConfiguration.cs" t="Include" />
+          </e>
+          <e p="Suppliers" t="Include">
+            <e p="SupplierEntityTypeConfiguration.cs" t="Include" />
+          </e>
+        </e>
+        <e p="GoodMarket.Persistence.csproj" t="IncludeRecursive" />
+        <e p="GoodMarketDbContext.cs" t="Include" />
+        <e p="GoodMarketIdentityDbContext.cs" t="Include" />
+        <e p="Migrations" t="Include">
+          <e p="20190208144840_InitialCreate.cs" t="Include" />
+          <e p="20190208144840_InitialCreate.Designer.cs" t="Include" />
+          <e p="GoodMarketDbModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.Persistence.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="GoodMarket.ProcessorsHost" t="IncludeRecursive">
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="GoodMarket.ProcessorsHost.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.ProcessorsHost.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="README.md" t="Include" />
+      </e>
+      <e p="GoodMarket.QueueProcessor" t="IncludeRecursive">
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ConsumerHostedService.cs" t="Include" />
+        <e p="Consumers" t="Include">
+          <e p="RegistrationQueueConsumer.cs" t="Include" />
+        </e>
+        <e p="Content" t="Include">
+          <e p="template.txt" t="Include" />
+        </e>
+        <e p="GoodMarket.QueueProcessor.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.QueueProcessor.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="GoodMarket.RabbitMQ" t="IncludeRecursive">
+        <e p="BaseQueueConsumer.cs" t="Include" />
+        <e p="BaseQueueProducer.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="GoodMarket.RabbitMQ.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.RabbitMQ.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Options" t="Include">
+          <e p="ExchangeBindOptions.cs" t="Include" />
+          <e p="ExchangeOptions.cs" t="Include" />
+          <e p="QueueBindOptions.cs" t="Include" />
+          <e p="QueueOptions.cs" t="Include" />
+          <e p="RabbitHostOptions.cs" t="Include" />
+          <e p="RabbitSchema.cs" t="Include" />
+        </e>
+        <e p="RabbitManager.cs" t="Include" />
+        <e p="RabbitMQServiceExtensions.cs" t="Include" />
+        <e p="README.md" t="Include" />
+      </e>
+      <e p="GoodMarket.ShopApi" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="CartController.cs" t="Include" />
+          <e p="ValuesController.cs" t="Include" />
+        </e>
+        <e p="GoodMarket.ShopApi.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.ShopApi.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="GoodMarket.SignalR" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="GoodMarket.SignalR.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.SignalR.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SignalRServiceExtensions.cs" t="Include" />
+      </e>
+      <e p="GoodMarket.sln" t="IncludeFlat" />
+      <e p="GoodMarket.StatisticsProcessor" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Consumers" t="Include">
+          <e p="OrderStatisticsQueueConsumer.cs" t="Include" />
+        </e>
+        <e p="GoodMarket.StatisticsProcessor.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.StatisticsProcessor.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="rabbitschema.json" t="Include" />
+        <e p="StatisticsHostedService.cs" t="Include" />
+      </e>
+      <e p="GoodMarket.Swagger" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="GoodMarket.Swagger.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="GoodMarket.Swagger.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SwaggerServiceExtensions.cs" t="Include" />
+      </e>
+      <e p="Infrastracture" t="Include" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Presentation" t="Include" />
+      <e p="Processors" t="Include" />
+      <e p="Tests" t="Include" />
+    </e>
+  </component>
+</project>

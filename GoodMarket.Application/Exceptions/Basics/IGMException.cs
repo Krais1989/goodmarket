@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace GoodMarket.Application.Exceptions
+﻿namespace GoodMarket.Application.Exceptions.Basics
 {
     /// <summary>
     /// Интерфейс-метка кастомных исключений IGMException

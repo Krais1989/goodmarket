@@ -1,5 +1,5 @@
 {
-  "RabbitOptions": {
+  "RabbitSchema": {
     "Queues": [
       {
         "Queue": "AccountRegistrationQueue",

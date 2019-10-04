@@ -1,7 +1,6 @@
-﻿using RabbitMQ.Client;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace GoodMarket.RabbitMQ
+namespace GoodMarket.RabbitMQ.Options
 {
     public class QueueOptions
     {

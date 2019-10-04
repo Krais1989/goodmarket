@@ -1,14 +1,12 @@
-﻿using GoodMarket.Domain;
-using GoodMarket.Persistence;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Linq;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using GoodMarket.Persistence;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
 
-namespace GoodMarket.Application
+namespace GoodMarket.Application.CRUD
 {
     public class BaseGetAllQuery<T> : IRequest<IEnumerable<T>>
     {

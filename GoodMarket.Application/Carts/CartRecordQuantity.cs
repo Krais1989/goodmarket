@@ -1,13 +1,11 @@
-﻿using GoodMarket.Persistence;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using GoodMarket.Persistence;
+using MediatR;
 
-namespace GoodMarket.Application
+namespace GoodMarket.Application.Carts
 {
     public class CartRecordQuantityMessage : IRequest
     {

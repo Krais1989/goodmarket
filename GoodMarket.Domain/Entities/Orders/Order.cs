@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using GoodMarket.Domain.Entities.Customers;
+using GoodMarket.Domain.Entities.Employees;
 
-namespace GoodMarket.Domain
+namespace GoodMarket.Domain.Entities.Orders
 {
     public enum EOrderState
     {

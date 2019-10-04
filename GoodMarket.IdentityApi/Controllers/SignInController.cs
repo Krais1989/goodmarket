@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using GoodMarket.Application;
 using GoodMarket.Application.Exceptions;
+using GoodMarket.Application.SignInOut;
 using GoodMarket.Domain;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -22,14 +23,12 @@ namespace GoodMarket.IdentityApi.Controllers
     public class SignInController : ControllerBase
     {
         private readonly IMediator _mediator;
-        private readonly GMUserManager _userMan;
         private readonly ILogger<SignInController> _logger;
 
-        public SignInController(ILogger<SignInController> logger, IMediator mediator, GMUserManager userMan)
+        public SignInController(ILogger<SignInController> logger, IMediator mediator)
         {
             _mediator = mediator;
             _logger = logger;
-            _userMan = userMan;
         }
 
         /// <summary>
@@ -49,16 +48,13 @@ namespace GoodMarket.IdentityApi.Controllers
         /// </summary>
         [HttpGet("Current")]
         [Authorize]
-        [ProducesResponseType(typeof(GetCurrentUserResponseDto), 200)]
+        [ProducesResponseType(typeof(GetCurrentUserResponse), 200)]
+        [ProducesResponseType(401)]
         public async Task<IActionResult> GetCurrentUser()
         {
-            var user = await _userMan.GetUserAsync(User);
-            //var user2 = await _userMan.GetUserAsync(User, e => e.UserClaims);
-            _logger.LogInformation($"Get current user: {user.Email}");
-            return Ok(new GetCurrentUserResponseDto()
-            {
-                Email = user.Email
-            });
+            var result = await _mediator.Send(new GetCurrentUserRequest());
+            _logger.LogInformation($"Get current user: {result.Email}");
+            return Ok(result);
         }
 
         /// <summary>

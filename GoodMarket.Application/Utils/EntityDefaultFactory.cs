@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace GoodMarket.Application
+namespace GoodMarket.Application.Utils
 {
     public static class EntityDefaultFactory
     {

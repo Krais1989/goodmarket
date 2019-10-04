@@ -31,9 +31,21 @@ namespace GoodMarket.RabbitMQ
         }
 
         public abstract string QueueName { get; }
+        /// <summary>
+        /// Количество предварительно извлекаемых сообщений
+        /// </summary>
         public virtual ushort PrefetchCount => 5;
+        /// <summary>
+        /// Авто-подтверждение при доставке сообщения
+        /// </summary>
         public virtual bool AutoAck => true;
+        /// <summary>
+        /// 
+        /// </summary>
         public virtual bool NoLocal => false;
+        /// <summary>
+        /// Эксклюзивный доступ к очереди. Исключает одновременное обращение нескольких консумеров
+        /// </summary>
         public virtual bool Exclusive => false;
 
         public virtual void LogInformation(string msg) => _logger.LogInformation($"{ConsumerName} - {msg}");

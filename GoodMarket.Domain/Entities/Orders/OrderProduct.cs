@@ -1,6 +1,6 @@
-﻿using System;
+﻿using GoodMarket.Domain.Entities.Products;
 
-namespace GoodMarket.Domain
+namespace GoodMarket.Domain.Entities.Orders
 {
     /// <summary>
     /// Связь заказ-продукт

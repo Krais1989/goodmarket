@@ -12,7 +12,7 @@ namespace GoodMarket.RabbitMQ
     {
         IConnection Connection { get; }
         IModel Model { get; }
-        RabbitOptions RabbitOptions { get; }
+        IList<RabbitSchema> RabbitSchemas { get; }
 
         void EnsureAll();
     }
@@ -24,16 +24,16 @@ namespace GoodMarket.RabbitMQ
     {
         public IConnection Connection { get; private set; }
         public IModel Model { get; private set; }
-        public RabbitOptions RabbitOptions { get; private set; }
+        public IList<RabbitSchema> RabbitSchemas { get; private set; }
 
         public RabbitManager(
             IConnection connection,
-            IOptions<RabbitOptions> rabbitOptions)
+            IEnumerable<IOptions<RabbitSchema>> rabbitSchema)
         {
             Connection = connection;
-            RabbitOptions = rabbitOptions.Value;
-            RabbitOptions.RemoveInvalids();
-
+            RabbitSchemas = rabbitSchema.Select(e => e.Value).ToList();
+            foreach (var schema in RabbitSchemas)
+                schema.RemoveInvalids();
             Model = Connection.CreateModel();
         }
 
@@ -43,19 +43,25 @@ namespace GoodMarket.RabbitMQ
                 Model.Close();
         }
 
+        /// <summary>
+        /// Реализация схемы RabbitMQ
+        /// </summary>
         public void EnsureAll()
         {
-            DoInInnerChannel(model =>
+            foreach (var rabbitSchema in RabbitSchemas)
             {
-                foreach (var q in RabbitOptions.Queues.Values)
-                    EnsureQueue(model, q);
-                foreach (var e in RabbitOptions.Exchanges.Values)
-                    if (e.IsValid) EnsureExchange(model, e);
-                foreach (var qb in RabbitOptions.QueueBinds)
-                    EnsureQueryBind(model, qb);
-                foreach (var eb in RabbitOptions.ExchangeBinds)
-                    EnsureExchangeBind(model, eb);
-            });
+                DoInInnerChannel(model =>
+                {
+                    foreach (var q in rabbitSchema.Queues.Values)
+                        EnsureQueue(model, q);
+                    foreach (var e in rabbitSchema.Exchanges.Values)
+                        if (e.IsValid) EnsureExchange(model, e);
+                    foreach (var qb in rabbitSchema.QueueBinds)
+                        EnsureQueryBind(model, qb);
+                    foreach (var eb in rabbitSchema.ExchangeBinds)
+                        EnsureExchangeBind(model, eb);
+                });
+            }
         }
 
         public QueueDeclareOk EnsureQueue(QueueOptions queue) => DoInInnerChannel(model => EnsureQueue(model, queue));
@@ -74,14 +80,27 @@ namespace GoodMarket.RabbitMQ
         public void EnsureQueryBind(IModel model, QueueBindOptions queryBind)
             => model.QueueBind(queryBind.Queue, queryBind.Exchange, queryBind.RoutingKey);
 
+        /// <summary>
+        /// Выполнение функции в рамках базового канала Rabbit
+        /// </summary>
         protected TResult DoInInnerChannel<TResult>(Func<IModel, TResult> action) => action(Model);
+        /// <summary>
+        /// Выполнение Процедуры в рамках базового канала Rabbit
+        /// </summary>
         protected void DoInInnerChannel(Action<IModel> action) => action(Model);
 
+        /// <summary>
+        /// Выполнение функции в новом канале Rabbit
+        /// </summary>
         protected TResult DoInNewChannel<TResult>(Func<IModel, TResult> action)
         {
             using (var model = Connection.CreateModel())
                 return action(model);
         }
+        /// <summary>
+        /// Выполнение процедуры в новом канале Rabbit
+        /// </summary>
+        /// <param name="action"></param>
         protected void DoInNewChannel(Action<IModel> action)
         {
             using (var model = Connection.CreateModel())

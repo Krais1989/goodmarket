@@ -1,7 +1,8 @@
-﻿using GoodMarket.Domain;
+﻿using GoodMarket.Application.CRUD;
+using GoodMarket.Domain.Entities.Identities;
 using GoodMarket.Persistence;
 
-namespace GoodMarket.Application
+namespace GoodMarket.Application.Accounts
 {
     // TODO: Обработчики Удаления элемента для сущностей
 

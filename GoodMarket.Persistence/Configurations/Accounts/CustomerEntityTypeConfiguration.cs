@@ -1,8 +1,8 @@
-﻿using GoodMarket.Domain;
+﻿using GoodMarket.Domain.Entities.Customers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace GoodMarket.Persistence.Configurations
+namespace GoodMarket.Persistence.Configurations.Accounts
 {
     /// <summary>
     /// Конфигурация юзера-клиента

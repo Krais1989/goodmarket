@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using GoodMarket.Application;
-using GoodMarket.Domain;
+using GoodMarket.Application.CRUD;
 using GoodMarket.Persistence;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace GoodMarket.AdminApi.Controllers
+namespace GoodMarket.AdminApi.Controllers.REST
 {
     [Route("api/[controller]")]
     [ApiController]

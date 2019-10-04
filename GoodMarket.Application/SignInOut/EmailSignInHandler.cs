@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Security.Claims;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using MediatR;
-using GoodMarket.Domain;
-using GoodMarket.Application.Serialization;
-using GoodMarket.Persistence;
-using Microsoft.EntityFrameworkCore;
 using GoodMarket.Application.Exceptions;
 using GoodMarket.Authentication;
-using Microsoft.AspNetCore.Identity;
+using MediatR;
 
-namespace GoodMarket.Application
+namespace GoodMarket.Application.SignInOut
 {
     /// <summary>
     /// Запрос входа по почте

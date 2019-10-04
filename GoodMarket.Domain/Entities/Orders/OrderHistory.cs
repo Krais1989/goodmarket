@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GoodMarket.Domain
+namespace GoodMarket.Domain.Entities.Orders
 {
     /// <summary>
     /// Запись лога заказа

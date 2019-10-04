@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using GoodMarket.Application;
+﻿using System.Threading.Tasks;
+using GoodMarket.Application.Carts;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace GoodMarket.Api.Controllers
+namespace GoodMarket.ShopApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

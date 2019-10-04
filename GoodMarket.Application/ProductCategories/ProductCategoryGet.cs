@@ -1,7 +1,8 @@
-﻿using GoodMarket.Domain;
+﻿using GoodMarket.Application.CRUD;
+using GoodMarket.Domain.Entities.Products;
 using GoodMarket.Persistence;
 
-namespace GoodMarket.Application
+namespace GoodMarket.Application.ProductCategories
 {
     public class ProductCategoryGet : BaseGetQueryHandler<Category>
     {

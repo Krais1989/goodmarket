@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using GoodMarket.Domain.Entities.Orders;
+using GoodMarket.Domain.Entities.Profiles;
 
-namespace GoodMarket.Domain
+namespace GoodMarket.Domain.Entities.Customers
 {
     /// <summary>
     /// Юзер-клиент

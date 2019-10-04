@@ -1,4 +1,5 @@
-﻿using GoodMarket.Domain;
+﻿using GoodMarket.Application.Exceptions.Basics;
+using GoodMarket.Domain;
 
 namespace GoodMarket.Application.Exceptions
 {

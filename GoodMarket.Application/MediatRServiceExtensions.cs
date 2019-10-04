@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using GoodMarket.Application.MediatRs;
+using MediatR;
+using MediatR.Pipeline;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -14,9 +16,11 @@ namespace GoodMarket.Application
         /// </summary>
         /// <param name="service"></param>
         /// <returns></returns>
-        public static IServiceCollection AddGMMediatoR(this IServiceCollection service)
+        public static IServiceCollection AddGMMediatoR(this IServiceCollection service, params Assembly[] assemblies)
         {
-            return service.AddMediatR(typeof(MediatRServiceExtensions).Assembly);
+            return (assemblies.Length == 0)
+                ? service.AddMediatR(typeof(MediatRServiceExtensions).Assembly)
+                : service.AddMediatR(assemblies);
         }
     }
 }

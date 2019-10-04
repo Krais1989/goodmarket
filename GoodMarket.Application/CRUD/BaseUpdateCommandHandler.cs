@@ -1,14 +1,10 @@
-﻿using GoodMarket.Domain;
+﻿using System.Threading;
+using System.Threading.Tasks;
 using GoodMarket.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
-namespace GoodMarket.Application
+namespace GoodMarket.Application.CRUD
 {
     public class BaseUpdateCommand<TEntity> : IRequest<TEntity>
     {

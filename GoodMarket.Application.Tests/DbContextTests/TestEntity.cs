@@ -1,8 +1,8 @@
-﻿using GoodMarket.Application.Serialization;
-using GoodMarket.Domain;
+﻿using GoodMarket.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.Collections.Generic;
+using GoodMarket.Common;
 
 namespace GoodMarket.Application.Tests.Application
 {
@@ -27,8 +27,8 @@ namespace GoodMarket.Application.Tests.Application
             builder.HasMany(e => e.SubList);
             builder.HasAlternateKey(e => e.Name);
             builder.Property(e => e.Props).HasConversion(
-                e => SSerializer.Serialize(e), 
-                e => SSerializer.Deserialize<Dictionary<string, string>>(e));
+                e => SSerializer.SerializeDefault(e), 
+                e => SSerializer.DeserializeDefault<Dictionary<string, string>>(e));
         }
     }
 }

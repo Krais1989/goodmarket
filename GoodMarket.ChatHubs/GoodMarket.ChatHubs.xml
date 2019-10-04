@@ -4,6 +4,11 @@
         <name>GoodMarket.ChatHubs</name>
     </assembly>
     <members>
+        <member name="T:GoodMarket.ChatHubs.Consumers.ChatNotifyQueueConsumer">
+            <summary>
+            Обработчик для системных уведомлений чата
+            </summary>
+        </member>
         <member name="M:GoodMarket.ChatHubs.Controllers.ChatStatisticsController.GetGroups">
             <summary>
             Получить названия всех групп SignalR
@@ -22,19 +27,19 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="T:GoodMarket.ChatHubs.ChatNotifyHostedService">
+        <member name="T:GoodMarket.ChatHubs.HostedServices.ChatHubRabbitHostedService">
             <summary>
-            Чтение сообщений с очереди 
+            Сервис работы с очередями ChatHub
             </summary>
         </member>
-        <member name="T:GoodMarket.ChatHubs.IClientChatHub">
+        <member name="T:GoodMarket.ChatHubs.Hubs.IClientChatHub">
             <summary>
             Интерфейс клиента SignalR
             </summary>
         </member>
-        <member name="T:GoodMarket.ChatHubs.MainChatHub">
+        <member name="T:GoodMarket.ChatHubs.Hubs.MainChatHub">
             <summary>
-            Интерфейс серверного хаба  SignalR
+            Главный хаб чата
             </summary>
         </member>
     </members>

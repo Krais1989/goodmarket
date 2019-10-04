@@ -1,8 +1,7 @@
-﻿using GoodMarket.Application;
-using GoodMarket.Domain;
+﻿using GoodMarket.Application.CRUD;
 using GoodMarket.Persistence;
 
-namespace GoodMarket.Application
+namespace GoodMarket.Application.Utils
 {
     /// <summary>
     /// Обёртка под CRUD CQRS

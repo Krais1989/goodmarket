@@ -1,17 +1,13 @@
-﻿using GoodMarket.Application.Exceptions;
-using GoodMarket.Application.Registration;
-using GoodMarket.Domain;
-using GoodMarket.Persistence;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading;
 using System.Threading.Tasks;
+using GoodMarket.Application.Exceptions;
+using GoodMarket.Domain.Entities.Identities;
+using MediatR;
 
-namespace GoodMarket.Application
+namespace GoodMarket.Application.Registration
 {
     public class RegistrationRequest : IRequest<RegistrationResponse>
     {
@@ -96,12 +92,6 @@ namespace GoodMarket.Application
                 throw new AccountCreateException(string.Join("\n", claimResult.Errors.Select(e => e.Description)));
 
             var emailConfirmToken = await _userMan.GenerateEmailConfirmationTokenAsync(user);
-            
-            /* тест - Получение Claim и Roles юзера */
-            var employees = await _userMan.GetUsersForClaimAsync(new Claim(ClaimTypes.Role, "Employee"));
-            var userClaims = await _userMan.GetClaimsAsync(user);
-            var roles = await _userMan.GetRolesAsync(user);
-            var roleClaims = await _roleMan.GetClaimsAsync(await _roleMan.FindByNameAsync(roles.First()));
 
             return await Task.FromResult(new RegistrationResponse(user.Id) { DebugEmailToken = emailConfirmToken });
         }

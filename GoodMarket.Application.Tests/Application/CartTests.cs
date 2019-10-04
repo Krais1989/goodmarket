@@ -6,6 +6,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
+using GoodMarket.Application.Carts;
+using GoodMarket.Application.CRUD;
+using GoodMarket.Application.Utils;
+using GoodMarket.Domain.Entities;
 using Xunit;
 
 namespace GoodMarket.Application.Tests.Application

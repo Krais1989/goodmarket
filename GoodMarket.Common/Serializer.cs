@@ -1,25 +1,43 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text.Json;
 
-namespace GoodMarket.Application.Serialization
+namespace GoodMarket.Common
 {
     public static class SSerializer
     {
-        public static readonly JsonSerializerSettings settings = new JsonSerializerSettings()
-        {
-            NullValueHandling = NullValueHandling.Ignore
-        };
+        public static readonly JsonSerializerOptions DefaultSerializationOptions =
+            new JsonSerializerOptions()
+            {
+                IgnoreNullValues = true,
+                WriteIndented = true
+            };
 
-        public static string Serialize<T>(T obj)
+
+        /// <summary>
+        /// Сериализация с базовыми опциями (Для использования в Expressions)
+        /// </summary>
+        public static string SerializeDefault<T>(T obj) => JsonSerializer.Serialize(obj, DefaultSerializationOptions);
+        /// <summary>
+        /// Десериализация с базовыми опциями (Для использования в Expressions)
+        /// </summary>
+        public static T DeserializeDefault<T>(string raw) => JsonSerializer.Deserialize<T>(raw, DefaultSerializationOptions);
+
+        /// <summary>
+        /// Сериализация с базовыми или кастомными опциями
+        /// </summary>
+        public static string Serialize<T>(T obj, JsonSerializerOptions options = null)
         {
-            return JsonConvert.SerializeObject(obj, settings);
+            if (options == null)
+                options = DefaultSerializationOptions;
+            return JsonSerializer.Serialize(obj, options);
         }
-        public static T Deserialize<T>(string raw)
+        /// <summary>
+        /// Десериализация с базовыми или кастомными опциями
+        /// </summary>
+        public static T Deserialize<T>(string raw, JsonSerializerOptions options = null)
         {
-            return JsonConvert.DeserializeObject<T>(raw);
+            if (options == null)
+                options = DefaultSerializationOptions;
+            return JsonSerializer.Deserialize<T>(raw, options);
         }
     }
 }

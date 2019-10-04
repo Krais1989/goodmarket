@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 using GoodMarket.Application;
 using GoodMarket.Application.Mappers;
 using GoodMarket.Application.RabbitMq;
+using GoodMarket.Application.Validators;
 using GoodMarket.Authentication;
 using GoodMarket.Domain;
+using GoodMarket.Domain.Entities.Identities;
 using GoodMarket.IdentityApi;
 using GoodMarket.Persistence;
 using GoodMarket.RabbitMQ;
@@ -15,6 +17,7 @@ using GoodMarket.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -22,6 +25,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -61,30 +65,28 @@ namespace GoodMarket.IdentityApi
                 opt.Lockout = idOpts.Lockout;
             })
             .AddRoles<Role>()
-            /* Необходимо переопределить UserStore, иначе, к примеру, падает при попытке получить IdentityUserClaim */
-            .AddUserStore<UserStore<User, Role, GoodMarketIdentityDbContext, int, UserClaim, UserRole, UserLogin, UserToken, RoleClaim>>()
-            /* Необходимо переопределить RoleStore, иначе, к примеру, падает при попытке получить IdentityUserRole */
-            .AddRoleStore<RoleStore<Role, GoodMarketIdentityDbContext, int, UserRole, RoleClaim>>()
+            .AddUserStore<UserStore<User, Role, GoodMarketIdentityDbContext, int, UserClaim, UserRole, UserLogin, UserToken, RoleClaim>>() // required
+            .AddRoleStore<RoleStore<Role, GoodMarketIdentityDbContext, int, UserRole, RoleClaim>>() // required
             .AddClaimsPrincipalFactory<UserClaimsPrincipalFactory<User, Role>>()
             .AddUserManager<GMUserManager>()
             .AddRoleManager<GMRoleManager>()
             .AddSignInManager<GMSignInManager>()
             .AddDefaultTokenProviders()
             .AddEntityFrameworkStores<GoodMarketIdentityDbContext>();
-
+            
             services.AddTransient<AccountRegistrationQueueProducer>();
-            services.AddGMRabbit(Configuration);
+            services.AddGMRabbitServices(Configuration);
             services.AddGMMediatoR();
             services.AddGMAuthentication(Configuration);
             services.AddGMSwagger();
             services.AddGMAutoMapping();
-            services.AddMvc()
+            services.AddControllers()
                 .AddGMValidators()
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+                .SetCompatibilityVersion(CompatibilityVersion.Latest);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (!env.IsDevelopment())
             {
@@ -97,8 +99,14 @@ namespace GoodMarket.IdentityApi
             app.UseCors(opt => opt.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
             app.UseHttpsRedirection();
             app.UseGMSwagger("GoodMarket Identity v1");
+
             app.UseAuthentication();
-            app.UseMvc();
+            app.UseAuthorization();
+
+            app.UseRouting();
+            app.UseEndpoints(route => {
+                route.MapDefaultControllerRoute();
+            });
         }
     }
 }

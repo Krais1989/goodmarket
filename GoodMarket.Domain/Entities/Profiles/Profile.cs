@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using GoodMarket.Domain.Entities.Identities;
 
-namespace GoodMarket.Domain
+namespace GoodMarket.Domain.Entities.Profiles
 {
     /// <summary>
     /// Данные профиля

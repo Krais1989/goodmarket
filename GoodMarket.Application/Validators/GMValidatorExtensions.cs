@@ -1,11 +1,8 @@
-﻿using FluentValidation.AspNetCore;
+﻿using System.Reflection;
+using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
 
-namespace GoodMarket.Application
+namespace GoodMarket.Application.Validators
 {
     public static class GMValidatorExtensions
     {

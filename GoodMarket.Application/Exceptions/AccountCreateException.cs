@@ -1,4 +1,6 @@
-﻿namespace GoodMarket.Application.Exceptions
+﻿using GoodMarket.Application.Exceptions.Basics;
+
+namespace GoodMarket.Application.Exceptions
 {
     public class AccountCreateException : GMException
     {

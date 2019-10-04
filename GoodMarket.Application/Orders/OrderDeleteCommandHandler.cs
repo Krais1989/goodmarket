@@ -1,7 +1,8 @@
-﻿using GoodMarket.Domain;
+﻿using GoodMarket.Application.CRUD;
+using GoodMarket.Domain.Entities.Orders;
 using GoodMarket.Persistence;
 
-namespace GoodMarket.Application
+namespace GoodMarket.Application.Orders
 {
     public class OrderDeleteCommandHandler : BaseDeleteCommandHandler<Order>
     {

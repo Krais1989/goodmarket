@@ -12,6 +12,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using GoodMarket.Domain.Entities.Identities;
 
 namespace GoodMarket.Application
 {

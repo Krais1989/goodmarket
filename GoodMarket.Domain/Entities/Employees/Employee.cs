@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using GoodMarket.Domain.Entities.Orders;
+using GoodMarket.Domain.Entities.Profiles;
 
-namespace GoodMarket.Domain
+namespace GoodMarket.Domain.Entities.Employees
 {
     /// <summary>
     /// Юзер-сотрудник

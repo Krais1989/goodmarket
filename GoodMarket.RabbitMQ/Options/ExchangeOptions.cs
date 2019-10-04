@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace GoodMarket.RabbitMQ
+namespace GoodMarket.RabbitMQ.Options
 {
     public class ExchangeOptions
     {

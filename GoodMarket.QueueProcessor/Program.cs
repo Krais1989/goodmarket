@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GoodMarket.QueueProcessor.Consumers;
 
 namespace GoodMarket.QueueProcessor
 {
@@ -34,7 +35,7 @@ namespace GoodMarket.QueueProcessor
                         opts.ShutdownTimeout = TimeSpan.FromSeconds(5);
                     });
 
-                    services.AddGMRabbit(context.Configuration);
+                    services.AddGMRabbitServices(context.Configuration);
                     services.AddHostedService<ConsumerHostedService>();
                     services.AddTransient<BaseQueueConsumer, RegistrationQueueConsumer>();
                 })

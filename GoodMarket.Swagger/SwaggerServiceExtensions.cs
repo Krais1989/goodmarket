@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using Microsoft.OpenApi.Models;
 
 namespace GoodMarket.Swagger
 {
@@ -20,9 +21,10 @@ namespace GoodMarket.Swagger
             /* Swagger */
             services.AddSwaggerGen((opt) =>
             {
+                
                 /* Swagger-документы */
                 opt.SwaggerDoc("v1",
-                    new Info()
+                    new Microsoft.OpenApi.Models.OpenApiInfo()
                     {
                         Title = $"{AppDomain.CurrentDomain.FriendlyName} Api",
                         Version = "v1",
@@ -31,17 +33,20 @@ namespace GoodMarket.Swagger
                 //options.CustomSchemaIds(x => x.FullName);
 
                 /* Возможность указания Bearer-токена */
-                opt.AddSecurityDefinition("Bearer", new ApiKeyScheme
-                {
-                    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
-                    Name = "Authorization",
-                    In = "header",
-                    Type = "apiKey"
-                });
+                //opt.AddSecurityDefinition("Bearer", new ApiKeyScheme
+                //{
+                //    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+                //    Name = "Authorization",
+                //    In = "header",
+                //    Type = "apiKey"
+                //});
 
-                opt.AddSecurityRequirement(new Dictionary<string, IEnumerable<string>>
-                {
-                    { "Bearer", new string[] { } }
+                opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme() {
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer", 
+                    In = ParameterLocation.Header, 
+                    Name = "Authorization",
+                    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
                 });
 
                 /* Использовать XML-документ с метаданными методов и классов */
@@ -65,7 +70,10 @@ namespace GoodMarket.Swagger
         /// </summary>
         public static IApplicationBuilder UseGMSwagger(this IApplicationBuilder app, string appName)
         {
-            app.UseSwagger();
+            app.UseSwagger(opt=>
+            {
+                
+            });
             app.UseSwaggerUI(opt =>
             {
                 opt.SwaggerEndpoint("/swagger/v1/swagger.json", appName);

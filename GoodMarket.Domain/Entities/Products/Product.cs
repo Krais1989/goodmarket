@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace GoodMarket.Domain
+namespace GoodMarket.Domain.Entities.Products
 {
     /// <summary>
     /// Продукт

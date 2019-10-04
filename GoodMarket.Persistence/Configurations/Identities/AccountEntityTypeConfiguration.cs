@@ -1,11 +1,8 @@
-﻿using GoodMarket.Domain;
+﻿using GoodMarket.Domain.Entities.Identities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace GoodMarket.Persistence.Configurations
+namespace GoodMarket.Persistence.Configurations.Identities
 {
     /// <summary>
     /// Базовая конфигурация для Юзера

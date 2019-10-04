@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace GoodMarket.Domain
+namespace GoodMarket.Domain.Entities.Identities
 {
     /// <summary>
     /// Связь юзер - роль

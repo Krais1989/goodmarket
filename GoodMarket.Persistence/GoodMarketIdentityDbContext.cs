@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GoodMarket.Domain.Entities.Identities;
 
 namespace GoodMarket.Persistence
 {

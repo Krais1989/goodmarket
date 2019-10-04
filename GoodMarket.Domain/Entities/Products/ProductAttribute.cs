@@ -1,4 +1,4 @@
-﻿namespace GoodMarket.Domain
+﻿namespace GoodMarket.Domain.Entities.Products
 {
     /// <summary>
     /// Связь продукт-аттрибут

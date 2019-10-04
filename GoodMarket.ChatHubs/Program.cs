@@ -29,10 +29,10 @@ namespace GoodMarket.ChatHubs
             WebHost.CreateDefaultBuilder(args)
                 .ConfigureAppConfiguration((context, config) =>
                 {
+                    config.ConfigureGMRabbitHost();
                     config.SetBasePath(Directory.GetCurrentDirectory());
                     config.AddJsonFile("appsettings.json", false, true);
                     config.AddJsonFile($"appsettings.{context.HostingEnvironment.EnvironmentName}.json", false, true);
-                    config.AddJsonFile("rabbitschema.json", false, false);
                     config.AddEnvironmentVariables();
                     config.AddCommandLine(args);
                 })

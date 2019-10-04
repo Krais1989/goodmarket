@@ -1,10 +1,9 @@
-﻿using System.Threading.Tasks;
-using GoodMarket.Domain;
+﻿using GoodMarket.Domain.Entities.Products;
 using GoodMarket.Persistence;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GoodMarket.AdminApi.Controllers
+namespace GoodMarket.AdminApi.Controllers.REST
 {
     [Route("api/[controller]")]
     public class ProductsController : BaseRestController<Product>

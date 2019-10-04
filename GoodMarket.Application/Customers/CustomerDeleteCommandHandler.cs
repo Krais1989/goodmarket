@@ -1,7 +1,8 @@
-﻿using GoodMarket.Domain;
+﻿using GoodMarket.Application.CRUD;
+using GoodMarket.Domain.Entities.Customers;
 using GoodMarket.Persistence;
 
-namespace GoodMarket.Application
+namespace GoodMarket.Application.Customers
 {
     public class CustomerDeleteCommandHandler : BaseDeleteCommandHandler<Customer>
     {

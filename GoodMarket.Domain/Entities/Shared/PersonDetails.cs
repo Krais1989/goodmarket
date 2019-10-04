@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace GoodMarket.Domain
+﻿namespace GoodMarket.Domain.Entities.Shared
 {
     public class PersonDetails
     {

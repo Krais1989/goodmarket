@@ -1,5 +1,5 @@
 {
-  "RabbitOptions": {
+  "ChatHubRabbitSchema": {
     "Queues": [
       {
         "Queue": "ChatNotifyQueue",
@@ -12,7 +12,7 @@
       {
         "Exchange": "ChatNotifyExchange",
         "Type": "direct",
-        "Durable": false,
+        "Durable": true,
         "AutoDelete": false
       }
     ],

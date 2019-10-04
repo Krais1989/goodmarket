@@ -1,13 +1,11 @@
-﻿using GoodMarket.Domain;
-using GoodMarket.Persistence;
-using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using GoodMarket.Domain.Entities.Orders;
+using GoodMarket.Persistence;
+using MediatR;
 
-namespace GoodMarket.Application
+namespace GoodMarket.Application.Orders
 {
     public class CreateOrderRequest : IRequest<Order>
     {

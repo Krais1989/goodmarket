@@ -1,11 +1,12 @@
 ﻿using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using GoodMarket.Domain;
+using GoodMarket.Application.CRUD;
+using GoodMarket.Domain.Entities.Customers;
 using GoodMarket.Persistence;
 using Microsoft.EntityFrameworkCore;
 
-namespace GoodMarket.Application
+namespace GoodMarket.Application.Customers
 {
     public class CustomerGetQueryHandler : BaseGetQueryHandler<Customer>
     {

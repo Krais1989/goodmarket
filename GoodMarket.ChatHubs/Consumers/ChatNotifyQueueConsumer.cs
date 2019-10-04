@@ -1,18 +1,15 @@
-﻿using GoodMarket.RabbitMQ;
+﻿using System.Text;
+using GoodMarket.ChatHubs.Hubs;
+using GoodMarket.RabbitMQ;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using RabbitMQ.Client;
-using System.Text;
 
-namespace GoodMarket.ChatHubs
+namespace GoodMarket.ChatHubs.Consumers
 {
-    public class ChatNotifyMessage
-    {
-        public string Issuer { get; set; }
-        public string Message { get; set; }
-    }
-
+    /// <summary>
+    /// Обработчик для системных уведомлений чата
+    /// </summary>
     public class ChatNotifyQueueConsumer : BaseQueueConsumer
     {
         public override string QueueName => "ChatNotifyQueue";

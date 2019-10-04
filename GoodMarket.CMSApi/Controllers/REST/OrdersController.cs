@@ -1,14 +1,9 @@
-﻿using GoodMarket.Domain;
+﻿using GoodMarket.Domain.Entities.Orders;
 using GoodMarket.Persistence;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace GoodMarket.AdminApi.Controllers
+namespace GoodMarket.AdminApi.Controllers.REST
 {
     [Route("api/[controller]")]
     public class OrdersController : BaseRestController<Order>

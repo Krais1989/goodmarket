@@ -6,6 +6,14 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Reflection;
+using GoodMarket.Domain.Entities;
+using GoodMarket.Domain.Entities.Customers;
+using GoodMarket.Domain.Entities.Employees;
+using GoodMarket.Domain.Entities.Orders;
+using GoodMarket.Domain.Entities.Products;
+using GoodMarket.Domain.Entities.Profiles;
+using GoodMarket.Domain.Entities.Suppliers;
+using Attribute = GoodMarket.Domain.Entities.Products.Attribute;
 
 namespace GoodMarket.Persistence
 {
@@ -22,7 +30,7 @@ namespace GoodMarket.Persistence
 
         /* Продукты */
         public DbSet<Product> Products { get; set; }
-        public DbSet<Domain.Attribute> Attributes { get; set; }
+        public DbSet<Attribute> Attributes { get; set; }
         public DbSet<ProductAttribute> ProductAttributes { get; set; }
         public DbSet<Category> Categories { get; set; }
 

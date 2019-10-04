@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using GoodMarket.Application.Exceptions.Basics;
 
 namespace GoodMarket.Application.Exceptions
 {

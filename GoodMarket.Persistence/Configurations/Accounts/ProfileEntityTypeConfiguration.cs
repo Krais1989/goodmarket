@@ -1,9 +1,9 @@
-﻿using GoodMarket.Application.Serialization;
-using GoodMarket.Domain;
+﻿using GoodMarket.Common;
+using GoodMarket.Domain.Entities.Profiles;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace GoodMarket.Persistence.Configurations
+namespace GoodMarket.Persistence.Configurations.Accounts
 {
     /// <summary>
     /// Конфигурация профиля
@@ -19,7 +19,7 @@ namespace GoodMarket.Persistence.Configurations
             builder.HasIndex(e => e.AccountId).IsUnique();
             builder.HasOne(e => e.Account).WithOne().HasForeignKey<Profile>(e => e.AccountId);
 
-            builder.Property(e => e.Address).HasConversion(e => SSerializer.Serialize(e), e => SSerializer.Deserialize<Address>(e));
+            builder.Property(e => e.Address).HasConversion(e => SSerializer.SerializeDefault(e), e => SSerializer.DeserializeDefault<Address>(e));
         }
     }
 }

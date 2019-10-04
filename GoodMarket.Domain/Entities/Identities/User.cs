@@ -1,11 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
 
-namespace GoodMarket.Domain
+namespace GoodMarket.Domain.Entities.Identities
 {
     /// <summary>
     /// Базовый юзер

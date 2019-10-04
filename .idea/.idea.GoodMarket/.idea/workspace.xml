@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0f022417-47aa-41f8-af15-0ba9b929f1ac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/GoodMarket.ChatHubs/Consumers/UserQueueConsumer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GoodMarket.ChatHubs/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GoodMarket.ProcessorsHost/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GoodMarket.ProcessorsHost/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GoodMarket.RabbitMQ/Options/RabbitHostOptions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GoodMarket.RabbitMQ/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GoodMarket.StatisticsProcessor/Consumers/OrderStatisticsQueueConsumer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GoodMarket.StatisticsProcessor/rabbitschema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application.Tests/Application/CartTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application.Tests/Application/CartTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application.Tests/DbContextTests/TestEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application.Tests/DbContextTests/TestEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Accounts/AccountCreateCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Accounts/AccountCreateCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Accounts/AccountDeleteCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Accounts/AccountDeleteCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Accounts/AccountGetAllQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Accounts/AccountGetAllQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Accounts/AccountGetQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Accounts/AccountGetQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Accounts/AccountUpdateCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Accounts/AccountUpdateCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/CRUD/BaseAttachCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/CRUD/BaseAttachCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/CRUD/BaseCRUDWrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/CRUD/BaseCRUDWrapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/CRUD/BaseCreateCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/CRUD/BaseCreateCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/CRUD/BaseDeleteCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/CRUD/BaseDeleteCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/CRUD/BaseGetAllQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/CRUD/BaseGetAllQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/CRUD/BaseGetQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/CRUD/BaseGetQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/CRUD/BaseUpdateCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/CRUD/BaseUpdateCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Carts/CartCreate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Carts/CartCreate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Carts/CartDelete.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Carts/CartDelete.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Carts/CartGet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Carts/CartGet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Carts/CartGetAll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Carts/CartGetAll.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Carts/CartRecordQuantity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Carts/CartRecordQuantity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Carts/CartRecordRemove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Carts/CartRecordRemove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Carts/CartUpdate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Carts/CartUpdate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Customers/CustomerCreateCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Customers/CustomerCreateCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Customers/CustomerDeleteCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Customers/CustomerDeleteCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Customers/CustomerGetAllQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Customers/CustomerGetAllQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Customers/CustomerGetQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Customers/CustomerGetQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Customers/CustomerUpdateCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Customers/CustomerUpdateCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Exceptions/AccountAlreadyExistsException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Exceptions/AccountAlreadyExistsException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Exceptions/AccountCreateException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Exceptions/AccountCreateException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Exceptions/AccountNotFoundException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Exceptions/AccountNotFoundException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Exceptions/Basics/GMException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Exceptions/Basics/GMException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Exceptions/Basics/IGMException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Exceptions/Basics/IGMException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Exceptions/EmailConfirmationException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Exceptions/EmailConfirmationException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Exceptions/LogInException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Exceptions/LogInException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/GMRoleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/GMRoleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/GMSignInManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/GMSignInManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/GMUserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/GMUserManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/MediatRServiceExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/MediatRServiceExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Middlewares/ExceptionHandlingMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Middlewares/ExceptionHandlingMiddleware.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Orders/CreateOrderCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Orders/CreateOrderCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Orders/OrderCreateCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Orders/OrderCreateCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Orders/OrderDeleteCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Orders/OrderDeleteCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Orders/OrderGetAllQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Orders/OrderGetAllQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Orders/OrderGetQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Orders/OrderGetQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Orders/OrderProcessHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Orders/OrderProcessHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Orders/OrderUpdateCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Orders/OrderUpdateCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/ProductCategories/ProductCategoryCreate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/ProductCategories/ProductCategoryCreate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/ProductCategories/ProductCategoryDelete.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/ProductCategories/ProductCategoryDelete.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/ProductCategories/ProductCategoryGet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/ProductCategories/ProductCategoryGet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/ProductCategories/ProductCategoryGetAll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/ProductCategories/ProductCategoryGetAll.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/ProductCategories/ProductCategoryUpdate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/ProductCategories/ProductCategoryUpdate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Products/ProductCreateCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Products/ProductCreateCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Products/ProductDeleteCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Products/ProductDeleteCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Products/ProductGetAllQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Products/ProductGetAllQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Products/ProductGetQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Products/ProductGetQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Products/ProductUpdateCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Products/ProductUpdateCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Registration/RegistrationHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Registration/RegistrationHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/SignInOut/EmailSignInHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/SignInOut/EmailSignInHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Utils/CRUDWrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Utils/CRUDWrapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Utils/EntityDefaultFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Utils/EntityDefaultFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/Validators/GMValidatorExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/Validators/GMValidatorExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Application/rabbitschema.json" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Application/rabbitschema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.CMSApi/Controllers/REST/BaseRestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.CMSApi/Controllers/REST/BaseRestController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.CMSApi/Controllers/REST/CustomersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.CMSApi/Controllers/REST/CustomersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.CMSApi/Controllers/REST/OrdersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.CMSApi/Controllers/REST/OrdersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.CMSApi/Controllers/REST/ProductGroupsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.CMSApi/Controllers/REST/ProductGroupsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.CMSApi/Controllers/REST/ProductsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.CMSApi/Controllers/REST/ProductsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.CMSApi/Controllers/REST/UsersContoller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.CMSApi/Controllers/REST/UsersContoller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.CMSApi/Controllers/ValuesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.CMSApi/Controllers/ValuesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.ChatHubs/Consumers/ChatNotifyQueueConsumer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.ChatHubs/Consumers/ChatNotifyQueueConsumer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.ChatHubs/Controllers/ChatStatisticsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.ChatHubs/Controllers/ChatStatisticsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.ChatHubs/GoodMarket.ChatHubs.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.ChatHubs/GoodMarket.ChatHubs.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.ChatHubs/GoodMarket.ChatHubs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.ChatHubs/GoodMarket.ChatHubs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.ChatHubs/HostedServices/ChatNotifyHostedService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.ChatHubs/HostedServices/ChatHubRabbitHostedService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.ChatHubs/Hubs/MainChatHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.ChatHubs/Hubs/MainChatHub.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.ChatHubs/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.ChatHubs/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.ChatHubs/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.ChatHubs/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.ChatHubs/rabbitschema.json" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.ChatHubs/rabbitschema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/public/good-market.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/action-creators/actions-creators.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/app/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/app/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/app/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/breadcrumbs-bar/breadcrumbs-bar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/breadcrumbs-bar/breadcrumbs-bar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/breadcrumbs-bar/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/error/error-boundary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/error/error-indicator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/error/error.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/error/error.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/error/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/error/with-error.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/footer-bar/footer-bar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/footer-bar/footer-bar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/footer-bar/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/header-bar/header-bar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/header-bar/header-bar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/header-bar/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/hoc/with-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/input-form/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/input-form/input-form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/loading/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/loading/load-boundary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/loading/load-indicator.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/loading/load-indicator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/loading/with-loading.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/navigation-bar/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/navigation-bar/navigation-bar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/navigation-bar/navigation-bar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/paginator/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/paginator/paginator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/product-card/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/product-card/product-card.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/product-card/product-card.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/product-card/product.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/shopping-cart/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/shopping-cart/shopping-cart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/table/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/table/object-table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/table/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/table/table-key-utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/table/table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/table/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/components/table/vertical-table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/context/gm-context.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/context/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/context/with-gm-injection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/context/with-injection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/base/base-create-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/base/base-details-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/base/base-edit-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/base/base-list-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/base/base-switch-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/base/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/base/with-base-switch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/customers/customer-create-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/customers/customer-details-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/customers/customer-edit-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/customers/customers-list-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/customers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/gm-pages.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/home-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/orders/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/orders/order-create-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/orders/order-details-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/orders/order-edit-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/orders/orders-list-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/products/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/products/product-create-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/products/product-details-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/products/product-edit-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/products/products-list-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/shopping-cart/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/shopping-cart/shopping-cart-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/showcase-page/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/showcase-page/showcase-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/users/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/users/user-create-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/users/user-details-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/users/user-edit-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/pages/users/users-list-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/reducers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/reducers/reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/services/http-service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/services/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/services/login-service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/services/redirect-service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/services/rest-api-service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/utils/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/utils/object-utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Client/src/utils/string-utills.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Common/Serializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Common/Serializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Cart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Cart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Customers/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Customers/Customer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Employees/Employee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Employees/Employee.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Identities/Role.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Identities/Role.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Identities/RoleClaim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Identities/RoleClaim.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Identities/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Identities/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Identities/UserClaim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Identities/UserClaim.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Identities/UserLogin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Identities/UserLogin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Identities/UserRole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Identities/UserRole.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Identities/UserToken.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Identities/UserToken.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Orders/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Orders/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Orders/OrderHistory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Orders/OrderHistory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Orders/OrderProduct.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Orders/OrderProduct.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Products/Attribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Products/Attribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Products/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Products/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Products/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Products/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Products/ProductAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Products/ProductAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Profiles/Profile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Profiles/Profile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Shared/AddressDetails.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Shared/AddressDetails.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Shared/PersonDetails.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Shared/PersonDetails.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Suppliers/Supplier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Domain/Entities/Suppliers/Supplier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.IdentityApi/Controllers/SignInController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.IdentityApi/Controllers/SignInController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.IdentityApi/DTOs/EmailSignInRequestDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.IdentityApi/DTOs/GetCurrentUserResponseDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.IdentityApi/DTOs/PhoneSignInRequestDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.IdentityApi/DTOs/SignInResponseDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.IdentityApi/GoodMarket.IdentityApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.IdentityApi/GoodMarket.IdentityApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.IdentityApi/GoodMarket.IdentityApi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.IdentityApi/GoodMarket.IdentityApi.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.IdentityApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.IdentityApi/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.IdentityApi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.IdentityApi/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Logger/GoodMarket.Logger.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Logger/GoodMarket.Logger.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.OrderProcessor/Controllers/OrderProcessController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.OrderProcessor/Controllers/OrderProcessController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.OrderProcessor/YandexKassa/YandexOrderHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.OrderProcessor/YandexKassa/YandexOrderHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Accounts/CustomerEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Accounts/CustomerEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Accounts/EmployeeEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Accounts/EmployeeEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Accounts/ProfileEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Accounts/ProfileEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/CartConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/CartConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Identities/AccountClaimEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Identities/AccountClaimEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Identities/AccountEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Identities/AccountEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Identities/AccountLoginEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Identities/AccountLoginEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Identities/AccountRoleEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Identities/AccountRoleEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Identities/AccountTokenEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Identities/AccountTokenEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Identities/RoleClaimEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Identities/RoleClaimEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Identities/RoleEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Identities/RoleEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Orders/OrderEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Orders/OrderEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Orders/OrderHistoryEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Orders/OrderHistoryEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Orders/OrderProductEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Orders/OrderProductEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Products/AttributeEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Products/AttributeEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Products/CategoryEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Products/CategoryEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Products/ProductAttributeEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Products/ProductAttributeEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Products/ProductEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Products/ProductEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Suppliers/SupplierEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/Configurations/Suppliers/SupplierEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/GoodMarketDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/GoodMarketDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.Persistence/GoodMarketIdentityDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.Persistence/GoodMarketIdentityDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.QueueProcessor/Consumers/RegistrationQueueConsumer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.QueueProcessor/Consumers/RegistrationQueueConsumer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.QueueProcessor/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.QueueProcessor/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.RabbitMQ/BaseQueueConsumer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.RabbitMQ/BaseQueueConsumer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.RabbitMQ/GoodMarket.RabbitMQ.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.RabbitMQ/GoodMarket.RabbitMQ.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.RabbitMQ/Options/ExchangeBindOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.RabbitMQ/Options/ExchangeBindOptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.RabbitMQ/Options/ExchangeOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.RabbitMQ/Options/ExchangeOptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.RabbitMQ/Options/QueueBindOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.RabbitMQ/Options/QueueBindOptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.RabbitMQ/Options/QueueOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.RabbitMQ/Options/QueueOptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.RabbitMQ/Options/RabbitOptions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.RabbitMQ/RabbitMQServiceExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.RabbitMQ/RabbitMQServiceExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.RabbitMQ/RabbitManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.RabbitMQ/RabbitManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.ShopApi/Controllers/CartController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.ShopApi/Controllers/CartController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.SignalR/SignalRServiceExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.SignalR/SignalRServiceExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GoodMarket.sln" beforeDir="false" afterPath="$PROJECT_DIR$/GoodMarket.sln" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2447B055-A7FB-43C0-8770-ED7968D8D407/3b/bc91714f/IModel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.ChatHubs/Consumers/UserQueueConsumer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.ChatHubs/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.QueueProcessor/Consumers/RegistrationQueueConsumer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.StatisticsProcessor/StatisticsHostedService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.StatisticsProcessor/Consumers/OrderStatisticsQueueConsumer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2447B055-A7FB-43C0-8770-ED7968D8D407/3e/63f31c6f/ConnectionFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.ChatHubs/Hubs/MainChatHub.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.ChatHubs/Consumers/ChatNotifyQueueConsumer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.IdentityApi/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.RabbitMQ/Options/RabbitHostOptions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.ChatHubs/Controllers/ChatStatisticsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.ChatHubs/HostedServices/ChatHubRabbitHostedService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.RabbitMQ/BaseQueueConsumer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.QueueProcessor/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.RabbitMQ/Options/RabbitSchema.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.ChatHubs/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.QueueProcessor/ConsumerHostedService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.RabbitMQ/RabbitManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.ProcessorsHost/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.RabbitMQ/RabbitMQServiceExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.Logger/LoggerServiceExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GoodMarket.IdentityApi/Controllers/SignInController.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/GoodMarket.StatisticsProcessor/Class1.cs" />
+        <option value="$PROJECT_DIR$/GoodMarket.ProcessorsHost/GoodMarket.ProcessorsHost.csproj" />
+        <option value="$PROJECT_DIR$/GoodMarket.StatisticsProcessor/StatisticsQueueConsumerHosterService.cs" />
+        <option value="$PROJECT_DIR$/GoodMarket.StatisticsProcessor/StatisticsQueueConsumerHostedService.cs" />
+        <option value="$PROJECT_DIR$/GoodMarket.StatisticsProcessor/GoodMarket.StatisticsProcessor.csproj" />
+        <option value="$PROJECT_DIR$/GoodMarket.ProcessorsHost/README.md" />
+        <option value="$PROJECT_DIR$/GoodMarket.ProcessorsHost/appsettings.json" />
+        <option value="$PROJECT_DIR$/GoodMarket.ProcessorsHost/Program.cs" />
+        <option value="$PROJECT_DIR$/GoodMarket.StatisticsProcessor/Consumers/OrderStatisticsQueueConsumer.cs" />
+        <option value="$PROJECT_DIR$/GoodMarket.ChatHubs/README.md" />
+        <option value="$PROJECT_DIR$/GoodMarket.RabbitMQ/Options/RabbitSchema.cs" />
+        <option value="$PROJECT_DIR$/GoodMarket.StatisticsProcessor/rabbitschema.json" />
+        <option value="$PROJECT_DIR$/GoodMarket.RabbitMQ/GoodMarket.RabbitMQ.csproj" />
+        <option value="$PROJECT_DIR$/GoodMarket.RabbitMQ/Options/RabbitHostOptions.cs" />
+        <option value="$PROJECT_DIR$/GoodMarket.ChatHubs/Program.cs" />
+        <option value="$PROJECT_DIR$/GoodMarket.RabbitMQ/RabbitManager.cs" />
+        <option value="$PROJECT_DIR$/GoodMarket.ChatHubs/Startup.cs" />
+        <option value="$PROJECT_DIR$/GoodMarket.ChatHubs/rabbitschema.json" />
+        <option value="$PROJECT_DIR$/GoodMarket.ChatHubs/Consumers/UserQueueConsumer.cs" />
+        <option value="$PROJECT_DIR$/GoodMarket.RabbitMQ/README.md" />
+        <option value="$PROJECT_DIR$/GoodMarket.RabbitMQ/RabbitMQServiceExtensions.cs" />
+        <option value="$PROJECT_DIR$/GoodMarket.ChatHubs/HostedServices/ChatHubRabbitHostedService.cs" />
+        <option value="$PROJECT_DIR$/GoodMarket.ChatHubs/Consumers/ChatNotifyQueueConsumer.cs" />
+        <option value="$PROJECT_DIR$/GoodMarket.ChatHubs/Hubs/MainChatHub.cs" />
+        <option value="$PROJECT_DIR$/GoodMarket.StatisticsProcessor/StatisticsHostedService.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1QsAX8FsgmsakNNSZtRhQdCUFFF" />
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.GoodMarket.ChatHubs (1)">
+    <configuration name="Processors\GoodMarket.ProcessorsHost" type="DotNetProject" factoryName=".NET Project" temporary="true">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/GoodMarket.ProcessorsHost/bin/Debug/netcoreapp2.2/GoodMarket.ProcessorsHost.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoodMarket.ProcessorsHost/bin/Debug/netcoreapp2.2" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/GoodMarket.ProcessorsHost/GoodMarket.ProcessorsHost.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.2" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodMarket.AdminApi: GoodMarket.CMSApi" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/GoodMarket.CMSApi/GoodMarket.AdminApi.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="GoodMarket.CMSApi" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodMarket.AdminApi: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/GoodMarket.CMSApi/GoodMarket.AdminApi.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodMarket.ChatHubs (1)" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/GoodMarket.ChatHubs/GoodMarket.ChatHubs.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="GoodMarket.ChatHubs" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodMarket.ChatHubs" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/GoodMarket.ChatHubs/GoodMarket.ChatHubs.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="GoodMarket.ChatHubs" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodMarket.ChatHubs: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/GoodMarket.ChatHubs/GoodMarket.ChatHubs.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodMarket.IdentityApi: Identity Dev" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/GoodMarket.IdentityApi/GoodMarket.IdentityApi.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="Identity Dev" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodMarket.IdentityApi: Identity Prod" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/GoodMarket.IdentityApi/GoodMarket.IdentityApi.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="Identity Prod" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodMarket.IdentityApi: Identity Stage" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/GoodMarket.IdentityApi/GoodMarket.IdentityApi.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="Identity Stage" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodMarket.OrderProcessor: OrderProcessor Dev" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/GoodMarket.OrderProcessor/GoodMarket.OrderProcessor.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="OrderProcessor Dev" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodMarket.OrderProcessor: OrderProcessor Prod" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/GoodMarket.OrderProcessor/GoodMarket.OrderProcessor.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="OrderProcessor Prod" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodMarket.OrderProcessor: OrderProcessor Stage" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/GoodMarket.OrderProcessor/GoodMarket.OrderProcessor.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="OrderProcessor Stage" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodMarket.ShopApi" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/GoodMarket.ShopApi/GoodMarket.ShopApi.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="GoodMarket.ShopApi" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodMarket.ShopApi: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/GoodMarket.ShopApi/GoodMarket.ShopApi.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue=".NET Launch Settings Profile.GoodMarket.ChatHubs (1)" />
+        <item itemvalue=".NET Project.Processors\GoodMarket.ProcessorsHost" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0f022417-47aa-41f8-af15-0ba9b929f1ac" name="Default Changelist" comment="" />
+      <created>1568548966682</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568548966682</updated>
+      <workItem from="1568548968904" duration="10832000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/GoodMarket.StatisticsProcessor/StatisticsHostedService.cs</url>
+          <line>22</line>
+          <properties documentPath="$PROJECT_DIR$/GoodMarket.StatisticsProcessor/StatisticsHostedService.cs" initialLine="22">
+            <startOffsets>
+              <option value="612" />
+            </startOffsets>
+            <endOffsets>
+              <option value="644" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/GoodMarket.StatisticsProcessor/StatisticsHostedService.cs</url>
+          <line>27</line>
+          <properties documentPath="$PROJECT_DIR$/GoodMarket.StatisticsProcessor/StatisticsHostedService.cs" initialLine="27">
+            <startOffsets>
+              <option value="751" />
+            </startOffsets>
+            <endOffsets>
+              <option value="782" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

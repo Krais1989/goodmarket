@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
+using GoodMarket.Domain.Entities.Identities;
 
 namespace GoodMarket.Application
 {

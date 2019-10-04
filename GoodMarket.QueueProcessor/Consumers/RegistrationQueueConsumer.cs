@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 
-namespace GoodMarket.QueueProcessor
+namespace GoodMarket.QueueProcessor.Consumers
 {
     public class RegistrationQueueConsumer : BaseQueueConsumer
     {

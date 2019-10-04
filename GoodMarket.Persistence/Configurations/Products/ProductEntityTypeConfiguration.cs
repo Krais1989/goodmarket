@@ -1,8 +1,8 @@
-﻿using GoodMarket.Domain;
+﻿using GoodMarket.Domain.Entities.Products;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace GoodMarket.Persistence.Configurations
+namespace GoodMarket.Persistence.Configurations.Products
 {
     public class ProductEntityTypeConfiguration : IEntityTypeConfiguration<Product>
     {

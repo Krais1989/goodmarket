@@ -1,10 +1,14 @@
-﻿using GoodMarket.RabbitMQ;
+﻿using GoodMarket.ChatHubs.Consumers;
+using GoodMarket.ChatHubs.HostedServices;
+using GoodMarket.ChatHubs.Hubs;
+using GoodMarket.RabbitMQ;
 using GoodMarket.SignalR;
 using GoodMarket.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace GoodMarket.ChatHubs
 {
@@ -20,9 +24,10 @@ namespace GoodMarket.ChatHubs
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddGMSignalR(Configuration);
-            services.AddGMRabbit(Configuration);
-            services.AddHostedService<ChatNotifyHostedService>();
+            services.AddGMSignalRServices(Configuration);
+            services.AddGMRabbitServices(Configuration);
+            
+            services.AddHostedService<ChatHubRabbitHostedService>();
             services.AddTransient<BaseQueueConsumer, ChatNotifyQueueConsumer>();
             services.AddMvc((opts) =>
             {
@@ -31,7 +36,7 @@ namespace GoodMarket.ChatHubs
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -45,13 +50,17 @@ namespace GoodMarket.ChatHubs
 
             app.UseCors(opt => opt.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
             app.UseHttpsRedirection();
-            app.UseSignalR(signalR => {
-                signalR.MapHub<MainChatHub>("/chathub", connOpts => {
+
+            app.UseEndpoints(conf => {
+                conf.MapHub<MainChatHub>("/chathub", connOpts => {
                 });
+
+                conf.MapDefaultControllerRoute();
             });
+
             app.UseGMSwagger("GoodMarket ChatHub Statistics");            
             app.UseHttpsRedirection();
-            app.UseMvc();
+            
         }
     }
 }

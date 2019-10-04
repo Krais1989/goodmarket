@@ -1,10 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Runtime.Serialization;
-using System.Text;
+using Microsoft.AspNetCore.Http;
 
-namespace GoodMarket.Application.Exceptions
+namespace GoodMarket.Application.Exceptions.Basics
 {
     /// <summary>
     /// Базовый класс 

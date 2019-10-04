@@ -1,8 +1,8 @@
-﻿using GoodMarket.Domain;
+﻿using GoodMarket.Domain.Entities.Suppliers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace GoodMarket.Persistence.Configurations
+namespace GoodMarket.Persistence.Configurations.Suppliers
 {
     public class SupplierEntityTypeConfiguration : IEntityTypeConfiguration<Supplier>
     {

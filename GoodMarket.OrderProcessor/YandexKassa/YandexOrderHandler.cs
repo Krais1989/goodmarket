@@ -1,11 +1,9 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
-using GoodMarket.OrderProcessor.Orders;
+using GoodMarket.Application.Orders;
 using MediatR;
-using Newtonsoft.Json.Linq;
 
-namespace GoodMarket.YandexKassa
+namespace GoodMarket.OrderProcessor.YandexKassa
 {
     public enum YandexOrderStatus
     {

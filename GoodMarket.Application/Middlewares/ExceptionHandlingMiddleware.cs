@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using GoodMarket.Application.Exceptions.Basics;
+using Microsoft.Extensions.Hosting;
 
 namespace GoodMarket.Application.Middlewares
 {
@@ -38,7 +40,7 @@ namespace GoodMarket.Application.Middlewares
             _logger = logger;
         }
 
-        public async Task InvokeAsync(HttpContext context, IHostingEnvironment env)
+        public async Task InvokeAsync(HttpContext context, IWebHostEnvironment env)
         {
             try
             {

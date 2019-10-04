@@ -1,10 +1,8 @@
-﻿using Microsoft.AspNetCore.SignalR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.SignalR;
 
-namespace GoodMarket.ChatHubs
+namespace GoodMarket.ChatHubs.Hubs
 {
     /// <summary>
     /// Интерфейс клиента SignalR
@@ -18,10 +16,11 @@ namespace GoodMarket.ChatHubs
     }
 
     /// <summary>
-    /// Интерфейс серверного хаба  SignalR
+    /// Главный хаб чата
     /// </summary>
     public class MainChatHub : Hub<IClientChatHub>
     {
+        
         public async override Task OnConnectedAsync()
         {
             await base.OnConnectedAsync();

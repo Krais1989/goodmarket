@@ -24,7 +24,7 @@
             Контроллер входа
             </summary>
         </member>
-        <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.SignIn(GoodMarket.Application.EmailSignInRequest)">
+        <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.SignIn(GoodMarket.Application.SignInOut.EmailSignInRequest)">
             <summary>
             Войти по имени/паролю
             </summary>
@@ -37,21 +37,6 @@
         <member name="M:GoodMarket.IdentityApi.Controllers.SignInController.SignOut">
             <summary>
             Выйти
-            </summary>
-        </member>
-        <member name="T:GoodMarket.IdentityApi.Controllers.EmailSignInRequestDto">
-            <summary>
-            Вход по почте
-            </summary>
-        </member>
-        <member name="T:GoodMarket.IdentityApi.Controllers.PhoneSignInRequestDto">
-            <summary>
-            Вход по телефону
-            </summary>
-        </member>
-        <member name="T:GoodMarket.IdentityApi.Controllers.SignInResponseDto">
-            <summary>
-            Результат входа - токен
             </summary>
         </member>
     </members>

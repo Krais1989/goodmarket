@@ -7,7 +7,7 @@ namespace GoodMarket.SignalR
 {
     public static class SignalRServiceExtensions
     {
-        public static IServiceCollection AddGMSignalR(this IServiceCollection services, IConfiguration config)
+        public static IServiceCollection AddGMSignalRServices(this IServiceCollection services, IConfiguration config)
         {
             services.AddSignalR(opts => {
                 opts.KeepAliveInterval = TimeSpan.FromSeconds(10);
