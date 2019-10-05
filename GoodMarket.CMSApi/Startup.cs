@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GoodMarket.Application;
+using GoodMarket.Persistence;
+using GoodMarket.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,7 +30,13 @@ namespace GoodMarket.AdminApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
+            services.AddDbContext<GoodMarketDbContext>(db =>
+            {
+                db.UseInMemoryDatabase("db_test");
+            });
+            services.AddGMSwagger();
+            services.AddControllers()
+                .SetCompatibilityVersion(CompatibilityVersion.Latest);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,9 +52,19 @@ namespace GoodMarket.AdminApi
                 app.UseHsts();
             }
 
+            app.UseGMExceptionHandling();
+            app.UseGMExecutionTimeTracking();
+            app.UseCors(opt => opt.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
             app.UseHttpsRedirection();
-            
+            app.UseGMSwagger("GoodMarket Admin v1");
+
+            app.UseAuthentication();
+            app.UseAuthorization();
+
             app.UseRouting();
+            app.UseEndpoints(cfg=> {
+                cfg.MapDefaultControllerRoute();
+            });
             
         }
     }

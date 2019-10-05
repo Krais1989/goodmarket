@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GoodMarket.Application;
+using GoodMarket.Persistence;
+using GoodMarket.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -15,8 +19,7 @@ using Microsoft.Extensions.Options;
 namespace GoodMarket.ShopApi
 {
     public class Startup
-    {
-        public Startup(IConfiguration configuration)
+    {        public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
@@ -26,7 +29,13 @@ namespace GoodMarket.ShopApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
+            services.AddDbContext<GoodMarketDbContext>(db =>
+            {
+                db.UseInMemoryDatabase("db_test");
+            });
+            services.AddGMSwagger();
+            services.AddControllers()
+                .SetCompatibilityVersion(CompatibilityVersion.Latest);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,8 +51,20 @@ namespace GoodMarket.ShopApi
                 app.UseHsts();
             }
 
+            app.UseGMExceptionHandling();
+            app.UseGMExecutionTimeTracking();
+            app.UseCors(opt => opt.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseGMSwagger("GoodMarket Admin v1");
+
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+            app.UseRouting();
+            app.UseEndpoints(cfg => {
+                cfg.MapDefaultControllerRoute();
+            });
+
         }
     }
 }
