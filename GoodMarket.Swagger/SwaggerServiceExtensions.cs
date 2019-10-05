@@ -11,6 +11,9 @@ using Microsoft.OpenApi.Models;
 
 namespace GoodMarket.Swagger
 {
+    /// <summary>
+    /// https://github.com/domaindrivendev/Swashbuckle.AspNetCore/releases/tag/v5.0.0-rc3
+    /// </summary>
     public static class SwaggerServiceExtensions
     {
         /// <summary>
@@ -21,33 +24,31 @@ namespace GoodMarket.Swagger
             /* Swagger */
             services.AddSwaggerGen((opt) =>
             {
-                
                 /* Swagger-документы */
-                opt.SwaggerDoc("v1",
-                    new Microsoft.OpenApi.Models.OpenApiInfo()
+                opt.SwaggerDoc("v1", new OpenApiInfo() { Title = $"{AppDomain.CurrentDomain.FriendlyName} Api", Version = "v1" });
+
+                opt.AddSecurityDefinition("BearerAuth",
+                    new OpenApiSecurityScheme()
                     {
-                        Title = $"{AppDomain.CurrentDomain.FriendlyName} Api",
-                        Version = "v1",
+                        Type = SecuritySchemeType.ApiKey,
+                        Scheme = "Bearer",
+                        BearerFormat = "JWT",
+                        In = ParameterLocation.Header,
+                        Name = "Authorization",
+                        Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
                     });
 
-                //options.CustomSchemaIds(x => x.FullName);
-
-                /* Возможность указания Bearer-токена */
-                //opt.AddSecurityDefinition("Bearer", new ApiKeyScheme
-                //{
-                //    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
-                //    Name = "Authorization",
-                //    In = "header",
-                //    Type = "apiKey"
-                //});
-
-                opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme() {
-                    Type = SecuritySchemeType.ApiKey,
-                    Scheme = "Bearer", 
-                    In = ParameterLocation.Header, 
-                    Name = "Authorization",
-                    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
-                });
+                opt.AddSecurityRequirement(
+                    new OpenApiSecurityRequirement
+                    {
+                        {
+                            new OpenApiSecurityScheme
+                            {
+                                Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "BearerAuth" }
+                            },
+                            new string[] { }
+                        }
+                    });
 
                 /* Использовать XML-документ с метаданными методов и классов */
                 //var xmlFile = $"{AppDomain.CurrentDomain.BaseDirectory}{AppDomain.CurrentDomain.FriendlyName}.xml";
@@ -70,9 +71,9 @@ namespace GoodMarket.Swagger
         /// </summary>
         public static IApplicationBuilder UseGMSwagger(this IApplicationBuilder app, string appName)
         {
-            app.UseSwagger(opt=>
+            app.UseSwagger(opt =>
             {
-                
+
             });
             app.UseSwaggerUI(opt =>
             {

@@ -47,6 +47,7 @@ namespace GoodMarket.Application.SignInOut
             
             var tokenClaims = new List<Claim>()
             {
+                new Claim(ClaimTypes.Name, user.Email),
                 new Claim(ClaimTypes.Email, user.Email)
             };
             var response = new EmailSignInResponse()

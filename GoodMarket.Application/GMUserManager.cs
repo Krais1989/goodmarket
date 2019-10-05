@@ -34,6 +34,12 @@ namespace GoodMarket.Application
         //    return result;
         //}
 
+        public async override Task<User> GetUserAsync(ClaimsPrincipal principal)
+        {
+            var result = await Users.SingleOrDefaultAsync(e => e.UserName == principal.GetName());
+            return result;
+        }
+
         public async virtual Task<User> GetUserAsync<TProperty>(ClaimsPrincipal principal, Expression<Func<User, TProperty>> navigationPropertyPath = null)
         {
             var result = await (navigationPropertyPath == null ? Users : Users.Include(e => navigationPropertyPath))
