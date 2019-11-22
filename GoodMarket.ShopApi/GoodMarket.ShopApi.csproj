@@ -5,6 +5,10 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>E:\Projects\NetCore\GoodMarket\GoodMarket.ShopApi\GoodMarket.ShopApi.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <_ContentIncludedByDefault Remove="appsettings.Production.json" />
     <_ContentIncludedByDefault Remove="appsettings.Staging.json" />
@@ -16,21 +20,27 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="GoodMarket.ShopApi.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!--<ItemGroup>
     <Content Include="appsettings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Newer</CopyToOutputDirectory>
     </Content>
     <Content Include="appsettings.Development.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Newer</CopyToOutputDirectory>
       <DependentUpon>appsettings.json</DependentUpon>
     </Content>
     <Content Include="appsettings.Staging.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Newer</CopyToOutputDirectory>
       <DependentUpon>appsettings.json</DependentUpon>
     </Content>
     <Content Include="appsettings.Production.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Newer</CopyToOutputDirectory>
       <DependentUpon>appsettings.json</DependentUpon>
     </Content>
-  </ItemGroup>
+  </ItemGroup>-->
 
 </Project>

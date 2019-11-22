@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GoodMarket.OrderProcessor</name>
+    </assembly>
+    <members>
+        <member name="T:GoodMarket.OrderProcessor.Controllers.OrderProcessController">
+            <summary>
+            Контроллер приёма уведомлений от платежных систем
+            </summary>
+        </member>
+        <member name="M:GoodMarket.OrderProcessor.Controllers.OrderProcessController.YandexOrderProcess(GoodMarket.OrderProcessor.YandexKassa.YandexOrderProcessRequest)">
+            <summary>
+            Метод для яндекса
+            </summary>
+        </member>
+        <member name="T:GoodMarket.OrderProcessor.YandexKassa.YandexOrderHandler">
+            <summary>
+            Обработчик 
+            </summary>
+        </member>
+    </members>
+</doc>
